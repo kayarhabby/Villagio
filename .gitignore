@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 045c22e36b43c10e21ae6f97025ab31577fafaf8
 /vendor/
 node_modules/
 npm-debug.log
@@ -22,6 +25,7 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+<<<<<<< HEAD
 =======
 /.phpunit.cache
 /node_modules
@@ -42,3 +46,5 @@ yarn-error.log
 /.idea
 /.vscode
 >>>>>>> 28d1b02 (first commit)
+=======
+>>>>>>> 045c22e36b43c10e21ae6f97025ab31577fafaf8
