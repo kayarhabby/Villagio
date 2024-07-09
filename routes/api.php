@@ -2,6 +2,14 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AvisController;
+use App\Http\Controllers\LieuController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\VillaController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\PaiementController;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\NotificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +25,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('admin', AdminController::class);
+Route::apiResource('avis', AvisController::class);
+Route::apiResource('client', ClientController::class);
+Route::apiResource('lieu', LieuController::class);
+Route::apiResource('notification', NotificationController::class);
+Route::apiResource('paiement', PaiementController::class);
+Route::apiResource('reservation', ReservationController::class);
+Route::apiResource('villa', VillaController::class);

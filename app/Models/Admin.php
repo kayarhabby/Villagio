@@ -7,5 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Admin extends Model
 {
-    protected $primaryKey = 'id_admin';
+    use HasFactory;
+
+    protected $table = 'admin'; // Nom de la table
+
+    protected $primaryKey = 'id_admin'; // Spécifiez la clé primaire
+
+    public $incrementing = true; // Assurez-vous que l'auto-incrémentation est activée
+
+    protected $fillable = [
+        'pseudo',
+        'password',
+    ];
+    protected $hidden = [
+        'password',
+    ];
 }
