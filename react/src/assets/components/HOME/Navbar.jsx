@@ -11,7 +11,7 @@ export default function Navbar() {
                     <p>MENU</p>
                 </div>
 
-                <a href="/"> Villagio </a>
+                <a href="/react/public"> Villagio </a>
                 <nav>
                     <ul>
                         <li><a href=""> Region</a></li>

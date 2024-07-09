@@ -1,9 +1,9 @@
-import Navbar from "../components/Navbar.jsx";
-import Footer from "../components/Footer.jsx";
-import FormHome from "../components/FormHome.jsx";
-import Card from "../components/Card.jsx";
-import GuestCard from "../components/GuestCard.jsx";
-import Header from "../components/Header.jsx";
+import Navbar from "../components/HOME/Navbar.jsx";
+import Footer from "../components/HOME/Footer.jsx";
+import FormHome from "../components/HOME/FormHome.jsx";
+import Card from "../components/HOME/Card.jsx";
+import GuestCard from "../components/HOME/GuestCard.jsx";
+import Header from "../components/HOME/Header.jsx";
 
 export default function Home() {
     return (
@@ -19,15 +19,12 @@ export default function Home() {
                     Villagio offers diverse villas in different regions to help you spend your dream vacation. Book your
                     villa online quickly and safely.
                 </p>
-
                 <FormHome />
-
                 <section id="cards">
                     <Card />
                     <Card />
                     <Card />
                 </section>
-
                 <section>
                     <h2>
                         Guest Reviews
@@ -40,7 +37,6 @@ export default function Home() {
                     </div>
                 </section>
             </main>
-
             <Footer />
         </>
     )

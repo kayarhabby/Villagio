@@ -32,11 +32,11 @@ export default function Footer() {
 
             <article>
                 <h2>Links</h2>
-                <a href="/">How to book</a>
-                <a href="/">General letting conditions</a>
-                <a href="/">JObs and careers</a>
-                <a href="/">Travel agent resources</a>
-                <a href="/">Contact us</a>
+                <a href="/react/public">How to book</a>
+                <a href="/react/public">General letting conditions</a>
+                <a href="/react/public">JObs and careers</a>
+                <a href="/react/public">Travel agent resources</a>
+                <a href="/react/public">Contact us</a>
             </article>
         </footer>
     )
