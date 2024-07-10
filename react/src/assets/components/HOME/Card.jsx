@@ -1,7 +1,7 @@
 export default function Card() {
     return (
         <article>
-            <img src="" alt=""/>
+            <img src="../../images/LeMarche.jpg" alt=""/>
             <h2> Title </h2>
             <p>
                 Le Marche Etna House is a fully equipped villa with many 3 big rooms, swimming pool, terrace
@@ -19,7 +19,7 @@ export default function Card() {
                 Prices start at: $750 for 3 nights (+taxes and fees)
             </div>
             <div>
-                <button>BOOK</button>
+                <button className="btn">BOOK</button>
                 <a href="">View Details</a>
             </div>
         </article>
