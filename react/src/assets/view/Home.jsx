@@ -12,18 +12,23 @@ export default function Home() {
 
             <main>
                 <Header />
-                <h1>
-                    The villa rental expert for your vacation
-                </h1>
-                <p>
-                    Villagio offers diverse villas in different regions to help you spend your dream vacation. Book your
-                    villa online quickly and safely.
-                </p>
-                <FormHome />
+                <section id="main-header-text-content">
+                    <h1>
+                        The villa rental expert for your vacation
+                    </h1>
+                    <p>
+                        Villagio offers diverse villas in different regions to help you spend your dream vacation. Book
+                        your
+                        villa online quickly and safely.
+                    </p>
+
+                    <FormHome />
+                </section>
+
                 <section id="cards">
-                    <Card />
-                    <Card />
-                    <Card />
+                    <Card/>
+                    <Card/>
+                    <Card/>
                 </section>
                 <section>
                     <h2>
