@@ -3,11 +3,26 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+//use Illuminate\Database\Eloquent\Model;
 
-class Client extends Model
+class Client extends Authenticatable
 {
+    protected $table = 'client';//Spécifier le nom de la table
     protected $primaryKey = 'id_client';
+    public $incrementing = true; //Activation de l'auto-incrémentation
+
+    protected $fillable = [
+        'Nom',
+        'Prenom',
+        'Contact',
+        'Email',
+        'Password',
+    ];
+
+    protected $hidden = [
+        'Password',
+    ];
 
     //Relation 1 à plusieurs avec la table réservation
     public function reservation()
