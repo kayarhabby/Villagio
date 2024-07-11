@@ -14,12 +14,15 @@ return new class extends Migration
         Schema::create('villa', function (Blueprint $table) {
             $table->id('id_villa');
             $table->unsignedBigInteger('id_lieu');
+            $table->String('Titre');
+            $table->text('Description');
+            $table->text('Image');
             $table->integer('Adultes');
             $table->integer('Enfants');
             $table->text('Equipements');
             $table->text('Vue');
             $table->text('Superficie');
-            $table->decimal('prix', 10, 2);
+            $table->decimal('Prix', 10, 2);
             $table->boolean('Statut');
             $table->date('Date_debut_disponible');
             $table->date('Date_fin_disponible');
