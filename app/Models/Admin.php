@@ -14,7 +14,7 @@ class Admin extends Authenticatable
 
     protected $primaryKey = 'id_admin'; // Spécifiez la clé primaire
 
-    public $incrementing = true; // Assurez-vous que l'auto-incrémentation est activée
+    public $incrementing = true; // Activation de l'auto-incrémentation
 
     protected $fillable = [
         'pseudo',
