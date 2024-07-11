@@ -14,6 +14,9 @@ class LieuResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id_lieu'=>$this->id_lieu,
+            'Nom'=>$this->Nom,
+        ];
     }
 }
