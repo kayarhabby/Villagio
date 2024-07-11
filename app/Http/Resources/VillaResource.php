@@ -29,6 +29,8 @@ class VillaResource extends JsonResource
             'Statut'=>$this->Statut,
             'Date_debut_disponible'=>$this->Date_debut_disponible,
             'Date_fin_disponible'=>$this->Date_fin_disponible,
+            'created_at'=>$this->created_at,
+            'updated_at'=>$this->updated_at,
         ];
     }
 }
