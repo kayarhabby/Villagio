@@ -7,7 +7,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class Villa extends Model
 {
+    protected $table = 'villa';//Spécification du nom de la table
     protected $primaryKey = 'id_villa';
+    public $incrementing = true; //Activation de l'auto-incrémentation
+
+    protected $fillable =[
+        'id_lieu',
+        'Titre',
+        'Description',
+        'Image',
+        'Adultes',
+        'Enfants',
+        'Equipements',
+        'Vue',
+        'Superficie',
+        'Prix',
+        'Statut',
+        'Date_debut_disponible',
+        'Date_fin_disponible',
+    ];
 
     //Relation 1 à plusieurs avec la table avis
     public function avis()
