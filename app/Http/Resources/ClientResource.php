@@ -14,6 +14,12 @@ class ClientResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'Nom'=>$this->Nom,
+            'Prenom'=>$this->PreNom,
+            'Contact'=>$this->Contact,
+            'Email'=>$this->Email,
+            'Password'=>$this->Password,
+        ];
     }
 }
