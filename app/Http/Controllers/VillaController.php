@@ -2,12 +2,99 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Villa;
 use Illuminate\Http\Request;
+use App\Http\Resources\VillaResource;
 
 class VillaController extends Controller
 {
+    //Récupérer toutes les ressources
     public function index()
     {
-        return 'Bonjour la famille';
+        return VillaResource::collection(Villa::all());
     }
+
+    //Récupérer une ressource spécifique
+    public function show(Villa $villa)
+    {
+        return new VillaResource($villa);
+    }
+
+    //Création d'une nouvelle ressource
+    public function store(Request $request)
+    {
+        //Validation des données
+        $request->validate([
+            'id_lieu'=>'required|exists:lieu,id_lieu',
+            'Titre'=>'required|string|max:255',
+            'Description'=>'required|text',
+            'Image'=>'required|text',
+            'Adultes'=>'required|integer',
+            'Enfants'=>'required|integer',
+            'Equipements'=>'required|text',
+            'Vue'=>'required|text',
+            'Superficie'=>'required|text',
+            'Prix'=>'required|decimal',
+            'Statut'=>'required|boolean',
+            'Date_debut_disponible'=>'required|date',
+            'Date_fin_disponible'=>'required|date',
+        ]);
+
+        //Créer une ressource dans la BDD
+        $villa = Villa::create([
+            'id_lieu'=>$request->id_lieu,
+            'Titre'=>$request->Titre,
+            'Description'=>$request->Description,
+            'Image'=>$request->Image,
+            'Adultes'=>$request->Adultes,
+            'Enfants'=>$request->Enfants,
+            'Equipements'=>$request->Equipements,
+            'Vue'=>$request->Vue,
+            'Superficie'=>$request->Superficie,
+            'Prix'=>$request->Prix,
+            'Statut'=>$request->Statut,
+            'Date_debut_disponible'=>$request->Date_debut_disponible,
+            'Date_fin_disponible'=>$request->Date_fin_disponible,
+        ]);
+
+        //Retourner la ressource dans VillaResource
+        return new VillaResource($villa);
+    }
+
+    //Modification de la ressource
+    public function update(Request $request, Villa $villa)
+    {
+        //Validation des données
+        $request->validate([
+            'id_lieu'=>'sometimes|required|exists:lieu,id_lieu',
+            'Titre'=>'sometimes|required|string|max:255',
+            'Description'=>'sometimes|required|text',
+            'Image'=>'sometimes|required|text',
+            'Adultes'=>'sometimes|required|integer',
+            'Enfants'=>'sometimes|required|integer',
+            'Equipements'=>'sometimes|required|text',
+            'Vue'=>'sometimes|required|text',
+            'Superficie'=>'sometimes|required|text',
+            'Prix'=>'sometimes|required|decimal',
+            'Statut'=>'sometimes|required|boolean',
+            'Date_debut_disponible'=>'sometimes|required|date',
+            'Date_fin_disponible'=>'sometimes|required|date',
+        ]);
+
+        //Mis à jour de la villa dans la BDD
+        $villa->update($request->all());
+
+        //Retourner la ressource dans VillaResource
+        return new VillaResource($villa);
+    }
+
+    //Supression de la villa
+    public function destroy(Villa $villa)
+    {
+        $villa->delete();
+
+        //Retourner une réponse vide avec un statut 204 No content
+        return response()->json(null, 204);
+    }
+
 }
