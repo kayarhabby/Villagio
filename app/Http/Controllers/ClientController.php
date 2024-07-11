@@ -59,8 +59,28 @@ class ClientController extends Controller
             'Password'=>'sometimes|required|string|min:8',
         ]);
 
-        //Mis à jour du client dans la BDD
-        $client->update($request->all());
+        //Mis à jour de la ressource dans la base de données
+        if($request->has('Nom')){
+            $client->Nom = $request->Nom;
+        }
+
+        if($request->has('Prenom')){
+            $client->Prenom = $request->Prenom;
+        }
+
+        if($request->has('Contact')){
+            $client->Contact = $request->Contact;
+        }
+
+        if($request->has('Email')){
+            $client->Email = $request->Email;
+        }
+
+        if($request->has('Password')){
+                $client->Password = bcrypt($request->Password);
+        }
+
+    $client->save();
 
         //Retourner la ressource créée
         return new ClientResource($client);
