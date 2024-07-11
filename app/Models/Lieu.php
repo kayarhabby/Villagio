@@ -9,7 +9,7 @@ class Lieu extends Model
 {
     protected $table = 'lieu'; //Nom de la table
     protected $primaryKey = 'id_lieu'; //Spécification de la clé primaire
-    protected $incrementing = true; //Activation de l'incrémentation
+    public $incrementing = true; //Activation de l'incrémentation
 
     protected $fillable = [
         'Nom',
