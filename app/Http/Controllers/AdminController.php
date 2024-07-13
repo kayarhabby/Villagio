@@ -18,7 +18,7 @@ class AdminController extends Controller
     {
         //Validation des données entrantes
         $request->validate([
-            'pseudo'=>'required|string|max:255',
+            'pseudo'=>'required|string|unique:admin,pseudo|max:255',
             'password'=>'required|string|min:8',
         ]);
 
@@ -44,7 +44,7 @@ class AdminController extends Controller
     {
         //Validation des données entrantes
         $request->validate([
-            'pseudo' => 'sometimes|required|string|max:255',
+            'pseudo' => 'sometimes|required|string|unique:admin,pseudo,' . $admin->id . '|max:255',
             'password' => 'sometimes|required|string|min:8',
         ]);
 
