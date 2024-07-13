@@ -7,7 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Avis extends Model
 {
+    protected $table = 'avis';//Spécifier le nom de la table
     protected $primaryKey = 'id_avis';
+    public $incrementing = true;//Activation de l'auto-incrémentation
+
+    protected $fillable = [
+        'id_client',
+        'id_villa',
+        'Notes',
+        'Commentaire',
+    ];
 
     //Un avis appartient à un client
     public function client()
