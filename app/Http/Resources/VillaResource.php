@@ -19,7 +19,7 @@ class VillaResource extends JsonResource
             'id_lieu'=>$this->id_lieu,
             'Titre'=>$this->Titre,
             'Description'=>$this->Description,
-            'Image'=>$this->Image,
+            'Image' => url('images/' . $this->Image),
             'Adultes'=>$this->Adultes,
             'Enfants'=>$this->Enfants,
             'Equipements'=>$this->Equipements,
