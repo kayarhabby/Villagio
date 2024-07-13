@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_lieu');
             $table->String('Titre');
             $table->text('Description');
-            $table->text('Image');
+            $table->string('Image');
             $table->integer('Adultes');
             $table->integer('Enfants');
             $table->text('Equipements');
