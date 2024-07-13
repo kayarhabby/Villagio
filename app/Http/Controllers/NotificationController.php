@@ -26,8 +26,8 @@ class NotificationController extends Controller
         //Validation des données
         $request->validate([
             'id_client'=>'required|exists:client,id_client',
-            'Sujet'=>'required|text',
-            'Message'=>'required|text',
+            'Sujet'=>'required|string',
+            'Message'=>'required|string',
         ]);
 
         //Création d'une nouvelle notification dans la BDD
@@ -36,7 +36,7 @@ class NotificationController extends Controller
             'Sujet'=>$request->Sujet,
             'Message'=>$request->Message,
         ]);
-        
+
         //Retourner la ressource créée
         return new NotificationResource($notification);
     }
@@ -47,6 +47,6 @@ class NotificationController extends Controller
         $notification->delete();
 
         //Retourner une réponse vide avec un statut 204 No content
-        return response()->json(null, 204); 
+        return response()->json(null, 204);
     }
 }
