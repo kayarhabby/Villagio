@@ -28,7 +28,7 @@ class AvisController extends Controller
             'id_client'=>'required|exists:client,id_client',
             'id_villa'=>'required|exists:villa,id_villa',
             'Notes'=>'required|integer',
-            'Commentaire'=>'required|text',
+            'Commentaire'=>'required|string',
         ]);
 
         //Création d'un avis dans la BDD
