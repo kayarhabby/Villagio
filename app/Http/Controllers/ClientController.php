@@ -28,7 +28,7 @@ class ClientController extends Controller
 
             'Nom'=>'required|string',
             'Prenom'=>'required|string',
-            'Contact'=>'required|string',
+            'Contact'=>'required|string|unique:client,Contact',
             'Email'=>'required|string|email|unique:client,Email',
             'Password'=>'required|string|min:8',
         ]);
@@ -54,7 +54,7 @@ class ClientController extends Controller
 
             'Nom'=>'sometimes|required|string',
             'Prenom'=>'sometimes|required|string',
-            'Contact'=>'sometimes|required|string',
+            'Contact'=>'sometimes|required|string|unique:client,Contact',
             'Email'=>'sometimes|required|string|email|unique:client,Email',
             'Password'=>'sometimes|required|string|min:8',
         ]);
