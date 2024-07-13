@@ -19,6 +19,8 @@ class PaiementResource extends JsonResource
             'montant'=>$this->montant,
             'Methode_paiement'=>$this->Methode_paiement,
             'Date_paiement'=>$this->Date_paiement,
+            'created_at'=>$this->created_at,
+            'updated_at'=>$this->updated_at,
         ];
     }
 }
