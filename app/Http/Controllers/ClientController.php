@@ -54,8 +54,8 @@ class ClientController extends Controller
 
             'Nom'=>'sometimes|required|string',
             'Prenom'=>'sometimes|required|string',
-            'Contact'=>'sometimes|required|string|unique:client,Contact',
-            'Email'=>'sometimes|required|string|email|unique:client,Email',
+            'Contact' => 'sometimes|required|string|unique:client,Contact,' . $client->id,
+            'Email' => 'sometimes|required|string|email|unique:client,Email,' . $client->id,
             'Password'=>'sometimes|required|string|min:8',
         ]);
 
