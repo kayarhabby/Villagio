@@ -26,7 +26,7 @@ class PaiementController extends Controller
         //Validation des données
         $request->validate([
             'id_client'=>'required|exists:client,id_client',
-            'montant'=>'required|decimal',
+            'montant'=>'required|numeric',
             'Methode_paiement'=>'required|string',
             'Date_paiement'=>'required|date',
         ]);
@@ -48,7 +48,7 @@ class PaiementController extends Controller
         //Validation des données
         $request->validate([
             'id_client'=>'sometimes|required|exists:client,id_client',
-            'montant'=>'sometimes|required|decimal',
+            'montant'=>'sometimes|required|numeric',
             'Methode_paiement'=>'sometimes|required|string',
             'Date_paiement'=>'sometimes|required|date',
         ]);
@@ -66,6 +66,6 @@ class PaiementController extends Controller
         $paiement->delete();
 
         //Retourner une réponse vide avec un statut 204 No content
-        return response()->json(null, 204); 
+        return response()->json(null, 204);
     }
 }
