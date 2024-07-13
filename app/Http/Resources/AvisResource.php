@@ -14,6 +14,13 @@ class AvisResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id_avis'=>$this->id_avis,
+            'id_client'=>$this->id_client,
+            'id_villa'=>$this->id_villa,
+            'Notes'=>$this->Notes,
+            'Commentaire'=>$this->Commentaire,
+            'created_at'=>$this->created_at,
+        ];
     }
 }
