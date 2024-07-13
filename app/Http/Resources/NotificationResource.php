@@ -14,6 +14,11 @@ class NotificationResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id_notification'=>$this->id_notification,
+            'id_client'=>$this->id_client,
+            'Sujet'=>$this->Sujet,
+            'Message'=>$this->Message,
+        ];
     }
 }
