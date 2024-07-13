@@ -24,7 +24,7 @@ class AvisController extends Controller
      public function store(Request $request)
      {
         //Validation des données
-        $request->validation([
+        $request->validate([
             'id_client'=>'required|exists:client,id_client',
             'id_villa'=>'required|exists:villa,id_villa',
             'Notes'=>'required|integer',
