@@ -29,7 +29,7 @@ class VillaController extends Controller
             'id_lieu' => 'required|exists:lieu,id_lieu',
             'Titre' => 'required|string',
             'Description' => 'required|string',
-            'Image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'Image' => 'required|string',
             'Adultes' => 'required|integer',
             'Enfants' => 'required|integer',
             'Equipements' => 'required|string',
@@ -41,18 +41,12 @@ class VillaController extends Controller
             'Date_fin_disponible' => 'required|date',
         ]);
 
-        // Gestion de l'upload de l'image
-        if ($request->hasFile('Image')) {
-            $imageName = time() . '.' . $request->Image->extension();
-            $request->Image->move(public_path('images'), $imageName);
-        }
-
         // Création de la villa dans la BDD
         $villa = Villa::create([
             'id_lieu' => $request->id_lieu,
             'Titre' => $request->Titre,
             'Description' => $request->Description,
-            'Image' => $imageName,
+            'Image' => $request->Image,
             'Adultes' => $request->Adultes,
             'Enfants' => $request->Enfants,
             'Equipements' => $request->Equipements,
@@ -76,7 +70,7 @@ class VillaController extends Controller
             'id_lieu' => 'sometimes|required|exists:lieu,id_lieu',
             'Titre' => 'sometimes|required|string',
             'Description' => 'sometimes|required|string',
-            'Image' => 'sometimes|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'Image' => 'sometimes|required|string',
             'Adultes' => 'sometimes|required|integer',
             'Enfants' => 'sometimes|required|integer',
             'Equipements' => 'sometimes|required|string',
@@ -89,20 +83,19 @@ class VillaController extends Controller
         ]);
 
         // Gestion de l'upload de l'image
-        if ($request->hasFile('Image')) {
-            // Supprimer l'ancienne image si elle existe
-            if ($villa->Image) {
-                unlink(public_path('images') . '/' . $villa->Image);
-            }
-
-            $imageName = time() . '.' . $request->Image->extension();
-            $request->Image->move(public_path('images'), $imageName);
-            $villa->Image = $imageName;
+        if ($request->has('Image')) {
+            $villa->Image = $request->Image;
         }
 
         // Mise à jour de la villa dans la BDD
         $villa->update($request->except('Image'));
 
+        // Enregistrer le nom de l'image si elle est présente
+        if ($request->has('Image')) {
+            $villa->Image = $request->Image;
+        }
+
+        $villa->save();
         // Retourner la ressource mise à jour
         return new VillaResource($villa);
     }
@@ -110,16 +103,11 @@ class VillaController extends Controller
     // Supprimer une villa
     public function destroy(Villa $villa)
     {
-        // Supprimer l'image associée si elle existe
-        if ($villa->Image) {
-            unlink(public_path('images') . '/' . $villa->Image);
-        }
-
-        // Supprimer la villa
+      // Supprimer la villa
         $villa->delete();
 
         // Retourner une réponse vide avec un statut 204 No content
         return response()->json(null, 204);
     }
-    
+
 }
