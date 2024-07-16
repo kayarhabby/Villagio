@@ -1,7 +1,8 @@
+import Lemarche from '/src/assets/images/Le_marche_Etna_House.jpg';
 export default function ServiceCard() {
     return (
         <article>
-            <img src="" alt=""/>
+            <img src={Lemarche} alt=""/>
             <section>
                 <h2> Title </h2>
                 <p>
