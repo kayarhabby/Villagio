@@ -16,7 +16,7 @@ class AdminResource extends JsonResource
     {
         return[
             'id_admin'=>$this->id_admin,
-            'pseudo'=>$this->pseudo,
+            'Pseudo'=>$this->Pseudo,
             'created_at'=>$this->created_at,
             'updated_at'=>$this->updated_at,
         ];

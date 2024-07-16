@@ -18,14 +18,14 @@ class AdminController extends Controller
     {
         //Validation des données entrantes
         $request->validate([
-            'pseudo'=>'required|string|unique:admin,pseudo|max:255',
-            'password'=>'required|string|min:8',
+            'Pseudo'=>'required|string|unique:admin,Pseudo|max:255',
+            'Password'=>'required|string|min:8',
         ]);
 
         //Création de la ressource dans la base de données
         $admin = Admin::create([
-            'pseudo'=>$request->pseudo,
-            'password'=>bcrypt($request->password),
+            'Pseudo'=>$request->Pseudo,
+            'Password'=>bcrypt($request->Password),
         ]);
 
         //Retourner la ressource créée dans AdminResource
@@ -44,17 +44,17 @@ class AdminController extends Controller
     {
         //Validation des données entrantes
         $request->validate([
-            'pseudo' => 'sometimes|required|string|unique:admin,pseudo,' . $admin->id . '|max:255',
-            'password' => 'sometimes|required|string|min:8',
+            'Pseudo' => 'sometimes|required|string|unique:admin,Pseudo,' . $admin->id . '|max:255',
+            'Password' => 'sometimes|required|string|min:8',
         ]);
 
         //Mis à jour de la ressource dans la base de données
-        if($request->has('pseudo')){
-            $admin->pseudo = $request->pseudo;
+        if($request->has('Pseudo')){
+            $admin->Pseudo = $request->Pseudo;
         }
 
-        if($request->has('password')){
-            $admin->password = bcrypt($request->password);
+        if($request->has('Password')){
+            $admin->Password = bcrypt($request->Password);
         }
 
         $admin->save();
