@@ -1,7 +1,8 @@
+import Lemarche from '/src/assets/images/Le_marche_Etna_House.jpg';
 export default function Card() {
     return (
         <article>
-            <img src="../../images/LeMarche.jpg" alt=""/>
+            <img src={Lemarche} alt=""/>
             <h2> Title </h2>
             <p>
                 Le Marche Etna House is a fully equipped villa with many 3 big rooms, swimming pool, terrace
