@@ -1,0 +1,19 @@
+#service main{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 30px;
+}
+
+#service main article img {
+    width: 100%;
+    height: 400px;
+}
+
+#service main section > div {
+    width: 80%;
+}
+
+#service main section > div p{
+    text-align: justify;
+}
