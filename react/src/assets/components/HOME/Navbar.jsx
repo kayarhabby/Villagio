@@ -14,9 +14,9 @@ export default function Navbar() {
             <nav>
                 <ul>
                     <li><a href=""> Region</a></li>
-                    <li><a href=""> Services</a></li>
+                    <li><a href="/service"> Services</a></li>
                     <li><a href="">Activities</a></li>
-                    <li><a href="">News</a></li>
+                    <li><a href="/news">News</a></li>
                 </ul>
             </nav>
             <div className="icon-container">
