@@ -17,10 +17,10 @@ class Admin extends Authenticatable
     public $incrementing = true; // Activation de l'auto-incrémentation
 
     protected $fillable = [
-        'pseudo',
-        'password',
+        'Pseudo',
+        'Password',
     ];
     protected $hidden = [
-        'password',
+        'Password',
     ];
 }
