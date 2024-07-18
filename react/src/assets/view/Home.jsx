@@ -30,12 +30,12 @@ export default function Home() {
                     <Card/>
                     <Card/>
                 </section>
-                <section>
+                <section id="guest">
                     <h2>
                         Guest Reviews
                     </h2>
 
-                    <div className="guest-container">
+                    <div className="guest-container-card">
                         <GuestCard />
                         <GuestCard />
                         <GuestCard />
