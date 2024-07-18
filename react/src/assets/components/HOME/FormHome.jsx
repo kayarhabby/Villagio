@@ -45,9 +45,7 @@ export default function FormHome() {
                 </div>
             </section>
 
-            <div>
-                <button type="submit " className="btn"> SEARCH</button>
-            </div>
+            <button type="submit " className="btn"> SEARCH</button>
 
         </form>
     )
