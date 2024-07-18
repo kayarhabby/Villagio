@@ -23,6 +23,11 @@ ul {
     list-style: none;
 }
 
+div{
+    margin-left : 0;
+    margin-right : 0;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     width: 100%;
@@ -73,6 +78,7 @@ article#header h1{
 
 article#header p{
     color : var(--white);
+    margin-left: 0;
 }
 
 article#header button{
@@ -91,6 +97,8 @@ section#main-header-text-content{
 section#main-header-text-content form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     row-gap: 20px;
 }
 
@@ -131,8 +139,6 @@ section#cards article{
 
 section#cards article div:last-child {
     display: flex;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 section#cards article div:last-child a{
@@ -195,11 +201,6 @@ footer div.footer-bas-page{
     padding: 20px;
 }
 
-footer div.footer-bas-page div{
-    margin-left: 0;
-    margin-right: 0;
-}
-
 .footer-link {
     display: flex;
     justify-content: flex-start;
@@ -212,11 +213,6 @@ footer div.footer-bas-page div{
 }
 
 .footer-link h2{
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.footer-link div{
     margin-left: 0;
     margin-right: 0;
 }
