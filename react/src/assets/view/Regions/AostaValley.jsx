@@ -2,7 +2,7 @@ import RegionTemplate from "./RegionTemplate.jsx";
 import Navbar from "../../components/HOME/Navbar.jsx";
 import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/HOME/Footer.jsx";
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 export default function () {
 
@@ -12,9 +12,11 @@ export default function () {
         <div className="template">
             <Navbar/>
             <main>
-                {villas.map((villa) => (
-                    <RegionTemplate key={villa.id} {...villa}/>
-                ))}
+                <section>
+                    {villas.map((villa) => (
+                        <RegionTemplate key={villa.id} {...villa}/>
+                    ))}
+                </section>
                 <Aside/>
             </main>
             <Footer/>

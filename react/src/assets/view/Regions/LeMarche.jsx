@@ -11,9 +11,11 @@ export default function () {
         <div className="template">
             <Navbar/>
             <main>
-                {villas.map((villa) => (
-                    <RegionTemplate key={villa.id} {...villa}/>
-                ))}
+                <section>
+                    {villas.map((villa) => (
+                        <RegionTemplate key={villa.id} {...villa}/>
+                    ))}
+                </section>
                 <Aside/>
             </main>
             <Footer/>
