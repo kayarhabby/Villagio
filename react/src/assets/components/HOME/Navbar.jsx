@@ -24,7 +24,7 @@ export default function Navbar() {
                 <p>MENU</p>
             </div>
 
-            <a href="/react/public">Villagio</a>
+            <a href="/">Villagio</a>
             <nav>
                 <ul>
                     <li
@@ -59,6 +59,7 @@ export default function Navbar() {
                                 <li><a className="dropdown-item" href="/CapriBoatTourFromSorrento">CAPRI BOAT TOUR FROM SORRENTO</a></li>
                                 <li><a className="dropdown-item" href="/SightseeingNaples">SIGHTSEEING NAPLES TOUR FOR FAMILIES</a></li>
                                 <li><a className="dropdown-item" href="/LearnHistory">LEARN HISTORY: HALF-DAY TRIP TO POMPEII</a></li>
+                                <li><a className="dropdown-item" href="/WineAndCheese">Wine and Cheese Tour at Le Marche’s Popular Wine Estate</a></li>
                             </ul>
                         )}
                     </li>
