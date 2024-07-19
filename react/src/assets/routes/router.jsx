@@ -8,6 +8,9 @@ import Lazio from "../view/Regions/Lazio.jsx";
 import LeMarche from "../view/Regions/LeMarche.jsx";
 import AllVillas from "../view/Regions/AllVillas.jsx";
 import FindYourVilla from "../view/Regions/FindYourVilla.jsx";
+import CapriBoat from "../view/Activities/CapriBoat.jsx";
+import LearnHistory from "../view/Activities/LearnHistory.jsx";
+import SightseeingNaples from "../view/Activities/SightseeingNaples.jsx";
 
 
 const router = createBrowserRouter([
@@ -51,15 +54,15 @@ const router = createBrowserRouter([
     },
     {
         path : '/CapriBoatTourFromSorrento',
-        element : <Service />
+        element : <CapriBoat />
     },
     {
-        path : '/SightseeingNaples',
-        element : <Service />
+        path : '/SightseeingNaples.jsx',
+        element : <SightseeingNaples />
     },
     {
         path : '/LearnHistory',
-        element : <Service />
+        element : <LearnHistory />
     },
 
 ])
