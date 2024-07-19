@@ -12,10 +12,12 @@ export default function SightseeingNaples() {
         "\n" +
         "Your child will enjoy a feast for the senses as he or she takes in new colors, sights and sounds and diversity.";
 
+    const imageSrc = 'src/assets/images/Lucca_Summer_Festival.jpg';
+    const imageTitle = 'Sightseeing Naples Tour for Families';
 
     return (
         <>
-            <ActivitiesTemplate descActivitie = {descriptionActivitie} />
+            <ActivitiesTemplate descActivitie={descriptionActivitie} source={imageSrc} title={imageTitle} />
         </>
     )
 }
