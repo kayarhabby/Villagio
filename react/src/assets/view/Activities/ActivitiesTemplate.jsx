@@ -2,14 +2,15 @@ import Navbar from "../../components/HOME/Navbar.jsx";
 import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/HOME/Footer.jsx";
 import React from "react";
-import Header from "../../components/HOME/Header.jsx";
+import ImageCard from "./ImageDisplay.jsx";
+import '../../css/ImageCard.css'
 
 export default function (props) {
     const paragraphs = props.descActivitie.split('\n');
     return (
         <div id="service">
             <Navbar/>
-            <Header />
+            <ImageCard src={props.source} title={props.title} />
             <main>
                 <section>
                     <div>
