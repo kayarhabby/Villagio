@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         element : <CapriBoat />
     },
     {
-        path : '/SightseeingNaples.jsx',
+        path : '/SightseeingNaples',
         element : <SightseeingNaples />
     },
     {
