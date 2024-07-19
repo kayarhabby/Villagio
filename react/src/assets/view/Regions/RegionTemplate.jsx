@@ -1,52 +1,64 @@
 import React from "react";
 import '../../css/template.css'
 import '../../css/RegionTemplate.css'
-export default function RegionTemplate() {
+export default function RegionTemplate(props) {
+
+    const {
+        src,
+        alt,
+        description,
+        title,
+        nbAdult,
+        nbChildren,
+        amenities,
+        size,
+        bedType,
+        categories,
+        price
+    } = props;
+
     return (
         <article>
-            <h1>Aosta Valley</h1>
-            <img src="src/assets/images/LeMarche.jpg" alt=""/>
+            <h1>{title}</h1>
+            <img src={src} alt={alt}/>
             <section>
-                <h2>Summer Villa Emilia</h2>
-                <p>Summer Villa Emilia is a perfect place for
-                    luxury rest, traveling and tasting the best
-                    regional cuisine in Italy, with a feel of
-                    Renaissance.</p>
+                <h2>{title}</h2>
+                <p>{description}</p>
             </section>
             <section>
                 <div className="description">
                     <p>
-                        <span className="title-desc-color">Adults : </span> 5
+                        <span className="title-desc-color">Adults : </span> {nbAdult}
                     </p>
                 </div>
                 <div className="description">
                     <p>
-                        <span className="title-desc-color">Children : </span> 2
+                        <span className="title-desc-color">Children : </span> {nbChildren}
                     </p>
                 </div>
                 <div className="description">
                     <p>
-                        <span className="title-desc-color">Amenities :</span> Air conditioning, Balcony, Beachfront, Dining area, Flat-screen TV, Free parking, Free WiFi, Outdoor pool, Pet friendly, Terrace
+                        <span className="title-desc-color">Amenities :</span> {amenities}
                     </p>
                 </div>
                 <div className="description">
                     <p>
-                        <span className="title-desc-color">Size : </span> 160m²
+                        <span className="title-desc-color">Size : </span> {size}
                     </p>
                 </div>
                 <div className="description">
                     <p>
-                        <span className="title-desc-color">Bed Type : </span> 2 Full beds, 2 Queen beds, 2 Tween beds
+                        <span className="title-desc-color">Bed Type : </span> {bedType}
                     </p>
                 </div>
                 <div className="description">
                     <p>
-                        <span className="title-desc-color">Categories : </span> Aosta Valley
+                        <span className="title-desc-color">Categories : </span> {categories}
                     </p>
                 </div>
                 <div className="description">
                     <p>
-                        <span className="title-desc-color">Prices start at : </span> $561 for 3 nights (+taxes and fees)
+                        <span className="title-desc-color">Prices start at : </span> {price} for 3 nights (+taxes and fees)
                     </p>
                 </div>
                 <div className="link">
