@@ -1,0 +1,19 @@
+div.description{
+    border-top : 1px solid #718096;
+}
+
+span.title-desc-color{
+    color: #718096;
+}
+
+.link {
+    display: flex;
+    gap: 30px;
+}
+
+.link a{
+    margin-right: 0;
+    margin-left: 0;
+    color : black;
+    text-decoration: underline dashed;
+}
