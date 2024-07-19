@@ -3,7 +3,6 @@ import ServiceCard from "../components/ServiceCard.jsx";
 import Footer from "../components/HOME/Footer.jsx";
 import Navbar from "../components/HOME/Navbar.jsx";
 import Aside from "../components/Aside.jsx";
-import Lemarche from '/src/assets/images/Le_marche_Etna_House.jpg';
 
 export default function Service() {
     const services = [
@@ -97,7 +96,7 @@ export default function Service() {
     ];
 
     return (
-        <div id="service">
+        <div className="template">
             <Navbar />
             <main>
                 <section>
