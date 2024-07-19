@@ -10,9 +10,13 @@ export default function LearnHistory() {
         "\n" +
         "This will be definitely unforgettable trip for people who want to have active rest!";
 
+    const imageSrc = 'src/assets/images/Summer_villa_emilia.jpg';
+    const imageTitle = 'Learn History: Half-day Trip to Pompeii';
+
+
     return (
         <>
-            <ActivitiesTemplate descActivitie = {descriptionActivitie} />
+            <ActivitiesTemplate descActivitie={descriptionActivitie} source={imageSrc} title={imageTitle} />
         </>
     )
 }
