@@ -1,30 +1,33 @@
-import Lemarche from '/src/assets/images/Le_marche_Etna_House.jpg';
-export default function ServiceCard() {
+import React from 'react';
+
+export default function ServiceCard(props) {
+    const {
+        src,
+        alt,
+        firstTitle,
+        text,
+        secondTitle,
+        price,
+        days,
+        accommodation
+    } = props;
+    const paragraphs = text.split('\n');
+
     return (
         <article>
-            <img src={Lemarche} alt=""/>
+            <img src={src} alt={alt} />
             <section>
-                <h2> Title </h2>
-                <p>
-                    Take children with you? Let them have the best vacation and let yourself! Have a free time while our
-                    baby sitters take care of your children – we have a lot of interesting things to do – playing,
-                    swimming, cooking, etc.
-
-                    In our villas it is possible to request the services of a qualified babysitter who can look after
-                    your children on those tours, excursions, which are not suitable for them, or simply for a romantic
-                    evening.
-
-                    The service is agreed upon according to your needs, contact us for availability. The price listed is
-                    a deposit that we’ll add to the final service price.
-                </p>
+                <h2>{firstTitle}</h2>
+                {paragraphs.map((paragraph, index) => (
+                    <p key={index}>{paragraph.trim()}</p>
+                ))}
             </section>
-
             <section>
-                <h2> Title </h2>
+                <h2>{secondTitle}</h2>
                 <p>
-                    $23 / Per Day / Per Guest
+                    {price} / {days} / {accommodation}
                 </p>
             </section>
         </article>
-    )
+    );
 }
