@@ -10,7 +10,7 @@ export default function (props) {
     return (
         <div className="template">
             <Navbar/>
-            <ImageCard src={props.source} title={props.title} />
+            <ImageCard src={props.source} title={props.title} alt={props.alt} />
             <main>
                 <section>
                     <div>

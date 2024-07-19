@@ -19,7 +19,7 @@ export default function CapriBoat() {
 
     return (
         <>
-            <ActivitiesTemplate descActivitie={descriptionActivitie} source={imageSrc} title={imageTitle} />
+            <ActivitiesTemplate descActivitie={descriptionActivitie} source={imageSrc} title={imageTitle} alt={imageTitle} />
         </>
     )
 }

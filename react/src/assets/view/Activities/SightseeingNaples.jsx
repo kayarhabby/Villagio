@@ -17,7 +17,7 @@ export default function SightseeingNaples() {
 
     return (
         <>
-            <ActivitiesTemplate descActivitie={descriptionActivitie} source={imageSrc} title={imageTitle} />
+            <ActivitiesTemplate descActivitie={descriptionActivitie} source={imageSrc} title={imageTitle} alt={imageTitle} />
         </>
     )
 }
