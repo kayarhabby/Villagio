@@ -11,6 +11,7 @@ import FindYourVilla from "../view/Regions/FindYourVilla.jsx";
 import CapriBoat from "../view/Activities/CapriBoat.jsx";
 import LearnHistory from "../view/Activities/LearnHistory.jsx";
 import SightseeingNaples from "../view/Activities/SightseeingNaples.jsx";
+import WineAndCheeseTour from "../view/Activities/WineAndCheeseTour.jsx";
 
 
 const router = createBrowserRouter([
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
         path : '/LearnHistory',
         element : <LearnHistory />
     },
+    {
+        path : '/WineAndCheese',
+        element : <WineAndCheeseTour />
+    }
 
 ])
 
