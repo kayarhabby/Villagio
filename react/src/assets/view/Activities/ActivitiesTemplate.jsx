@@ -8,7 +8,7 @@ import '../../css/ImageCard.css'
 export default function (props) {
     const paragraphs = props.descActivitie.split('\n');
     return (
-        <div id="service">
+        <div className="template">
             <Navbar/>
             <ImageCard src={props.source} title={props.title} />
             <main>
