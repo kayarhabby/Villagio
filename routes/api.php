@@ -34,3 +34,5 @@ Route::apiResource('notification', NotificationController::class);
 Route::apiResource('paiement', PaiementController::class);
 Route::apiResource('reservation', ReservationController::class);
 Route::apiResource('villa', VillaController::class);
+
+Route::get('lieu/{id_lieu}/villa', [LieuController::class, 'villa']);

@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Villa;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Lieu extends Model
 {
@@ -14,4 +15,10 @@ class Lieu extends Model
     protected $fillable = [
         'Nom',
     ];
+
+    //Relation 1 à plusieurs avec la table villa
+    public function villa()
+    {
+        return $this->hasMany(Villa::class, 'id_lieu');
+    }
 }

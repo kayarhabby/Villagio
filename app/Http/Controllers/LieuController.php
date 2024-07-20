@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Lieu;
 use Illuminate\Http\Request;
 use App\Http\Resources\LieuResource;
+use App\Http\Resources\VillaResource;
 
 class LieuController extends Controller
 {
@@ -19,6 +20,14 @@ class LieuController extends Controller
     {
         return new LieuResource($lieu);
     }
+
+     // Récupérer toutes les villas pour un lieu spécifique
+     public function villa($id_lieu)
+     {
+         $lieu = Lieu::with('villa')->findOrFail($id_lieu);
+
+         return VillaResource::collection($lieu->villa);
+     }
 
     //Création d'une ressource
     public function store(Request $request)
