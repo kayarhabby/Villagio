@@ -16,7 +16,7 @@ class VillaResource extends JsonResource
     {
         return [
             'id_villa'=>$this->id_villa,
-            'id_lieu'=>$this->id_lieu,
+            'lieu' => $this->lieu->Nom,
             'Titre'=>$this->Titre,
             'Description'=>$this->Description,
             'Image' => url('images/' . $this->Image),
