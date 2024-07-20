@@ -1,5 +1,19 @@
+import React, { useState } from 'react';
+import '../../css/Navbar.css';
 
 export default function Navbar() {
+    const [dropdowns, setDropdowns] = useState({
+        region: false,
+        activities: false,
+    });
+
+    const toggleDropdown = (dropdown) => {
+        setDropdowns({
+            ...dropdowns,
+            [dropdown]: !dropdowns[dropdown],
+        });
+    };
+
     return (
         <header id="navbar">
             <div>
@@ -10,35 +24,60 @@ export default function Navbar() {
                 <p>MENU</p>
             </div>
 
-            <a href="/react/public"> Villagio </a>
+            <a href="/">Villagio</a>
             <nav>
                 <ul>
-                    <li><a href=""> Region</a></li>
-                    <li><a href="/service"> Services</a></li>
-                    <li><a href="">Activities</a></li>
-                    <li><a href="/news">News</a></li>
+                    <li
+                        className="dropdown"
+                        onMouseEnter={() => toggleDropdown('region')}
+                        onMouseLeave={() => toggleDropdown('region')}
+                    >
+                        <a className="dropdown-toggle" href="#" role="button">
+                            REGION
+                        </a>
+                        {dropdowns.region && (
+                            <ul className="dropdown-menu">
+                                <li><a className="dropdown-item" href="/aostaValley">AOSTA VALLEY</a></li>
+                                <li><a className="dropdown-item" href="/lazio">LAZIO</a></li>
+                                <li><a className="dropdown-item" href="/leMarche">LE MARCHE</a></li>
+                                <li><a className="dropdown-item" href="/allVillas">ALL VILLAS</a></li>
+                                <li><a className="dropdown-item" href="/findYourVilla">FIND YOUR VILLA</a></li>
+                            </ul>
+                        )}
+                    </li>
+                    <li><a href="/service">SERVICE</a></li>
+                    <li
+                        className="dropdown"
+                        onMouseEnter={() => toggleDropdown('activities')}
+                        onMouseLeave={() => toggleDropdown('activities')}
+                    >
+                        <a className="dropdown-toggle" href="/activities" role="button">
+                            ACTIVITIES
+                        </a>
+                        {dropdowns.activities && (
+                            <ul className="dropdown-menu">
+                                <li><a className="dropdown-item" href="/CapriBoatTourFromSorrento">CAPRI BOAT TOUR FROM SORRENTO</a></li>
+                                <li><a className="dropdown-item" href="/SightseeingNaples">SIGHTSEEING NAPLES TOUR FOR FAMILIES</a></li>
+                                <li><a className="dropdown-item" href="/LearnHistory">LEARN HISTORY: HALF-DAY TRIP TO POMPEII</a></li>
+                                <li><a className="dropdown-item" href="/WineAndCheese">Wine and Cheese Tour at Le Marche’s Popular Wine Estate</a></li>
+                            </ul>
+                        )}
+                    </li>
+                    <li><a href="/news">NEWS</a></li>
                 </ul>
             </nav>
             <div className="icon-container">
                 <div className="icon-reseaux-social">
-                    <p>
-                        TRIPADVISOR
-                    </p>
+                    <p>TRIPADVISOR</p>
                 </div>
                 <div className="icon-reseaux-social">
-                    <p className="text-reseaux-social">
-                        FOURSQAURE
-                    </p>
+                    <p className="text-reseaux-social">FOURSQUARE</p>
                 </div>
                 <div className="icon-reseaux-social">
-                    <p className="text-reeaux-social">
-                        INSTAGRAM
-                    </p>
+                    <p className="text-reseaux-social">INSTAGRAM</p>
                 </div>
                 <div className="icon-reseaux-social">
-                    <p className="text-reseaux-social">
-                        FACEBOOK
-                    </p>
+                    <p className="text-reseaux-social">FACEBOOK</p>
                 </div>
                 <select className="form-select">
                     <option selected>English</option>
@@ -50,5 +89,5 @@ export default function Navbar() {
                 </select>
             </div>
         </header>
-    )
+    );
 }

@@ -28,7 +28,7 @@ export default function FormHome() {
                 </div>
 
                 <div>
-                    <label htmlFor="Adults"> Adults</label>
+                    <label htmlFor="Children"> Children</label>
                     <select className="form-select">
                         <option selected>0</option>
                         <option value="1">1</option>
