@@ -67,18 +67,6 @@ export default function Navbar() {
                 </ul>
             </nav>
             <div className="icon-container">
-                <div className="icon-reseaux-social">
-                    <p>TRIPADVISOR</p>
-                </div>
-                <div className="icon-reseaux-social">
-                    <p className="text-reseaux-social">FOURSQUARE</p>
-                </div>
-                <div className="icon-reseaux-social">
-                    <p className="text-reseaux-social">INSTAGRAM</p>
-                </div>
-                <div className="icon-reseaux-social">
-                    <p className="text-reseaux-social">FACEBOOK</p>
-                </div>
                 <select className="form-select">
                     <option selected>English</option>
                     <option value="1">Français</option>
