@@ -12,7 +12,6 @@ export default function RegionTemplate(props) {
         nbChildren,
         amenities,
         size,
-        bedType,
         categories,
         price
     } = props;
@@ -26,41 +25,28 @@ export default function RegionTemplate(props) {
                 <p>{description}</p>
             </section>
             <section>
-                <div className="description">
-                    <p>
+                <ul className="description">
+                    <li>
                         <span className="title-desc-color">Adults : </span> {nbAdult}
-                    </p>
-                </div>
-                <div className="description">
-                    <p>
+                    </li>
+                    <li>
                         <span className="title-desc-color">Children : </span> {nbChildren}
-                    </p>
-                </div>
-                <div className="description">
-                    <p>
+                    </li>
+                    <li>
                         <span className="title-desc-color">Amenities :</span> {amenities}
-                    </p>
-                </div>
-                <div className="description">
-                    <p>
+                    </li>
+                    <li>
                         <span className="title-desc-color">Size : </span> {size}
-                    </p>
-                </div>
-                <div className="description">
-                    <p>
-                        <span className="title-desc-color">Bed Type : </span> {bedType}
-                    </p>
-                </div>
-                <div className="description">
-                    <p>
+                    </li>
+                    <li>
                         <span className="title-desc-color">Categories : </span> {categories}
-                    </p>
-                </div>
-                <div className="description">
-                    <p>
-                        <span className="title-desc-color">Prices start at : </span> {price} for 3 nights (+taxes and fees)
-                    </p>
-                </div>
+                    </li>
+                    <li>
+                        <span className="title-desc-color">Prices start at : </span> {price} for 3 nights (+taxes
+                            and fees)
+                    </li>
+                </ul>
+
                 <div className="link">
                     <button className="btn">
                         BOOK
