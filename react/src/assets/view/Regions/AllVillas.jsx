@@ -26,13 +26,6 @@ export default function AllVillas() {
     const firstPostIndex = lastPostIndex - postsPerPage;
     const currentPosts = villas.slice(firstPostIndex, lastPostIndex);
     console.log(currentPosts);
-    // const handlePreviousPage = () => {
-    //     if (currentPage > 1) setCurrentPage(currentPage - 1);
-    // };
-    //
-    // const handleNextPage = () => {
-    //     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
-    // };
 
     return (
         <div className="template">
@@ -56,6 +49,7 @@ export default function AllVillas() {
                                 nbChildren={villa.Enfants}
                                 amenities={villa.Equipements}
                                 size={villa.Superficie}
+                                categories={villa.lieu}
                                 price={villa.Prix}
                             />
                         );
