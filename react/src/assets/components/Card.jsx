@@ -1,5 +1,4 @@
-import Lemarche from '/src/assets/images/Le_marche_Etna_House.jpg';
-import React from "react";
+
 export default function Card(props) {
     const {
         src,
