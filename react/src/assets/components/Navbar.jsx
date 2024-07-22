@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../css/Navbar.css';
+import '../css/Navbar.css';
 
 export default function Navbar() {
     const [dropdowns, setDropdowns] = useState({
@@ -24,7 +24,7 @@ export default function Navbar() {
                 <p>MENU</p>
             </div>
 
-            <a href="/">Villagio</a>
+            <a href="/public">Villagio</a>
             <nav>
                 <ul>
                     <li
