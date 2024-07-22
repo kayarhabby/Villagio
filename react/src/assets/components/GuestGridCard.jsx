@@ -1,5 +1,4 @@
 import GuestCard from "./GuestCard.jsx";
-import React from "react";
 
 export default function GuestGridCard() {
 
