@@ -1,9 +1,9 @@
-import Navbar from "../components/HOME/Navbar.jsx";
-import Footer from "../components/HOME/Footer.jsx";
-import FormHome from "../components/HOME/FormHome.jsx";
-import Card from "../components/HOME/Card.jsx";
-import GuestCard from "../components/HOME/GuestCard.jsx";
-import Header from "../components/HOME/Header.jsx";
+import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
+import FormHome from "../components/FormHome.jsx";
+import Card from "../components/Card.jsx";
+import GuestCard from "../components/GuestCard.jsx";
+import Header from "../components/Header.jsx";
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 

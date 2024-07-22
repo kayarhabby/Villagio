@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiceCard from "../components/ServiceCard.jsx";
-import Footer from "../components/HOME/Footer.jsx";
-import Navbar from "../components/HOME/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
+import Navbar from "../components/Navbar.jsx";
 import Aside from "../components/Aside.jsx";
 
 export default function Service() {
