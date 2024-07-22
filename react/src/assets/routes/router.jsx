@@ -12,6 +12,7 @@ import CapriBoat from "../view/Activities/CapriBoat.jsx";
 import LearnHistory from "../view/Activities/LearnHistory.jsx";
 import SightseeingNaples from "../view/Activities/SightseeingNaples.jsx";
 import WineAndCheeseTour from "../view/Activities/WineAndCheeseTour.jsx";
+import TestimonialPage from "../view/Testimoniale/TestimonialPage.jsx";
 
 
 const router = createBrowserRouter([
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
     {
         path : '/WineAndCheese',
         element : <WineAndCheeseTour />
+    },
+    {
+        path: '/testimonial/:id',
+        element: <TestimonialPage />
     }
 
 ])
