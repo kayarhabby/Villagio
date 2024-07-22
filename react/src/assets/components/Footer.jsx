@@ -1,4 +1,22 @@
+import FooterLinks from "./FooterLinks.jsx";
+
 export default function Footer() {
+    const recentNews = [
+        { text: 'Unforgettable Vignanello garden tour in Lazio', href: '#' },
+        { text: 'Special discounts for Italian castles tour!', href: '#' },
+        { text: 'Places of interest near summer villa Emilia', href: '#' },
+        { text: 'Celebrate Lucca Summer Festival with us', href: '#' },
+        { text: 'Lazio or Campania: which location is best for your stay?', href: '#' },
+    ];
+
+    const links = [
+        { text: 'How to book', href: '#' },
+        { text: 'General letting conditions', href: '#' },
+        { text: 'Jobs and careers', href: '#' },
+        { text: 'Travel agent resources', href: '#' },
+        { text: 'Contact us', href: '#' },
+    ];
+
     return (
         <footer>
             <div className="footer-text-container">
@@ -29,43 +47,8 @@ export default function Footer() {
                     </article>
                 </section>
 
-                <article className="footer-link">
-                    <h2>RECENT NEWS</h2>
-                    <div>
-                        <a href="">Unforgettable Vignanello garden tour in Lazio</a>
-                    </div>
-                    <div>
-                        <a href="">Special discounts for Italian castles tour!</a>
-                    </div>
-                    <div>
-                        <a href="">Places of interest neat summer villa Emilia</a>
-                    </div>
-                    <div>
-                        <a href="">Celebrate Lucca Summer Festival with us</a>
-                    </div>
-                    <div>
-                        <a href="">Lazio or Campania: which location is best for your stay?</a>
-                    </div>
-                </article>
-
-                <article className="footer-link">
-                    <h2>Links</h2>
-                    <div>
-                        <a href="/react/public">How to book</a>
-                    </div>
-                    <div>
-                        <a href="/react/public">General letting conditions</a>
-                    </div>
-                    <div>
-                        <a href="/react/public">JObs and careers</a>
-                    </div>
-                    <div>
-                        <a href="/react/public">Travel agent resources</a>
-                    </div>
-                    <div>
-                        <a href="/react/public">Contact us</a>
-                    </div>
-                </article>
+                <FooterLinks title="RECENT NEWS" links={recentNews} />
+                <FooterLinks title="Links" links={links} />
             </div>
 
             <div className="footer-bas-page">
