@@ -1,6 +1,7 @@
 import FormHome from "./FormHome.jsx";
-import Lemarche from '/src/assets/images/Le_marche_Etna_House.jpg';
 import FooterLinks from "./FooterLinks.jsx";
+import RegionButtons from "./RegionButtons.jsx";
+import RecommendSection from "./RecommendSection.jsx";
 
 export default function () {
     const recentComments = [
@@ -10,26 +11,26 @@ export default function () {
         { text: 'Celebrate Lucca Summer Festival with us', href: '#' },
         { text: 'Lazio or Campania: which location is best for your stay?', href: '#' },
     ];
+
+    const regionButtonsData = {
+        title: "Région",
+        regions: ["Aosta Valley", "Lazio", "Le Marche"]
+    };
+
+    const recommendSectionData = {
+        title: "WE RECOMMEND",
+        imageSrc: "src/assets/images/Cottage_Monte_Bianco.jpg",
+        altText: "Cottage Monte Bianco",
+        villaName: "Summer Villa Emilia",
+        price: "$561",
+        buttonText: "BOOK"
+    };
+
     return (
         <aside>
             <FormHome/>
-            <section>
-                <h2>Région</h2>
-                <div className="regionbtn">
-                    <button>Aosta Valley</button>
-                    <button>Lazio</button>
-                    <button>Le Marche</button>
-                </div>
-            </section>
-
-            <section>
-                <h2>WE RECOMMEND</h2>
-                <img src={Lemarche} alt=""/>
-                <h4>Summer VIlla Emilia</h4>
-                <p> Prices start at: $561 for 3 nights (+taxes and fees)</p>
-                <button className="btn">BOOK</button>
-            </section>
-
+            <RegionButtons {...regionButtonsData} />
+            <RecommendSection {...recommendSectionData} />
             <section>
                 <FooterLinks title="RECENT COMMENTS" links={recentComments} />
             </section>
