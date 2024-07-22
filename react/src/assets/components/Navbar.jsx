@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../css/Navbar.css';
 
 export default function Navbar() {
@@ -24,7 +24,7 @@ export default function Navbar() {
                 <p>MENU</p>
             </div>
 
-            <a href="/public">Villagio</a>
+            <a href="/">Villagio</a>
             <nav>
                 <ul>
                     <li
