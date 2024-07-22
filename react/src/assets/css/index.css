@@ -210,9 +210,12 @@ footer div.footer-bas-page{
 
 .footer-link a{
     color : var(--black);
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .footer-link h2{
     margin-left: 0;
     margin-right: 0;
 }
+
