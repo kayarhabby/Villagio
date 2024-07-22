@@ -5,7 +5,7 @@ import Footer from "../../components/Footer.jsx";
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 
-export default function () {
+export default function LeMarche() {
     const [villas, setVillas] = useState([]);
     useEffect(() => {
         const fetchVillas = async () => {

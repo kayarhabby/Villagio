@@ -6,7 +6,7 @@ import '../../css/ImageCard.css'
 import '../../css/findYourVilla.css'
 import FormHome from "../../components/FormHome.jsx";
 
-export default function () {
+export default function FindYourVilla() {
     const imageSrc = 'src/assets/images/Seaside_Villa_Tuscany_Maremma.jpg';
     const imageTitle = 'Find Your Villa';
     const imageAlt = 'Seaside villa Tuscany Maremma';
