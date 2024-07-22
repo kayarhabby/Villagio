@@ -1,31 +1,12 @@
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import FormHome from "../components/FormHome.jsx";
-import Card from "../components/Card.jsx";
 import Header from "../components/Header.jsx";
-import React, {useEffect, useState} from "react";
-import axios from "axios";
+import React from "react";
 import GuestGridCard from "../components/GuestGridCard.jsx";
+import VillaGridCard from "../components/VillaGridCard.jsx";
 
 export default function Home() {
-
-    const [villas, setVillas] = useState([]);
-
-    useEffect( () => {
-        const fetchVillas = async () => {
-            try {
-                const response = await axios.get(`http://127.0.0.1:8000/api/villa/`);
-                setVillas(response.data.data);
-            } catch (error) {
-                console.error('Error fetching villas:', error);
-            }
-        };
-
-        fetchVillas();
-
-    }, []);
-
-
 
     return (
         <>
@@ -44,31 +25,7 @@ export default function Home() {
                     </p>
                     <FormHome />
                 </section>
-
-                <section id="cards">
-                    {villas.map((villa) => {
-                        // Split the image URL
-                        const imgPathParts = villa.Image.split('/');
-                        const imgFileName = imgPathParts[imgPathParts.length - 1];
-                        const src = `/src/assets/images/${imgFileName}`;
-
-                        return (
-                            <Card
-                                key={villa.id_villa}
-                                src={src}
-                                alt={villa.Titre}
-                                description={villa.Description}
-                                title={villa.Titre}
-                                nbAdult={villa.Adultes}
-                                nbChildren={villa.Enfants}
-                                amenities={villa.Equipements}
-                                size={villa.Superficie}
-                                categories={villa.lieu}
-                                price={villa.Prix}
-                            />
-                        );
-                    })}
-                </section>
+                <VillaGridCard />
                 <GuestGridCard />
             </main>
             <Footer />
