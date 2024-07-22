@@ -1,12 +1,20 @@
 import FormHome from "./FormHome.jsx";
 import Lemarche from '/src/assets/images/Le_marche_Etna_House.jpg';
+import FooterLinks from "./FooterLinks.jsx";
 
 export default function () {
+    const recentComments = [
+        { text: 'Unforgettable Vignanello garden tour in Lazio', href: '#' },
+        { text: 'Special discounts for Italian castles tour!', href: '#' },
+        { text: 'Places of interest near summer villa Emilia', href: '#' },
+        { text: 'Celebrate Lucca Summer Festival with us', href: '#' },
+        { text: 'Lazio or Campania: which location is best for your stay?', href: '#' },
+    ];
     return (
         <aside>
             <FormHome/>
             <section>
-                <h3>Région</h3>
+                <h2>Région</h2>
                 <div className="regionbtn">
                     <button>Aosta Valley</button>
                     <button>Lazio</button>
@@ -15,7 +23,7 @@ export default function () {
             </section>
 
             <section>
-                <h3>WE RECOMMEND</h3>
+                <h2>WE RECOMMEND</h2>
                 <img src={Lemarche} alt=""/>
                 <h4>Summer VIlla Emilia</h4>
                 <p> Prices start at: $561 for 3 nights (+taxes and fees)</p>
@@ -23,24 +31,7 @@ export default function () {
             </section>
 
             <section>
-                <article className="footer-link">
-                    <h3>RECENT COMMENTS</h3>
-                    <div>
-                        <a href="">Unforgettable Vignanello garden tour in Lazio</a>
-                    </div>
-                    <div>
-                        <a href="">Special discounts for Italian castles tour!</a>
-                    </div>
-                    <div>
-                        <a href="">Places of interest neat summer villa Emilia</a>
-                    </div>
-                    <div>
-                        <a href="">Celebrate Lucca Summer Festival with us</a>
-                    </div>
-                    <div>
-                        <a href="">Lazio or Campania: which location is best for your stay?</a>
-                    </div>
-                </article>
+                <FooterLinks title="RECENT COMMENTS" links={recentComments} />
             </section>
 
             <section>
