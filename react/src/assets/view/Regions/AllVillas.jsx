@@ -1,7 +1,7 @@
-import Navbar from "../../components/HOME/Navbar.jsx";
+import Navbar from "../../components/Navbar.jsx";
 import RegionTemplate from "./RegionTemplate.jsx";
 import Aside from "../../components/Aside.jsx";
-import Footer from "../../components/HOME/Footer.jsx";
+import Footer from "../../components/Footer.jsx";
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import Pagination from "./Pagination.jsx";

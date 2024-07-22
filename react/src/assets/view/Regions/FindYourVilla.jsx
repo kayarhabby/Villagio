@@ -1,10 +1,10 @@
-import Navbar from "../../components/HOME/Navbar.jsx";
-import Footer from "../../components/HOME/Footer.jsx";
+import Navbar from "../../components/Navbar.jsx";
+import Footer from "../../components/Footer.jsx";
 import React from "react";
 import ImageCard from "../Activities/ImageDisplay.jsx";
 import '../../css/ImageCard.css'
 import '../../css/findYourVilla.css'
-import FormHome from "../../components/HOME/FormHome.jsx";
+import FormHome from "../../components/FormHome.jsx";
 
 export default function () {
     const imageSrc = 'src/assets/images/Seaside_Villa_Tuscany_Maremma.jpg';
