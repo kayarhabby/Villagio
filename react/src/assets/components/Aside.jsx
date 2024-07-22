@@ -1,4 +1,4 @@
-import FormHome from "./HOME/FormHome.jsx";
+import FormHome from "./FormHome.jsx";
 import Lemarche from '/src/assets/images/Le_marche_Etna_House.jpg';
 
 export default function () {
