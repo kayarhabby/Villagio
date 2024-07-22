@@ -1,6 +1,6 @@
-import Navbar from "../../components/HOME/Navbar.jsx";
+import Navbar from "../../components/Navbar.jsx";
 import Aside from "../../components/Aside.jsx";
-import Footer from "../../components/HOME/Footer.jsx";
+import Footer from "../../components/Footer.jsx";
 import React from "react";
 import ImageCard from "./ImageDisplay.jsx";
 import '../../css/ImageCard.css'
