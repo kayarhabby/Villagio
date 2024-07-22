@@ -1,4 +1,5 @@
 import FooterLinks from "./FooterLinks.jsx";
+import VillagioText from "./VillagioText.jsx";
 
 export default function Footer() {
     const recentNews = [
@@ -17,38 +18,28 @@ export default function Footer() {
         { text: 'Contact us', href: '#' },
     ];
 
+    const aboutUsData = {
+        title: "ABOUT US",
+        descriptions: "We are one of the most recognized happy vacation makers in Italy – we provide a wide range of great villas for any occasion since 2015. Any type of a winter or summer villa can be found on the site."
+    };
+
+    const multilingualVillagioData = {
+        title: "MULTILINGUAL VILLAGIO",
+        descriptions: "The demo content in German is not a professional translation! It’s sample data used to demonstrate a multilingual website (localization was performed via WPML plugin, which is NOT included into the theme). " +
+            "\n" +
+            "Note: multi-currency is performed via addon, which is NOT included into the theme."
+    };
+
     return (
         <footer>
             <div className="footer-text-container">
                 <section>
-                    <article>
-                        <h2>ABOUT US</h2>
-                        <p>
-                            We are one of the most recognized happy vacation makers in Italy – we provide a wide range
-                            of
-                            great villas for any occasion since 2015. Any type of a winter or summer villa can be found
-                            on
-                            the site.
-                        </p>
-                    </article>
-
-                    <article>
-                        <h2>MULTILINGUAL VILLAGIO</h2>
-                        <p>
-                            The demo content in German is not a professional translation! It’s sample data used to
-                            demonstrate a multilingual website (localization was performed via WPML plugin, which is NOT
-                            included into the theme).
-                        </p>
-
-                        <p>
-                            Note: multi-currency is performed via addon, which is NOT included into the theme.
-                        </p>
-
-                    </article>
+                    <VillagioText {...aboutUsData} />
+                    <VillagioText {...multilingualVillagioData} />
                 </section>
 
-                <FooterLinks title="RECENT NEWS" links={recentNews} />
-                <FooterLinks title="Links" links={links} />
+                <FooterLinks title="RECENT NEWS" links={recentNews}/>
+                <FooterLinks title="Links" links={links}/>
             </div>
 
             <div className="footer-bas-page">
