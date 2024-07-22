@@ -1,7 +1,4 @@
 
-// import React from 'react';
-// import './FooterLinks.css';
-
 function FooterLinks({ title, links }) {
     return (
         <article className="footer-link">
