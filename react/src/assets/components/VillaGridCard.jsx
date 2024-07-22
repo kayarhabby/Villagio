@@ -2,7 +2,7 @@ import Card from "./Card.jsx";
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 
-export default function () {
+export default function VillaGridCard() {
 
     const [villas, setVillas] = useState([]);
 
