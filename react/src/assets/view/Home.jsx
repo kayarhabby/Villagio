@@ -3,15 +3,15 @@ import Footer from "../components/Footer.jsx";
 import FormHome from "../components/FormHome.jsx";
 import Header from "../components/Header.jsx";
 import React from "react";
-import GuestGridCard from "../components/GuestGridCard.jsx";
 import VillaGridCard from "../components/VillaGridCard.jsx";
+import Testimonial from "./Testimoniale/Testimonial.jsx";
 
 export default function Home() {
+
 
     return (
         <>
             <Navbar />
-
             <main>
                 <Header />
                 <section id="main-header-text-content">
@@ -26,7 +26,7 @@ export default function Home() {
                     <FormHome />
                 </section>
                 <VillaGridCard />
-                <GuestGridCard />
+                <Testimonial />
             </main>
             <Footer />
         </>
