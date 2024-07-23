@@ -18,29 +18,14 @@ export default function Card(props) {
         <article>
             <img src={src} alt={alt}/>
             <h2>{title}</h2>
-            <p>{description}</p>
-            <ul className="description-item-acs">
-                <li>
-                    <span>Adults : </span> {nbAdult}
-                </li>
-                <li>
-                    <span>Children : </span> {nbChildren}
-                </li>
-                <li>
-                    <span>Size : </span> {size}
-                </li>
-            </ul>
-            <ul className="description-item-ac">
-                <li>
-                    <span>Amenities :</span> {amenities}
-                </li>
-                <li>
-                    <span>Categories : </span> {categories}
-                </li>
-            </ul>
-            <div>
-                <span>Prices start at : </span> {price} for 3 nights (+taxes
-                and fees
+            <p className="desc-item-p">{description}</p>
+            <section className="description-item-acs">
+                <span>
+                    Adults : {nbAdult} / Children : {nbChildren} / Size : {size} / Amenities : {amenities} / Categories : {categories}.
+                </span>
+            </section>
+            <div className="price-item-acs">
+                <span>Prices start at : </span> <strong>{price}</strong> for 3 nights (+taxes and fees)
             </div>
             <div>
                 <button className="btn" onClick={() => goToVillaBookPage(props.title)}>BOOK</button>
