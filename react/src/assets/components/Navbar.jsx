@@ -15,17 +15,15 @@ export default function Navbar() {
     };
 
     return (
-        <header id="navbar">
-            <div>
-                <div className="menu-hamburger">
+        <nav id="navbar">
+            <section>
+
+                <section className="menu-hamburger">
                     <a href="#"><i className="fa-solid fa-bars"></i></a>
                     <a href="#"><i className="fa-solid fa-x"></i></a>
-                </div>
-                <p>MENU</p>
-            </div>
+                </section>
 
-            <a href="/">Villagio</a>
-            <nav>
+                <a href="/">Villagio</a>
                 <ul>
                     <li
                         className="dropdown"
@@ -56,17 +54,21 @@ export default function Navbar() {
                         </a>
                         {dropdowns.activities && (
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="/CapriBoatTourFromSorrento">CAPRI BOAT TOUR FROM SORRENTO</a></li>
-                                <li><a className="dropdown-item" href="/SightseeingNaples">SIGHTSEEING NAPLES TOUR FOR FAMILIES</a></li>
-                                <li><a className="dropdown-item" href="/LearnHistory">LEARN HISTORY: HALF-DAY TRIP TO POMPEII</a></li>
-                                <li><a className="dropdown-item" href="/WineAndCheese">Wine and Cheese Tour at Le Marche’s Popular Wine Estate</a></li>
+                                <li><a className="dropdown-item" href="/CapriBoatTourFromSorrento">CAPRI BOAT TOUR
+                                    FROM SORRENTO</a></li>
+                                <li><a className="dropdown-item" href="/SightseeingNaples">SIGHTSEEING NAPLES TOUR
+                                    FOR FAMILIES</a></li>
+                                <li><a className="dropdown-item" href="/LearnHistory">LEARN HISTORY: HALF-DAY TRIP
+                                    TO POMPEII</a></li>
+                                <li><a className="dropdown-item" href="/WineAndCheese">Wine and Cheese Tour at Le
+                                    Marche’s Popular Wine Estate</a></li>
                             </ul>
                         )}
                     </li>
                     <li><a href="/news">NEWS</a></li>
                 </ul>
-            </nav>
-            <div className="icon-container">
+            </section>
+            <section>
                 <select className="form-select">
                     <option selected>English</option>
                     <option value="1">Français</option>
@@ -75,7 +77,7 @@ export default function Navbar() {
                     <option selected>Euro</option>
                     <option value="1">USD</option>
                 </select>
-            </div>
-        </header>
+            </section>
+        </nav>
     );
 }
