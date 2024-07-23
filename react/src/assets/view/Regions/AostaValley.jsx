@@ -4,6 +4,7 @@ import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/Footer.jsx";
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 export default function AostaValley() {
 
@@ -15,6 +16,12 @@ export default function AostaValley() {
         }
         fetchVillas();
     }, []);
+
+    const navigate = useNavigate();
+
+    const goToVillaBookPage = (name) => {
+        navigate(`/villa/book/${encodeURIComponent(name)}`);
+    };
 
     return (
         <div className="template">
@@ -40,6 +47,7 @@ export default function AostaValley() {
                                 size={villa.Superficie}
                                 categories={villa.lieu}
                                 price={villa.Prix}
+                                goToVillaBookPage = {goToVillaBookPage}
                             />
                         );
                     })}
