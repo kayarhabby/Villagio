@@ -49,6 +49,7 @@ main {
     color : var(--white);
     padding : 10px;
     background-color: #0FC2C0;
+    margin-bottom: 10px;
 }
 
 .btn:hover{
