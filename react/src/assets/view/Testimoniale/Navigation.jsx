@@ -2,7 +2,7 @@
 import React from 'react';
 // import './Navigation.css';
 
-function NavigationTestimonial({ currentPage, totalPages, nextPage, prevPage}) {
+function Navigation({ currentPage, totalPages, nextPage, prevPage}) {
     return (
         <div className="navigation">
             {currentPage > 0 && <button onClick={prevPage}>Prev</button>}
@@ -11,4 +11,4 @@ function NavigationTestimonial({ currentPage, totalPages, nextPage, prevPage}) {
     );
 }
 
-export default NavigationTestimonial;
+export default Navigation;
