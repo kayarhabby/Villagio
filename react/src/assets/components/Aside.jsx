@@ -19,7 +19,7 @@ export default function () {
 
     const recommendSectionData = {
         title: "WE RECOMMEND",
-        imageSrc: "src/assets/images/Cottage_Monte_Bianco.jpg",
+        imageSrc: "/src/assets/images/Cottage_Monte_Bianco.jpg",
         altText: "Cottage Monte Bianco",
         villaName: "Summer Villa Emilia",
         price: "$561",
