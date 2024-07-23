@@ -7,11 +7,8 @@ import TextTestimonial from "../Testimoniale/TextTestimonial.jsx";
 import Navigation from "../Testimoniale/Navigation.jsx";
 import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/Footer.jsx";
-import Card from "../../components/Card.jsx";
 import axios from "axios";
-import RegionTemplate from "../Regions/RegionTemplate.jsx";
 import DetailsVilla from "./DetailsVilla.jsx";
-import FormHome from "../../components/FormHome.jsx";
 import ReservationForm from "./ReservationForm.jsx";
 
 function VillabookPage() {
@@ -77,7 +74,7 @@ function VillabookPage() {
                         prevPage={prevPage}
                     />
                 </section>
-                <Aside/>
+                <Aside />
             </main>
             <Footer/>
         </div>
