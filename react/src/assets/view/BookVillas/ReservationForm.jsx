@@ -1,6 +1,6 @@
 export default function ReservationForm() {
     return (
-        <form action="">
+        <form action="" className="reservation-form">
             <section>
                 <div>
                     <label htmlFor="Check-in"> Check-in : </label>
