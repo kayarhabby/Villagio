@@ -6,6 +6,8 @@ header img {
 
 header a{
     color : var(--white);
+    background-color: #4b5563;
+    padding : 5px;
 }
 
 header h1{
