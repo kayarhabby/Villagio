@@ -13,7 +13,8 @@ export default function RegionTemplate(props) {
         amenities,
         size,
         categories,
-        price
+        price,
+        goToVillaBookPage
     } = props;
 
     return (
@@ -48,7 +49,7 @@ export default function RegionTemplate(props) {
                 </ul>
 
                 <div className="link">
-                    <button className="btn">
+                    <button className="btn" onClick={() => goToVillaBookPage(props.title)}>
                         BOOK
                     </button>
                     <a href="">View Details</a>
