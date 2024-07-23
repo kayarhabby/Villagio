@@ -5,6 +5,7 @@ import Header from "../components/Header.jsx";
 import React from "react";
 import VillaGridCard from "../components/VillaGridCard.jsx";
 import Testimonial from "./Testimoniale/Testimonial.jsx";
+import MainHeaderTextContent from "../components/MainHeaderTextContent.jsx";
 
 export default function Home() {
 
@@ -14,17 +15,7 @@ export default function Home() {
             <Navbar />
             <main>
                 <Header />
-                <section id="main-header-text-content">
-                    <h1>
-                        The villa rental expert for your vacation
-                    </h1>
-                    <p>
-                        Villagio offers diverse villas in different regions to help you spend your dream vacation. Book
-                        your
-                        villa online quickly and safely.
-                    </p>
-                    <FormHome />
-                </section>
+                <MainHeaderTextContent />
                 <VillaGridCard />
                 <Testimonial />
             </main>
