@@ -52,7 +52,6 @@ export default function RegionTemplate(props) {
                     <button className="btn" onClick={() => goToVillaBookPage(props.title)}>
                         BOOK
                     </button>
-                    <a href="">View Details</a>
                 </div>
             </section>
         </article>
