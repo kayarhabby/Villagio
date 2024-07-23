@@ -1,6 +1,7 @@
 import Card from "./Card.jsx";
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 export default function VillaGridCard() {
 
@@ -19,6 +20,12 @@ export default function VillaGridCard() {
         fetchVillas();
 
     }, []);
+
+    const navigate = useNavigate();
+
+    const goToVillaBookPage = (name) => {
+        navigate(`/villa/book/${encodeURIComponent(name)}`);
+    };
 
     return (
         <section id="cards">
@@ -41,6 +48,7 @@ export default function VillaGridCard() {
                         size={villa.Superficie}
                         categories={villa.lieu}
                         price={villa.Prix}
+                        goToVillaBookPage={goToVillaBookPage}
                     />
                 );
             })}
