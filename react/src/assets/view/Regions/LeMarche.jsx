@@ -4,6 +4,7 @@ import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/Footer.jsx";
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 export default function LeMarche() {
     const [villas, setVillas] = useState([]);
@@ -14,6 +15,12 @@ export default function LeMarche() {
         }
         fetchVillas();
     }, []);
+
+    const navigate = useNavigate();
+
+    const goToVillaBookPage = (name) => {
+        navigate(`/villa/book/${encodeURIComponent(name)}`);
+    };
 
     return (
         <div className="template">
@@ -39,6 +46,7 @@ export default function LeMarche() {
                                 size={villa.Superficie}
                                 categories={villa.lieu}
                                 price={villa.Prix}
+                                goToVillaBookPage = {goToVillaBookPage}
                             />
                         );
                     })}
