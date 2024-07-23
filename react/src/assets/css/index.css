@@ -183,10 +183,6 @@ footer  div.footer-text-container section > article{
     row-gap: 30px;
 }
 
-footer  div.footer-text-container section > article h2{
-    margin-left: 0;
-    margin-right: 0;
-}
 
 footer div.footer-bas-page{
     display: flex;
@@ -202,11 +198,20 @@ footer div.footer-bas-page{
 }
 
 .footer-link a{
-    color : var(--black);
+    text-decoration: underline dashed #9ca3af;
 }
 
-.footer-link h2{
+.footer-link a:hover{
+    color: #0FC2C0;
+}
+
+footer h2{
     margin-left: 0;
     margin-right: 0;
+    font-size: 18px;
+}
+
+footer p{
+    font-size: 14px;
 }
 
