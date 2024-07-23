@@ -1,5 +1,5 @@
 // App.js
-import React, { useState } from 'react';
+import React from 'react';
 import {useNavigate} from "react-router-dom";
 
 
@@ -48,7 +48,7 @@ function Testimonial() {
                             <img src={guest.src} alt={guest.alt} className="cercle-img"/>
                             <section>
                                 <p>{guest.comments}</p>
-                                <button onClick={() => goToTestimonialPage(guest.name)}>En savoir plus</button>
+                                <button className="btn" onClick={() => goToTestimonialPage(guest.name)}>{guest.name}</button>
                             </section>
                         </article>
                     </div>
