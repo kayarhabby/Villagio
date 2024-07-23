@@ -29,7 +29,6 @@ export default function Card(props) {
             </div>
             <div>
                 <button className="btn" onClick={() => goToVillaBookPage(props.title)}>BOOK</button>
-                <a href="">View Details</a>
             </div>
         </article>
     )
