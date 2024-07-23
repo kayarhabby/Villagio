@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from "../../components/Navbar.jsx";
 import ImageCard from "../Activities/ImageDisplay.jsx";
 import TextTestimonial from "./TextTestimonial.jsx";
-import NavigationTestimonial from "./NavigationTestimonial.jsx";
+import Navigation from "./Navigation.jsx";
 import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/Footer.jsx";
 
@@ -56,7 +56,7 @@ function TestimonialPage() {
             <main>
                 <section>
                     <TextTestimonial text={guests[currentPage].comments}/>
-                    <NavigationTestimonial
+                    <Navigation
                         currentPage={currentPage}
                         totalPages={guests.length}
                         nextPage={nextPage}
