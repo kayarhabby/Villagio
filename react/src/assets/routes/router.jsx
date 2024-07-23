@@ -71,7 +71,7 @@ const router = createBrowserRouter([
         element : <WineAndCheeseTour />
     },
     {
-        path: '/testimonial/:id',
+        path: '/testimonial/:name',
         element: <TestimonialPage />
     }
 
