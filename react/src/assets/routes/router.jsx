@@ -13,6 +13,7 @@ import LearnHistory from "../view/Activities/LearnHistory.jsx";
 import SightseeingNaples from "../view/Activities/SightseeingNaples.jsx";
 import WineAndCheeseTour from "../view/Activities/WineAndCheeseTour.jsx";
 import TestimonialPage from "../view/Testimoniale/TestimonialPage.jsx";
+import VillabookPage from "../view/BookVillas/VillabookPage.jsx";
 
 
 const router = createBrowserRouter([
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
     {
         path: '/testimonial/:name',
         element: <TestimonialPage />
+    },
+    {
+        path: '/villa/book/:name',
+        element: <VillabookPage />
     }
 
 ])
