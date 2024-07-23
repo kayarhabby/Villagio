@@ -10,7 +10,8 @@ export default function Card(props) {
         amenities,
         size,
         categories,
-        price
+        price,
+        goToVillaBookPage
     } = props;
 
     return (
@@ -42,7 +43,7 @@ export default function Card(props) {
                 and fees
             </div>
             <div>
-                <button className="btn">BOOK</button>
+                <button className="btn" onClick={() => goToVillaBookPage(props.title)}>BOOK</button>
                 <a href="">View Details</a>
             </div>
         </article>
