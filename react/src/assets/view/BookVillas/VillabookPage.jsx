@@ -3,11 +3,9 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import Navbar from "../../components/Navbar.jsx";
 import ImageCard from "../Activities/ImageDisplay.jsx";
-import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/Footer.jsx";
 import axios from "axios";
 import ReservationForm from "./ReservationForm.jsx";
-import FormHome from "../../components/FormHome.jsx";
 
 function VillabookPage() {
     const [villas, setVillas] = useState([]);
