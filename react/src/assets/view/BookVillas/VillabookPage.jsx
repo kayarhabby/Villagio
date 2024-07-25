@@ -7,6 +7,7 @@ import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/Footer.jsx";
 import axios from "axios";
 import ReservationForm from "./ReservationForm.jsx";
+import FormHome from "../../components/FormHome.jsx";
 
 function VillabookPage() {
     const [villas, setVillas] = useState([]);
@@ -42,12 +43,12 @@ function VillabookPage() {
                        alt={villas[currentPage].Titre}/>
 
             <main>
-                <section>
-
+                <section className="fyv-container">
+                    <p>
+                        Booking your dream villa with Villagio company is really fast and safe. Just set check-in and check-out dates, provide details for reservation and pay online! Your perfect vacation is several clicks away!
+                    </p>
                     <ReservationForm />
-
                 </section>
-                <Aside />
             </main>
             <Footer/>
         </div>
