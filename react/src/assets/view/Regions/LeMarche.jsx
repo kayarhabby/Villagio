@@ -22,6 +22,10 @@ export default function LeMarche() {
         navigate(`/villa/book/${encodeURIComponent(name)}`);
     };
 
+    const goToVillaDetailsPage = (name) => {
+        navigate(`/villa/details/${encodeURIComponent(name)}`);
+    };
+
     return (
         <div className="template">
             <Navbar/>
@@ -47,6 +51,7 @@ export default function LeMarche() {
                                 categories={villa.lieu}
                                 price={villa.Prix}
                                 goToVillaBookPage = {goToVillaBookPage}
+                                goToVillaDetailsPage={goToVillaDetailsPage}
                             />
                         );
                     })}
