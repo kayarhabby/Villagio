@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
-import FormHome from "../components/FormHome.jsx";
+import SearchForm from "../components/SearchForm.jsx";
 import Header from "../components/Header.jsx";
 import React from "react";
 import VillaGridCard from "../components/VillaGridCard.jsx";

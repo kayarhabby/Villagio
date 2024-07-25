@@ -1,4 +1,4 @@
-import FormHome from "./FormHome.jsx";
+import SearchForm from "./SearchForm.jsx";
 import FooterLinks from "./FooterLinks.jsx";
 import RegionButtons from "./RegionButtons.jsx";
 import RecommendSection from "./RecommendSection.jsx";
@@ -28,7 +28,7 @@ export default function () {
 
     return (
         <aside>
-            <FormHome/>
+            <SearchForm/>
             <RegionButtons {...regionButtonsData} />
             <RecommendSection {...recommendSectionData} />
             <section>

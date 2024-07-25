@@ -4,7 +4,7 @@ import React from "react";
 import ImageCard from "../Activities/ImageDisplay.jsx";
 import '../../css/ImageCard.css'
 import '../../css/findYourVilla.css'
-import FormHome from "../../components/FormHome.jsx";
+import SearchForm from "../../components/SearchForm.jsx";
 
 export default function FindYourVilla() {
     const imageSrc = 'src/assets/images/Seaside_Villa_Tuscany_Maremma.jpg';
@@ -19,7 +19,7 @@ export default function FindYourVilla() {
                 <p>
                     Booking your dream villa with Villagio company is really fast and safe. Just set check-in and check-out dates, view the description, choose your villa, provide details for reservation and pay online! Your perfect vacation is several clicks away!
                 </p>
-                <FormHome />
+                <SearchForm />
             </section>
             <Footer/>
         </div>
