@@ -27,6 +27,9 @@ export default function VillaGridCard() {
         navigate(`/villa/book/${encodeURIComponent(name)}`);
     };
 
+    const goToVillaDetailsPage = (name) => {
+        navigate(`/villa/details/${encodeURIComponent(name)}`);
+    };
     return (
         <section id="cards">
             {villas.map((villa) => {
@@ -49,6 +52,7 @@ export default function VillaGridCard() {
                         categories={villa.lieu}
                         price={villa.Prix}
                         goToVillaBookPage={goToVillaBookPage}
+                        goToVillaDetailsPage={goToVillaDetailsPage}
                     />
                 );
             })}
