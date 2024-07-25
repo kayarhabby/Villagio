@@ -32,7 +32,7 @@ export default function Region() {
     };
 
     return (
-        <div className="template">
+        <div className="template home">
             <Navbar />
             <main>
                 <section>

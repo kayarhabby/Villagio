@@ -64,7 +64,7 @@ function TestimonialPage() {
     };
 
     return (
-        <div className="template">
+        <div className="template home">
             <Navbar/>
             <ImageCard src={guests[currentPage].src} title={guests[currentPage].name}
                        alt={guests[currentPage].alt}/>

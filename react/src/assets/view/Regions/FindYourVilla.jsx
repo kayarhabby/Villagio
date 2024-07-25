@@ -12,7 +12,7 @@ export default function FindYourVilla() {
     const imageAlt = 'Seaside villa Tuscany Maremma';
 
     return (
-        <div>
+        <div  className="home">
             <Navbar/>
             <ImageCard src={imageSrc} title={imageTitle}  alt={imageAlt} />
             <section className="fyv-container">

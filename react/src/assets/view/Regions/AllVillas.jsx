@@ -28,7 +28,7 @@ export default function AllVillas() {
     console.log(currentPosts);
 
     return (
-        <div className="template">
+        <div className="template home">
             <Navbar/>
             <main>
                 <section>

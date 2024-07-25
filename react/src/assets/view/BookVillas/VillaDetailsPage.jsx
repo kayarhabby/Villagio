@@ -47,7 +47,7 @@ function VillaDetailsPage() {
     const src = `/src/assets/images/${imgFileName}`;
 
     return (
-        <div className="template">
+        <div className="template home">
             <Navbar/>
             <ImageCard src={src} title={villas[currentPage].Titre}
                        alt={villas[currentPage].Titre}/>

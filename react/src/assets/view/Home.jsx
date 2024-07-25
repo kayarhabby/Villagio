@@ -11,7 +11,7 @@ export default function Home() {
 
 
     return (
-        <>
+        <div className="home">
             <Navbar />
             <main>
                 <Header />
@@ -20,6 +20,6 @@ export default function Home() {
                 <Testimonial />
             </main>
             <Footer />
-        </>
+        </div>
     )
 }
