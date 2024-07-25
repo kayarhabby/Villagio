@@ -78,6 +78,10 @@ const router = createBrowserRouter([
     {
         path: '/villa/book/:name',
         element: <VillabookPage />
+    },
+    {
+        path: '/villa/details/:name',
+        element: <VillabookPage />
     }
 
 ])
