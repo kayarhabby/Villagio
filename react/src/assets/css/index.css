@@ -179,7 +179,7 @@ section#guest{
 }
 
 /*###################################################################################################*/
-footer  div.footer-text-container{
+footer .footer-text-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     column-gap: 30px;
@@ -188,14 +188,14 @@ footer  div.footer-text-container{
     padding: 50px;
 }
 
-footer  div.footer-text-container section > article{
+footer .footer-text-container section > article{
    display: flex;
     flex-direction: column;
     row-gap: 30px;
 }
 
 
-footer div.footer-bas-page{
+footer .footer-bas-page{
     display: flex;
     justify-content: space-between;
     padding: 20px;
