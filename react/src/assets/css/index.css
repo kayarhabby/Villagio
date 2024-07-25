@@ -125,6 +125,10 @@ section#cards article img {
     height: 100%;
 }
 
+section#cards article > a:nth-child(2):hover{
+    color : #0FC2C0;
+}
+
 
 .desc-item-p{
     margin-bottom : 0;
