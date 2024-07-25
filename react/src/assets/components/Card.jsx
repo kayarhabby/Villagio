@@ -17,8 +17,8 @@ export default function Card(props) {
 
     return (
         <article>
-            <a href="#" onClick={(event) => goToVillaDetailsPage(event, title)}><img src={src} alt={alt}/> </a>{/* Villa image*/}
-                <h2>{title}</h2>  {/*Villa title */}
+            <a href="#" onClick={(event) => goToVillaDetailsPage(event, title)}><img src={src} alt={alt}/></a>{/* Villa image*/}
+            <a href="#" onClick={(event) => goToVillaDetailsPage(event, title)}><h2>{title}</h2> </a> {/*Villa title */}
                 <p className="desc-item-p">{description}</p>  {/*Villa description */}
                 <section className="description-item-acs">
                 <span>
