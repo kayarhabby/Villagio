@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Villa;
 use Illuminate\Http\Request;
 use App\Http\Resources\VillaResource;
@@ -20,6 +21,31 @@ class VillaController extends Controller
         return new VillaResource($villa);
     }
 
+    //Rechercher des villas disponibles
+    public function search(Request $request)
+    {
+        // Validation des données
+        $request->validate([
+            'Date_debut_disponible' => 'required|date',
+            'Date_fin_disponible' => 'required|date',
+            'Adultes' => 'required|integer|min:1',
+            'Enfants' => 'required|integer|min:0',
+        ]);
+
+        $Date_debut_disponible = Carbon::parse($request->Date_debut_disponible);//Faciliter la manipulation des dates
+        $Date_fin_disponible = Carbon::parse($request->Date_fin_disponible);//Faciliter la manipulation des dates
+        $Adultes = $request->Adultes;
+        $Enfants = $request->Enfants;
+
+        // Rechercher les villas disponibles
+        $villa = Villa::where('Date_debut_disponible', '<=', $Date_debut_disponible)
+            ->where('Date_fin_disponible', '>=', $Date_fin_disponible)
+            ->where('Adultes', '>=', $Adultes)
+            ->where('Enfants', '>=', $Enfants)
+            ->get();
+
+        return VillaResource::collection($villa);
+    }
 
     // Créer une nouvelle villa
     public function store(Request $request)
