@@ -11,7 +11,8 @@ export default function Card(props) {
         size,
         categories,
         price,
-        goToVillaBookPage
+        goToVillaBookPage,
+        goToVillaDetailsPage
     } = props;
 
     return (
@@ -29,6 +30,7 @@ export default function Card(props) {
             </div>
             <div>
                 <button className="btn" onClick={() => goToVillaBookPage(props.title)}>BOOK</button>
+                <button className="btn" onClick={() => goToVillaDetailsPage(props.title)}>View Details</button>
             </div>
         </article>
     )
