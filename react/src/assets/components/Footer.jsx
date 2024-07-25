@@ -32,7 +32,7 @@ export default function Footer() {
 
     return (
         <footer>
-            <div className="footer-text-container">
+            <section className="footer-text-container">
                 <section>
                     <VillagioText {...aboutUsData} />
                     <VillagioText {...multilingualVillagioData} />
@@ -40,9 +40,9 @@ export default function Footer() {
 
                 <FooterLinks title="RECENT NEWS" links={recentNews}/>
                 <FooterLinks title="Links" links={links}/>
-            </div>
+            </section>
 
-            <div className="footer-bas-page">
+            <section className="footer-bas-page">
                 <div>
                     Villagia 2024
                 </div>
@@ -50,7 +50,7 @@ export default function Footer() {
                     +1 (954) 456 6789410 Sunny St, Florida, FL
                 </div>
 
-            </div>
+            </section>
         </footer>
     )
 }

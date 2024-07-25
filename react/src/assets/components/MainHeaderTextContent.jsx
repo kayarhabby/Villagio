@@ -1,4 +1,4 @@
-import FormHome from "./FormHome.jsx";
+import SearchForm from "./SearchForm.jsx";
 import React from "react";
 
 export default function () {
@@ -12,7 +12,7 @@ export default function () {
                 your
                 villa online quickly and safely.
             </p>
-            <FormHome/>
+            <SearchForm/>
         </section>
     )
 }

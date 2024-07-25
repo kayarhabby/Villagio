@@ -1,30 +1,39 @@
-import Navbar from "../../components/Navbar.jsx";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate, useParams } from "react-router-dom";
 import RegionTemplate from "./RegionTemplate.jsx";
+import Navbar from "../../components/Navbar.jsx";
 import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/Footer.jsx";
-import React, {useEffect, useState} from "react";
-import axios from "axios";
-import {useNavigate} from "react-router-dom";
 
-export default function Lazio() {
+export default function Region() {
     const [villas, setVillas] = useState([]);
+    const { regionId } = useParams();
+    const navigate = useNavigate();
+
     useEffect(() => {
         const fetchVillas = async () => {
-            const response = await axios.get(`http://127.0.0.1:8000/api/lieu/2/villa`);
-            setVillas(response.data.data);
-        }
+            try {
+                const response = await axios.get(`http://127.0.0.1:8000/api/lieu/${regionId}/villa`);
+                setVillas(response.data.data);
+            } catch (error) {
+                console.error('Error fetching villas:', error);
+            }
+        };
         fetchVillas();
-    }, []);
-
-    const navigate = useNavigate();
+    }, [regionId]);
 
     const goToVillaBookPage = (name) => {
         navigate(`/villa/book/${encodeURIComponent(name)}`);
     };
 
+    const goToVillaDetailsPage = (name) => {
+        navigate(`/villa/details/${encodeURIComponent(name)}`);
+    };
+
     return (
-        <div className="template">
-            <Navbar/>
+        <div className="template home">
+            <Navbar />
             <main>
                 <section>
                     {villas.map((villa) => {
@@ -46,14 +55,15 @@ export default function Lazio() {
                                 size={villa.Superficie}
                                 categories={villa.lieu}
                                 price={villa.Prix}
-                                goToVillaBookPage = {goToVillaBookPage}
+                                goToVillaBookPage={goToVillaBookPage}
+                                goToVillaDetailsPage={goToVillaDetailsPage}
                             />
                         );
                     })}
                 </section>
-                <Aside/>
+                <Aside />
             </main>
-            <Footer/>
+            <Footer />
         </div>
-    )
+    );
 }

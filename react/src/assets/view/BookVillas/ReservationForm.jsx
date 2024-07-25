@@ -13,7 +13,7 @@ export default function ReservationForm() {
 
             </section>
 
-            <button type="submit " className="btn"> SEARCH</button>
+            <button type="submit " className="btn"> Book</button>
 
         </form>
     )

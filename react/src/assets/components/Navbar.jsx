@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Navbar.css';
 
 export default function Navbar() {
     const [dropdowns, setDropdowns] = useState({
         region: false,
         activities: false,
+        user: false,
     });
 
     const toggleDropdown = (dropdown) => {
@@ -14,10 +16,16 @@ export default function Navbar() {
         });
     };
 
+    const closeDropdown = (dropdown) => {
+        setDropdowns({
+            ...dropdowns,
+            [dropdown]: false,
+        });
+    };
+
     return (
         <nav id="navbar">
             <section>
-
                 <section className="menu-hamburger">
                     <a href="#"><i className="fa-solid fa-bars"></i></a>
                     <a href="#"><i className="fa-solid fa-x"></i></a>
@@ -28,44 +36,39 @@ export default function Navbar() {
                     <li
                         className="dropdown"
                         onMouseEnter={() => toggleDropdown('region')}
-                        onMouseLeave={() => toggleDropdown('region')}
+                        onMouseLeave={() => closeDropdown('region')}
                     >
-                        <a className="dropdown-toggle" href="#" role="button">
+                        <a className="dropdown-toggle" href="#">
                             REGION
                         </a>
                         {dropdowns.region && (
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="/aostaValley">AOSTA VALLEY</a></li>
-                                <li><a className="dropdown-item" href="/lazio">LAZIO</a></li>
-                                <li><a className="dropdown-item" href="/leMarche">LE MARCHE</a></li>
-                                <li><a className="dropdown-item" href="/allVillas">ALL VILLAS</a></li>
-                                <li><a className="dropdown-item" href="/findYourVilla">FIND YOUR VILLA</a></li>
+                                <li><Link className="dropdown-item" to="/region/1">AOSTA VALLEY</Link></li>
+                                <li><Link className="dropdown-item" to="/region/2">LAZIO</Link></li>
+                                <li><Link className="dropdown-item" to="/region/3">LE MARCHE</Link></li>
+                                <li><Link className="dropdown-item" to="/allVillas">ALL VILLAS</Link></li>
+                                <li><Link className="dropdown-item" to="/findYourVilla">FIND YOUR VILLA</Link></li>
                             </ul>
                         )}
                     </li>
-                    <li><a href="/service">SERVICE</a></li>
+                    <li><Link to="/service">SERVICE</Link></li>
                     <li
                         className="dropdown"
                         onMouseEnter={() => toggleDropdown('activities')}
-                        onMouseLeave={() => toggleDropdown('activities')}
+                        onMouseLeave={() => closeDropdown('activities')}
                     >
-                        <a className="dropdown-toggle" href="/activities" role="button">
+                        <Link className="dropdown-toggle" to="/activities">
                             ACTIVITIES
-                        </a>
+                        </Link>
                         {dropdowns.activities && (
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="/CapriBoatTourFromSorrento">CAPRI BOAT TOUR
-                                    FROM SORRENTO</a></li>
-                                <li><a className="dropdown-item" href="/SightseeingNaples">SIGHTSEEING NAPLES TOUR
-                                    FOR FAMILIES</a></li>
-                                <li><a className="dropdown-item" href="/LearnHistory">LEARN HISTORY: HALF-DAY TRIP
-                                    TO POMPEII</a></li>
-                                <li><a className="dropdown-item" href="/WineAndCheese">Wine and Cheese Tour at Le
-                                    Marche’s Popular Wine Estate</a></li>
+                                <li><Link className="dropdown-item" to="/CapriBoatTourFromSorrento">CAPRI BOAT TOUR FROM SORRENTO</Link></li>
+                                <li><Link className="dropdown-item" to="/SightseeingNaples">SIGHTSEEING NAPLES TOUR FOR FAMILIES</Link></li>
+                                <li><Link className="dropdown-item" to="/LearnHistory">LEARN HISTORY: HALF-DAY TRIP TO POMPEII</Link></li>
+                                <li><Link className="dropdown-item" to="/WineAndCheese">Wine and Cheese Tour at Le Marche’s Popular Wine Estate</Link></li>
                             </ul>
                         )}
                     </li>
-                    <li><a href="/news">NEWS</a></li>
                 </ul>
             </section>
             <section>
@@ -77,6 +80,28 @@ export default function Navbar() {
                     <option selected>Euro</option>
                     <option value="1">USD</option>
                 </select>
+                <section
+                    className="dropdown"
+                    onMouseEnter={() => toggleDropdown('user')}
+                    onMouseLeave={() => closeDropdown('user')}
+                >
+                    <div className="btn-group">
+                        <button
+                            data-bs-toggle="dropdown"
+                            data-bs-display="static"
+                            aria-expanded="false"
+                            onClick={() => toggleDropdown('user')}
+                        >
+                            <img src="/src/assets/images/account.png" alt="account image" />
+                        </button>
+                        {dropdowns.user && (
+                            <ul className="dropdown-menu">
+                                <li><Link className="dropdown-item" to="/inscription">Inscription</Link></li>
+                                <li><Link className="dropdown-item" to="/connexion">Connexion</Link></li>
+                            </ul>
+                        )}
+                    </div>
+                </section>
             </section>
         </nav>
     );

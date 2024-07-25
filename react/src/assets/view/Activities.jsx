@@ -44,7 +44,7 @@ export default function () {
     ]
 
     return (
-        <section>
+        <div className="home">
             <Navbar />
             <main className="main-content-activities">
                 <h1>Activities</h1>
@@ -55,6 +55,6 @@ export default function () {
                 </section>
             </main>
             <Footer />
-        </section>
+        </div>
     )
 }

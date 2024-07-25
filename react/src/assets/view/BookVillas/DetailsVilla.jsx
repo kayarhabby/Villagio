@@ -1,6 +1,5 @@
 import React from "react";
 import '../../css/template.css'
-import '../../css/RegionTemplate.css'
 export default function DetailsVilla(props) {
 
     const {

@@ -1,4 +1,4 @@
-export default function FormHome() {
+export default function SearchForm() {
     return (
         <form action="">
             <section>
