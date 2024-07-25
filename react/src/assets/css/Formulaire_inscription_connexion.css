@@ -18,17 +18,23 @@ section#form div.form_container{
     padding: 20px;
     border-radius: 5px;
     height: 60%;
+    width: 500px;
 }
 
 section#form div.form_container form{
     display: flex;
     flex-direction: column;
     row-gap: 20px;
+    width: 100%;
 }
 
 form label {
     display: block;
     margin-bottom: 5px;
+}
+
+input{
+    width: 100%;
 }
 
 input[type="text"],
@@ -59,15 +65,15 @@ input[type="submit"]:hover {
 }
 
 .form-control.success input {
-    border-color: var(--success-color);
+    border-color: #0FC2C0;
 }
 
 .form-control.error input {
-    border-color: var(--error-color);
+    border-color: #ef4444;
 }
 
 .form-control small {
-    color: var(--error-color);
+    color: #ef4444;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -101,6 +107,7 @@ section#form button {
     white-space: nowrap;
     cursor: pointer;
     transition: all .3s;
+    width: 50%;
 }
 
 section#form button:active,
