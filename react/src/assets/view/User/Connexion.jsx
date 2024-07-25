@@ -1,10 +1,11 @@
 import Navbar from "../../components/Navbar.jsx";
 import RegistrationForm from "./RegistrationForm.jsx";
+import NavbarRegistrationForm from "./NavbarRegistrationForm.jsx";
 
 export default function () {
     return (
         <>
-            <Navbar />
+            <NavbarRegistrationForm />
             <RegistrationForm />
         </>
     )
