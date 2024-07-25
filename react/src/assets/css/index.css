@@ -115,10 +115,16 @@ section#cards article div:last-child a{
     text-decoration: underline dashed;
 }
 
+section#cards article div:last-child a:hover{
+    color : #0FC2C0;
+    text-decoration: none;
+}
+
 section#cards article img {
     width: 100%;
     height: 100%;
 }
+
 
 .desc-item-p{
     margin-bottom : 0;
