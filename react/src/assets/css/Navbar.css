@@ -31,6 +31,15 @@ nav > section:last-child {
     column-gap: 10px;
 }
 
+nav > section:last-child img {
+    width : 50px;
+    height : 50px;
+}
+
+nav > section:last-child button {
+    border: none;
+}
+
 
 .dropdown-menu {
     position: absolute;
@@ -60,4 +69,9 @@ nav > section:last-child {
 
 .dropdown-item:hover {
     background-color: #ddd;
+}
+
+
+.btn-group .dropdown-menu {
+    left: -210%;
 }
