@@ -34,16 +34,6 @@ export default function () {
             <section>
                 <FooterLinks title="RECENT COMMENTS" links={recentComments} />
             </section>
-
-            <section>
-                <h3>Search</h3>
-                <div className="search-container">
-                    <form action="">
-                        <input type="text" placeholder="Search.." name="search"/>
-                        {/*<button type="submit"><i className="fa fa-search" aria-hidden="true"></i></button>*/}
-                    </form>
-                </div>
-            </section>
         </aside>
     )
 }
