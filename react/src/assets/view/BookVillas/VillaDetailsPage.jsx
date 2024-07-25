@@ -9,9 +9,8 @@ import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/Footer.jsx";
 import axios from "axios";
 import DetailsVilla from "./DetailsVilla.jsx";
-import ReservationForm from "./ReservationForm.jsx";
 
-function VillabookPage() {
+function VillaDetailsPage() {
     const [villas, setVillas] = useState([]);
 
     const fetchVillas = async () => {
@@ -66,7 +65,6 @@ function VillabookPage() {
                         categories={villas[currentPage].lieu}
                         price={villas[currentPage].Prix}
                     />
-                    <ReservationForm />
                     <Navigation
                         currentPage={currentPage}
                         totalPages={villas.length}
@@ -81,6 +79,6 @@ function VillabookPage() {
     );
 }
 
-export default VillabookPage;
+export default VillaDetailsPage;
 
 
