@@ -1,4 +1,3 @@
-// TestimonialPage.jsx
 import React, {useEffect, useState} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import Navbar from "../../components/Navbar.jsx";
@@ -35,12 +34,12 @@ function VillaDetailsPage() {
 
     const nextPage = () => {
         const nextIndex = currentPage < villas.length - 1 ? currentPage + 1 : currentPage;
-        navigate(`/villa/book/${encodeURIComponent(villas[nextIndex].Titre)}`);
+        navigate(`/villa/details/${encodeURIComponent(villas[nextIndex].Titre)}`);
     };
 
     const prevPage = () => {
         const prevIndex = currentPage > 0 ? currentPage - 1 : currentPage;
-        navigate(`/villa/book/${encodeURIComponent(villas[prevIndex].Titre)}`);
+        navigate(`/villa/details/${encodeURIComponent(villas[prevIndex].Titre)}`);
     };
 
     const imgPathParts = villas[currentPage].Image.split('/');
