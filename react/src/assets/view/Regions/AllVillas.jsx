@@ -5,6 +5,7 @@ import Footer from "../../components/Footer.jsx";
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import Pagination from "./Pagination.jsx";
+import { useNavigate} from "react-router-dom";
 
 export default function AllVillas() {
     const [villas, setVillas] = useState([]);
@@ -26,6 +27,16 @@ export default function AllVillas() {
     const firstPostIndex = lastPostIndex - postsPerPage;
     const currentPosts = villas.slice(firstPostIndex, lastPostIndex);
     console.log(currentPosts);
+
+    const navigate = useNavigate();
+
+    const goToVillaBookPage = (name) => {
+        navigate(`/villa/book/${encodeURIComponent(name)}`);
+    };
+
+    const goToVillaDetailsPage = (name) => {
+        navigate(`/villa/details/${encodeURIComponent(name)}`);
+    };
 
     return (
         <div className="template home">
@@ -51,6 +62,8 @@ export default function AllVillas() {
                                 size={villa.Superficie}
                                 categories={villa.lieu}
                                 price={villa.Prix}
+                                goToVillaBookPage = {goToVillaBookPage}
+                                goToVillaDetailsPage = {goToVillaDetailsPage}
                             />
                         );
                     })}
