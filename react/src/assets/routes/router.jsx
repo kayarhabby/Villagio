@@ -14,6 +14,7 @@ import SightseeingNaples from "../view/Activities/SightseeingNaples.jsx";
 import WineAndCheeseTour from "../view/Activities/WineAndCheeseTour.jsx";
 import TestimonialPage from "../view/Testimoniale/TestimonialPage.jsx";
 import VillabookPage from "../view/BookVillas/VillabookPage.jsx";
+import VillaDetailsPage from "../view/BookVillas/VillaDetailsPage.jsx";
 
 
 const router = createBrowserRouter([
@@ -81,7 +82,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/villa/details/:name',
-        element: <VillabookPage />
+        element: <VillaDetailsPage />
     }
 
 ])
