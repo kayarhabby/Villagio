@@ -6,12 +6,20 @@ export default function Navbar() {
     const [dropdowns, setDropdowns] = useState({
         region: false,
         activities: false,
+        user: false,
     });
 
     const toggleDropdown = (dropdown) => {
         setDropdowns({
             ...dropdowns,
             [dropdown]: !dropdowns[dropdown],
+        });
+    };
+
+    const closeDropdown = (dropdown) => {
+        setDropdowns({
+            ...dropdowns,
+            [dropdown]: false,
         });
     };
 
@@ -28,9 +36,9 @@ export default function Navbar() {
                     <li
                         className="dropdown"
                         onMouseEnter={() => toggleDropdown('region')}
-                        onMouseLeave={() => toggleDropdown('region')}
+                        onMouseLeave={() => closeDropdown('region')}
                     >
-                        <a className="dropdown-toggle" href="#" >
+                        <a className="dropdown-toggle" href="#">
                             REGION
                         </a>
                         {dropdowns.region && (
@@ -47,9 +55,9 @@ export default function Navbar() {
                     <li
                         className="dropdown"
                         onMouseEnter={() => toggleDropdown('activities')}
-                        onMouseLeave={() => toggleDropdown('activities')}
+                        onMouseLeave={() => closeDropdown('activities')}
                     >
-                        <Link className="dropdown-toggle" to="/activities" role="button">
+                        <Link className="dropdown-toggle" to="/activities">
                             ACTIVITIES
                         </Link>
                         {dropdowns.activities && (
@@ -72,6 +80,28 @@ export default function Navbar() {
                     <option selected>Euro</option>
                     <option value="1">USD</option>
                 </select>
+                <section
+                    className="dropdown"
+                    onMouseEnter={() => toggleDropdown('user')}
+                    onMouseLeave={() => closeDropdown('user')}
+                >
+                    <div className="btn-group">
+                        <button
+                            data-bs-toggle="dropdown"
+                            data-bs-display="static"
+                            aria-expanded="false"
+                            onClick={() => toggleDropdown('user')}
+                        >
+                            <img src="/src/assets/images/account.png" alt="account image" />
+                        </button>
+                        {dropdowns.user && (
+                            <ul className="dropdown-menu">
+                                <li><Link className="dropdown-item" to="/inscription">Inscription</Link></li>
+                                <li><Link className="dropdown-item" to="/connexion">Connexion</Link></li>
+                            </ul>
+                        )}
+                    </div>
+                </section>
             </section>
         </nav>
     );
