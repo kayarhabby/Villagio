@@ -12,6 +12,8 @@ import TestimonialPage from "../view/Testimoniale/TestimonialPage.jsx";
 import VillabookPage from "../view/BookVillas/VillabookPage.jsx";
 import VillaDetailsPage from "../view/BookVillas/VillaDetailsPage.jsx";
 import Region from "../view/Regions/Region.jsx";
+import Inscription from "../view/User/Inscription.jsx";
+import Connexion from "../view/User/Connexion.jsx";
 
 
 const router = createBrowserRouter([
@@ -68,7 +70,15 @@ const router = createBrowserRouter([
     {
         path: '/villa/details/:name',
         element: <VillaDetailsPage />
-    }
+    },
+    {
+        path: '/inscription',
+        element: <Inscription />
+    },
+    {
+        path: '/connexion',
+        element: <Connexion />
+    },
 
 ])
 
