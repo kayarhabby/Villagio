@@ -1,14 +1,16 @@
+import {Link} from "react-router-dom";
+
 export default function SearchForm() {
     return (
-        <form action="/searchVillaResult" method="post">
+        <form action="" method="post">
             <section>
                 <div>
                     <label htmlFor="Check-in"> Check-in : </label>
-                    <input type="date" placeholder="Check-in Date"/>
+                    <input type="date" placeholder="Check-in Date" id="Check-in" />
                 </div>
                 <div>
                     <label htmlFor="Check-out"> Check-out : </label>
-                    <input type="date" placeholder="Check-out Date"/>
+                    <input type="date" placeholder="Check-out Date" id="Check-out" />
                 </div>
 
                 <div>
@@ -55,7 +57,7 @@ export default function SearchForm() {
                 </div>
             </section>
 
-            <button type="submit " className="btn"> SEARCH</button>
+            <Link to="/search"><button type="submit " className="btn"> SEARCH</button></Link>
 
         </form>
     )
