@@ -1,6 +1,6 @@
 export default function SearchForm() {
     return (
-        <form action="">
+        <form action="/searchVillaResult" method="post">
             <section>
                 <div>
                     <label htmlFor="Check-in"> Check-in : </label>
