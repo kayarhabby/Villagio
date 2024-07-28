@@ -6,6 +6,7 @@ import ImageCard from "../Activities/ImageDisplay.jsx";
 import Footer from "../../components/Footer.jsx";
 import axios from "axios";
 import ReservationForm from "./ReservationForm.jsx";
+import Aside from "../../components/Aside.jsx";
 
 function VillabookPage() {
     const [villas, setVillas] = useState([]);
@@ -29,24 +30,14 @@ function VillabookPage() {
         return <div>Témoignage non trouvé</div>;
     }
 
-
-    const imgPathParts = villas[currentPage].Image.split('/');
-    const imgFileName = imgPathParts[imgPathParts.length - 1];
-    const src = `/src/assets/images/${imgFileName}`;
-
     return (
         <div className="template home">
             <Navbar/>
-            <ImageCard src={src} title={villas[currentPage].Titre}
-                       alt={villas[currentPage].Titre}/>
-
             <main>
-                <section className="fyv-container">
-                    <p>
-                        Booking your dream villa with Villagio company is really fast and safe. Just set check-in and check-out dates, provide details for reservation and pay online! Your perfect vacation is several clicks away!
-                    </p>
+                <section>
                     <ReservationForm />
                 </section>
+                <Aside />
             </main>
             <Footer/>
         </div>
