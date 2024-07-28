@@ -6,16 +6,16 @@ export default function SearchForm() {
             <section>
                 <div>
                     <label htmlFor="Check-in"> Check-in : </label>
-                    <input type="date" placeholder="Check-in Date" id="Check-in" />
+                    <input type="date" placeholder="Check-in Date" id="Check-in" name="Check-in"/>
                 </div>
                 <div>
                     <label htmlFor="Check-out"> Check-out : </label>
-                    <input type="date" placeholder="Check-out Date" id="Check-out" />
+                    <input type="date" placeholder="Check-out Date" id="Check-out" name="Check-out"/>
                 </div>
 
                 <div>
                     <label htmlFor="Adults"> Adults</label>
-                    <select className="form-select">
+                    <select className="form-select" id="Adults" name="Adults">
                         <option selected>1</option>
                         <option value="1">2</option>
                         <option value="2">3</option>
@@ -31,7 +31,7 @@ export default function SearchForm() {
 
                 <div>
                     <label htmlFor="Children"> Children</label>
-                    <select className="form-select">
+                    <select className="form-select" id="Children" name="Children" >
                         <option selected>0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -48,7 +48,7 @@ export default function SearchForm() {
 
                 <div>
                     <label htmlFor="Region"> Region</label>
-                    <select className="form-select">
+                    <select className="form-select" id="Region" name="Region">
                         <option selected>AllVillas</option>
                         <option value="1">Aosta Valley</option>
                         <option value="2">Lazio</option>
