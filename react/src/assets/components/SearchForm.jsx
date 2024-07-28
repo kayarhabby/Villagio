@@ -16,14 +16,14 @@ export default function SearchForm() {
                     <select className="form-select">
                         <option selected>1</option>
                         <option value="1">2</option>
-                        <option value="1">3</option>
-                        <option value="1">4</option>
-                        <option value="1">5</option>
-                        <option value="1">6</option>
-                        <option value="1">7</option>
-                        <option value="1">8</option>
-                        <option value="1">9</option>
-                        <option value="1">10</option>
+                        <option value="2">3</option>
+                        <option value="3">4</option>
+                        <option value="4">5</option>
+                        <option value="5">6</option>
+                        <option value="6">7</option>
+                        <option value="7">8</option>
+                        <option value="8">9</option>
+                        <option value="9">10</option>
                     </select>
                 </div>
 
@@ -32,15 +32,25 @@ export default function SearchForm() {
                     <select className="form-select">
                         <option selected>0</option>
                         <option value="1">1</option>
-                        <option value="1">2</option>
-                        <option value="1">3</option>
-                        <option value="1">4</option>
-                        <option value="1">5</option>
-                        <option value="1">6</option>
-                        <option value="1">7</option>
-                        <option value="1">8</option>
-                        <option value="1">9</option>
-                        <option value="1">10</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label htmlFor="Region"> Region</label>
+                    <select className="form-select">
+                        <option selected>AllVillas</option>
+                        <option value="1">Aosta Valley</option>
+                        <option value="2">Lazio</option>
+                        <option value="3">Le Marche</option>
                     </select>
                 </div>
             </section>
