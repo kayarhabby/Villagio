@@ -28,7 +28,6 @@ export default function () {
 
     return (
         <aside>
-            <SearchForm/>
             <RegionButtons {...regionButtonsData} />
             <RecommendSection {...recommendSectionData} />
             <section>
