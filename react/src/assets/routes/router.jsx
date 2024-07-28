@@ -81,7 +81,7 @@ const router = createBrowserRouter([
         element: <Connexion />
     },
     {
-        path: '/searchVillaResults',
+        path: '/search',
         element: <SearchVillaResults />
     }
 ])
