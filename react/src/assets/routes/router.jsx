@@ -14,6 +14,7 @@ import VillaDetailsPage from "../view/BookVillas/VillaDetailsPage.jsx";
 import Region from "../view/Regions/Region.jsx";
 import Inscription from "../view/User/Inscription.jsx";
 import Connexion from "../view/User/Connexion.jsx";
+import SearchVillaResults from "../view/BookVillas/SearchVillaResults.jsx";
 
 
 const router = createBrowserRouter([
@@ -79,7 +80,10 @@ const router = createBrowserRouter([
         path: '/connexion',
         element: <Connexion />
     },
-
+    {
+        path: '/searchVillaResults',
+        element: <SearchVillaResults />
+    }
 ])
 
 export default router;
