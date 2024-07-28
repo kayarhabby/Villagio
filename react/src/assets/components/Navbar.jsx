@@ -80,10 +80,6 @@ export default function Navbar() {
                     <option selected>English</option>
                     <option value="1">Français</option>
                 </select>
-                <select className="form-select" id="monnaie" name="monnaie">
-                    <option selected>Euro</option>
-                    <option value="1">USD</option>
-                </select>
                 <section
                     className="dropdown"
                     onMouseEnter={() => toggleDropdown('user')}
