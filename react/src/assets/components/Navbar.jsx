@@ -76,11 +76,11 @@ export default function Navbar() {
                 </ul>
             </section>
             <section>
-                <select className="form-select">
+                <select className="form-select" id="langues" name="langues">
                     <option selected>English</option>
                     <option value="1">Français</option>
                 </select>
-                <select className="form-select">
+                <select className="form-select" id="monnaie" name="monnaie">
                     <option selected>Euro</option>
                     <option value="1">USD</option>
                 </select>
