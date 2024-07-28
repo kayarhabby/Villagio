@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import RegionTemplate from "../Regions/RegionTemplate.jsx";
 import Navbar from "../../components/Navbar.jsx";
 import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/Footer.jsx";
+import SearchRegionTemplate from "./SearchRegionTemplate.jsx";
 
 export default function SearchVillaResults() {
     const [villas, setVillas] = useState([]);
@@ -20,7 +20,7 @@ export default function SearchVillaResults() {
             }
         };
         fetchVillas();
-    }, [regionId]);
+    }, []);
 
     const goToVillaBookPage = (name) => {
         navigate(`/villa/book/${encodeURIComponent(name)}`);
@@ -48,7 +48,7 @@ export default function SearchVillaResults() {
                         const src = `/src/assets/images/${imgFileName}`;
 
                         return (
-                            <RegionTemplate
+                            <SearchRegionTemplate
                                 key={villa.id_villa}
                                 src={src}
                                 alt={villa.Titre}
