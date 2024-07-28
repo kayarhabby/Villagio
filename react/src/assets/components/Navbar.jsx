@@ -47,7 +47,6 @@ export default function Navbar() {
                                 <li><Link className="dropdown-item" to="/region/2">LAZIO</Link></li>
                                 <li><Link className="dropdown-item" to="/region/3">LE MARCHE</Link></li>
                                 <li><Link className="dropdown-item" to="/allVillas">ALL VILLAS</Link></li>
-                                <li><Link className="dropdown-item" to="/findYourVilla">FIND YOUR VILLA</Link></li>
                             </ul>
                         )}
                     </li>
@@ -62,13 +61,18 @@ export default function Navbar() {
                         </Link>
                         {dropdowns.activities && (
                             <ul className="dropdown-menu">
-                                <li><Link className="dropdown-item" to="/CapriBoatTourFromSorrento">CAPRI BOAT TOUR FROM SORRENTO</Link></li>
-                                <li><Link className="dropdown-item" to="/SightseeingNaples">SIGHTSEEING NAPLES TOUR FOR FAMILIES</Link></li>
-                                <li><Link className="dropdown-item" to="/LearnHistory">LEARN HISTORY: HALF-DAY TRIP TO POMPEII</Link></li>
-                                <li><Link className="dropdown-item" to="/WineAndCheese">Wine and Cheese Tour at Le Marche’s Popular Wine Estate</Link></li>
+                                <li><Link className="dropdown-item" to="/CapriBoatTourFromSorrento">CAPRI BOAT TOUR FROM
+                                    SORRENTO</Link></li>
+                                <li><Link className="dropdown-item" to="/SightseeingNaples">SIGHTSEEING NAPLES TOUR FOR
+                                    FAMILIES</Link></li>
+                                <li><Link className="dropdown-item" to="/LearnHistory">LEARN HISTORY: HALF-DAY TRIP TO
+                                    POMPEII</Link></li>
+                                <li><Link className="dropdown-item" to="/WineAndCheese">Wine and Cheese Tour at Le
+                                    Marche’s Popular Wine Estate</Link></li>
                             </ul>
                         )}
                     </li>
+                    <li><Link to="/findYourVilla">FIND YOUR VILLA</Link></li>
                 </ul>
             </section>
             <section>
