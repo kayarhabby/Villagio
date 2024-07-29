@@ -215,11 +215,14 @@ footer .footer-text-container{
 }
 
 footer .footer-text-container section > article{
-   display: flex;
+    display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
+footer .footer-text-container section > article p{
+    margin: 0;
+}
 
 footer .footer-bas-page{
     display: flex;
@@ -240,6 +243,10 @@ footer .footer-bas-page{
 
 .footer-link a:hover{
     color: #0FC2C0;
+}
+
+.footer-link h2{
+    margin : 0;
 }
 
 footer h2{
@@ -343,6 +350,87 @@ footer p{
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #cards{
+        grid-template-columns: repeat(2,1fr);
+    }
 
+    .guest-container-card{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .guest-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .guest-container section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .guest-container section p{
+        text-align: center;
+    }
+
+    footer .footer-text-container{
+        grid-template-columns: 1fr;
+        padding : 10px;
+    }
+    .footer-link {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    footer .footer-bas-page{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #main-header-text-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    #main-header-text-content form{
+        margin : 0;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        gap : 10px;
+    }
+
+    #main-header-text-content form section{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        column-gap: 10px;
+        margin : 0;
+        width: 100%;
+    }
+
+    #main-header-text-content form section div{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    #main-header-text-content form section div label{
+        margin-left: 0;
+        margin-right: 0;
+    }
 
 }
