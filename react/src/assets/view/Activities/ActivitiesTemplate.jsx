@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar.jsx";
 import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/Footer.jsx";
 import React from "react";
-import ImageCard from "./ImageDisplay.jsx";
+import ImageCard from "./ImageCard.jsx";
 
 export default function (props) {
     const paragraphs = props.descActivitie.split('\n');

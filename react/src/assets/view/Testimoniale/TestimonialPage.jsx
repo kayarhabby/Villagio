@@ -2,7 +2,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from "../../components/Navbar.jsx";
-import ImageCard from "../Activities/ImageDisplay.jsx";
+import ImageCard from "../Activities/ImageCard.jsx";
 import TextTestimonial from "./TextTestimonial.jsx";
 import Navigation from "./Navigation.jsx";
 import Aside from "../../components/Aside.jsx";

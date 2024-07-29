@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import Navbar from "../../components/Navbar.jsx";
-import ImageCard from "../Activities/ImageDisplay.jsx";
+import ImageCard from "../Activities/ImageCard.jsx";
 import TextTestimonial from "../Testimoniale/TextTestimonial.jsx";
 import Navigation from "../Testimoniale/Navigation.jsx";
 import Aside from "../../components/Aside.jsx";
@@ -53,7 +53,7 @@ function VillaDetailsPage() {
                        alt={villas[currentPage].Titre}/>
 
             <main>
-                <section>
+                <section className="villa-details-page">
                     <TextTestimonial text={villas[currentPage].Description}/>
                     <DetailsVilla
                         key={villas[currentPage].id_villa}

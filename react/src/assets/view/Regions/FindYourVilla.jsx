@@ -1,7 +1,7 @@
 import Navbar from "../../components/Navbar.jsx";
 import Footer from "../../components/Footer.jsx";
 import React from "react";
-import ImageCard from "../Activities/ImageDisplay.jsx";
+import ImageCard from "../Activities/ImageCard.jsx";
 import SearchForm from "../../components/SearchForm.jsx";
 
 export default function FindYourVilla() {

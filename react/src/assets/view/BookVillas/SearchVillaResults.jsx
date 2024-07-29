@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar.jsx";
-import '../../css/Search.css'
 import Footer from "../../components/Footer.jsx";
 import SearchRegionTemplate from "./SearchRegionTemplate.jsx";
 
