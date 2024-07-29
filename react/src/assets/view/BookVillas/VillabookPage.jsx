@@ -37,7 +37,6 @@ function VillabookPage() {
                 <section>
                     <ReservationForm />
                 </section>
-                <Aside />
             </main>
             <Footer/>
         </div>
