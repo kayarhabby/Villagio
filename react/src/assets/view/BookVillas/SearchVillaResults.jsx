@@ -66,7 +66,6 @@ export default function SearchVillaResults() {
                         );
                     })}
                 </section>
-                <Aside />
             </main>
             <Footer />
         </div>
