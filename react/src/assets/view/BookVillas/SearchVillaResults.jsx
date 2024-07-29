@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar.jsx";
-import Aside from "../../components/Aside.jsx";
+import '../../css/Search.css'
 import Footer from "../../components/Footer.jsx";
 import SearchRegionTemplate from "./SearchRegionTemplate.jsx";
 
@@ -31,41 +31,38 @@ export default function SearchVillaResults() {
     };
 
     return (
-        <div className="template home">
+        <div className="home">
             <Navbar />
             <main>
-                <section>
+                <article className="villa-search-title">
+                    <h1>Search Results</h1>
+                    <p>{villas.length} accommodations found </p>
+                </article>
 
-                    <article>
-                        <h1>Search Results</h1>
-                        <p>{villas.length} accommodations found </p>
-                    </article>
+                {villas.map((villa) => {
+                    // Split the image URL
+                    const imgPathParts = villa.Image.split('/');
+                    const imgFileName = imgPathParts[imgPathParts.length - 1];
+                    const src = `/src/assets/images/${imgFileName}`;
 
-                    {villas.map((villa) => {
-                        // Split the image URL
-                        const imgPathParts = villa.Image.split('/');
-                        const imgFileName = imgPathParts[imgPathParts.length - 1];
-                        const src = `/src/assets/images/${imgFileName}`;
-
-                        return (
-                            <SearchRegionTemplate
-                                key={villa.id_villa}
-                                src={src}
-                                alt={villa.Titre}
-                                description={villa.Description}
-                                title={villa.Titre}
-                                nbAdult={villa.Adultes}
-                                nbChildren={villa.Enfants}
-                                amenities={villa.Equipements}
-                                size={villa.Superficie}
-                                categories={villa.lieu}
-                                price={villa.Prix}
-                                goToVillaBookPage={goToVillaBookPage}
-                                goToVillaDetailsPage={goToVillaDetailsPage}
-                            />
-                        );
-                    })}
-                </section>
+                    return (
+                        <SearchRegionTemplate
+                            key={villa.id_villa}
+                            src={src}
+                            alt={villa.Titre}
+                            description={villa.Description}
+                            title={villa.Titre}
+                            nbAdult={villa.Adultes}
+                            nbChildren={villa.Enfants}
+                            amenities={villa.Equipements}
+                            size={villa.Superficie}
+                            categories={villa.lieu}
+                            price={villa.Prix}
+                            goToVillaBookPage={goToVillaBookPage}
+                            goToVillaDetailsPage={goToVillaDetailsPage}
+                        />
+                    );
+                })}
             </main>
             <Footer />
         </div>
