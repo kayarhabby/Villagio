@@ -10,9 +10,154 @@
     height: 400px;
 }
 
-.image-card{
+.image-card {
+    position: relative;
+    display: inline-block;
+    width: 100%;
     margin-top: 30px;
 }
+
+.image {
+    display: block;
+    width: 100%;
+    height: 70vh;
+}
+
+.title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 50px;
+    background-color: #4b5563;
+    font-size: 2em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*find your villa*/
+.fyv-container {
+    margin-top : 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    max-width: 1200px;
+}
+
+.fyv-container form section{
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.fyv-container form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 500px;
+    row-gap: 30px;
+}
+
+
+.fyv-container form div{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.fyv-container form div label{
+    margin-left: 0;
+}
+
+.fyv-container form div input{
+    border : 1px solid #718096;
+    padding: 10px;
+}
+
+/*pagination*/
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.pagination button {
+    width: 40px;
+    height: 40px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #eee;
+    border-color: #eee;
+}
+
+.pagination button.active {
+    font-weight: 900;
+    border-color: #101010;
+    background: #ffe400;
+    color: #101010;
+}
+
+/*activities template*/
+
+.main-content-activities{
+    display: grid;
+    row-gap: 30px;
+}
+
+.main-content-activities h1{
+    margin-left: 0;
+}
+
+.activitie-container{
+    display : grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.activitie-container img {
+    width: 100%;
+}
+
+/*region template*/
+ul.description{
+    padding-left: 0;
+}
+
+ul.description li{
+    border-top : 1px solid #718096;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+ul.description li span{
+    color: #718096;
+}
+
+.link {
+    display: flex;
+    gap: 30px;
+}
+
+.link a{
+    margin-right: 0;
+    margin-left: 0;
+    color : black;
+    text-decoration: underline dashed;
+}
+
 /*#####################################################"*/
 .reservation-form{
     display: flex;
@@ -70,3 +215,7 @@ aside img{
     width: 100%;
     height: 50%;
 }
+
+
+
+

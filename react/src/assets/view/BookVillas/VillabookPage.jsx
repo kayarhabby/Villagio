@@ -2,11 +2,9 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import Navbar from "../../components/Navbar.jsx";
-import ImageCard from "../Activities/ImageDisplay.jsx";
 import Footer from "../../components/Footer.jsx";
 import axios from "axios";
 import ReservationForm from "./ReservationForm.jsx";
-import Aside from "../../components/Aside.jsx";
 
 function VillabookPage() {
     const [villas, setVillas] = useState([]);

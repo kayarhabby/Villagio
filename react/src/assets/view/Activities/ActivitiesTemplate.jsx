@@ -3,7 +3,6 @@ import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/Footer.jsx";
 import React from "react";
 import ImageCard from "./ImageDisplay.jsx";
-import '../../css/ImageCard.css'
 
 export default function (props) {
     const paragraphs = props.descActivitie.split('\n');

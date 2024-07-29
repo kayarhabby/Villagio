@@ -2,7 +2,6 @@ import React from "react";
 import ActivitiesCard from "./Activities/ActivitiesCard.jsx";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
-import "../css/ActivitiesCard.css";
 
 export default function () {
 

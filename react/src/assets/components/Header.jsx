@@ -1,4 +1,3 @@
-import "../css/Header.css";
 import { useNavigate } from "react-router-dom";
 import HeaderText from "./HeaderText.jsx";
 import React from "react";

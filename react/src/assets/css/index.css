@@ -62,9 +62,30 @@ main {
     margin-bottom: 50px;
 }
 
+header img {
+    width: 100%;
+    height: 70vh;
+    filter: grayscale(70%);
+}
+
+header a{
+    color : var(--white);
+    background-color: #4b5563;
+    padding : 5px;
+}
+
+header h1{
+    color : var(--white);
+}
+
+header p{
+    color : var(--white);
+    margin-left: 0;
+}
+
 /*####################################################################################################*/
 
-section#main-header-text-content{
+#main-header-text-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,20 +94,20 @@ section#main-header-text-content{
     margin-top: 30px;
 }
 
-section#main-header-text-content form{
+#main-header-text-content form{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
-section#main-header-text-content form section{
+#main-header-text-content form section{
     display: flex;
     justify-content: center;
     column-gap: 50px;
 }
 
-section#main-header-text-content form section div{
+#main-header-text-content form section div{
     display: flex;
     flex-direction: column;
     column-gap: 5px;
@@ -96,7 +117,7 @@ section#main-header-text-content form section div{
 
 /*#####################################################################*/
 
-section#cards{
+#cards{
     display: grid;
     grid-template-rows : auto;
     grid-template-columns: repeat(3, 1fr);
@@ -104,13 +125,13 @@ section#cards{
     gap: 30px;
 }
 
-section#cards article{
+#cards article{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-section#cards article div:last-child {
+#cards article div:last-child {
     display: flex;
     column-gap: 50px;
 }
@@ -120,17 +141,17 @@ section#cards article div:last-child a{
     text-decoration: underline dashed;
 }
 
-section#cards article div:last-child a:hover{
+#cards article div:last-child a:hover{
     color : #0FC2C0;
     text-decoration: none;
 }
 
-section#cards article img {
+#cards article img {
     width: 100%;
     height: 100%;
 }
 
-section#cards article > a:nth-child(2):hover{
+#cards article > a:nth-child(2):hover{
     color : #0FC2C0;
 }
 
@@ -166,7 +187,7 @@ section#cards article > a:nth-child(2):hover{
     border-radius: 50%;
 }
 
-section#guest{
+#guest {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -174,7 +195,7 @@ section#guest{
 
 .guest-container{
     display: flex;
-    column-gap: 20px;
+    gap: 20px;
 }
 
 .guest-container-card{
@@ -196,7 +217,7 @@ footer .footer-text-container{
 footer .footer-text-container section > article{
    display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    gap: 30px;
 }
 
 
@@ -210,7 +231,7 @@ footer .footer-bas-page{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    row-gap: 30px;
+    gap: 30px;
 }
 
 .footer-link a{
@@ -235,11 +256,93 @@ footer p{
 
 /*media queries start */
 @media only screen and (max-width: 767px) {
+    #cards{
+        grid-template-columns: 1fr;
+    }
+
+    .guest-container-card{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .guest-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .guest-container section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .guest-container section p{
+        text-align: center;
+    }
+
+    footer .footer-text-container{
+        grid-template-columns: 1fr;
+        padding : 10px;
+    }
+    .footer-link {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    footer .footer-bas-page{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #main-header-text-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    #main-header-text-content form{
+        margin : 0;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+        gap : 10px;
+    }
+
+    #main-header-text-content form section{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        column-gap: 10px;
+        margin : 0;
+        width: 100%;
+    }
+
+    #main-header-text-content form section div{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    #main-header-text-content form section div label{
+        margin-left: 0;
+        margin-right: 0;
+    }
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  
+
 
 }
