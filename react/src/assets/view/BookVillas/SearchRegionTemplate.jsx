@@ -19,8 +19,8 @@ export default function SearchRegionTemplate(props) {
     } = props;
 
     return (
-        <article>
-            <img src={src} alt={alt}/>
+        <article className="villa-search">
+            <img src={src} alt={alt} />
             <section>
                 <h2>{title}</h2>
                 <p>{description}</p>
