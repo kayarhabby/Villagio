@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar.jsx";
 import Footer from "../../components/Footer.jsx";
 import axios from "axios";
 import ReservationForm from "./ReservationForm.jsx";
+import ImageCard from "../Activities/ImageCard.jsx";
 
 function VillabookPage() {
     const [villas, setVillas] = useState([]);
@@ -28,9 +29,15 @@ function VillabookPage() {
         return <div>Témoignage non trouvé</div>;
     }
 
+    const imgPathParts = villas[currentPage].Image.split('/');
+    const imgFileName = imgPathParts[imgPathParts.length - 1];
+    const src = `/src/assets/images/${imgFileName}`;
+
     return (
         <div className="template home">
             <Navbar/>
+            <ImageCard src={src} title={villas[currentPage].Titre}
+                       alt={villas[currentPage].Titre}/>
             <main>
                 <section>
                     <ReservationForm />
