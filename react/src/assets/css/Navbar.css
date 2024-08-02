@@ -1,16 +1,17 @@
+/* Base Styles */
 nav {
     display: flex;
     justify-content: space-between;
     padding: 16px 30px 0 30px;
 }
 
-nav section{
-    margin : 0;
+nav section {
+    margin: 0;
     display: flex;
     align-items: center;
 }
 
-nav section > a{
+nav section > a {
     font-size: 2rem;
     font-weight: 700;
 }
@@ -18,28 +19,29 @@ nav section > a{
 nav section > ul {
     display: flex;
     align-items: center;
-    gap : 16px;
-    margin-bottom : 0;
+    gap: 16px;
+    margin-bottom: 0;
 }
 
-nav section > ul li a{
+nav section > ul li a {
     font-size: 1rem;
+    padding: 12px 0;
+    display: block;
 }
 
-nav > section:last-child {
+.btn-group {
     display: flex;
     column-gap: 10px;
 }
 
-nav > section:last-child img {
-    width : 50px;
-    height : 50px;
+.btn-group img {
+    width: 50px;
+    height: 50px;
 }
 
-nav > section:last-child button {
+.btn-group button {
     border: none;
 }
-
 
 .dropdown-menu {
     position: absolute;
@@ -71,7 +73,122 @@ nav > section:last-child button {
     background-color: #ddd;
 }
 
+.dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 0;
+    cursor: pointer;
+}
 
 .btn-group .dropdown-menu {
     left: -210%;
+}
+
+.menu-hamburger {
+    display: none;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 767px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav section {
+        margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav section > ul {
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 0;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    nav section > ul li {
+        margin: 0;
+        border-top: 1px solid #718096;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        left: 0;
+        top: auto;
+        min-width: 100%;
+        box-shadow: none;
+        border: none;
+    }
+
+    .dropdown-item {
+        padding: 12px 16px;
+        color: black;
+        text-decoration: none;
+        display: block;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    .dropdown-item:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .villagio_link_item section:nth-child(2) {
+        gap: 10px;
+    }
+
+    .villagio_icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .villagio_icon a {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .menu-hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-hamburger a {
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
+
+    .menu-hamburger .fa-x {
+        display: none;
+    }
+
+    .menu-hamburger.active .fa-bars {
+        display: none;
+    }
+
+    .menu-hamburger.active .fa-x {
+        display: inline-block;
+    }
+
+    /* Ensure visibility of menu when open */
+    .villagio_link_item.is-visible {
+        display: block;
+    }
+
+    .villagio_link_item {
+        display: none;
+    }
 }
