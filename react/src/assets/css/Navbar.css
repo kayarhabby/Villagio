@@ -1,32 +1,43 @@
 /* Base Styles */
 nav {
     display: flex;
-    justify-content: space-between;
     padding: 16px 30px 0 30px;
 }
 
-nav section {
+nav > article {
     margin: 0;
-    display: flex;
-    align-items: center;
 }
 
-nav section > a {
+.villagio_icon > a {
     font-size: 2rem;
     font-weight: 700;
 }
 
-nav section > ul {
+.villagio_link_item{
     display: flex;
+    justify-content : space-between;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 0;
+    width: 100%;
 }
 
-nav section > ul li a {
+.villagio_link_item section {
+    margin: 0;
+}
+
+.villagio_link_item section > ul {
+    display: flex;
+    gap: 16px;
+}
+
+.villagio_link_item ul li a {
     font-size: 1rem;
     padding: 12px 0;
     display: block;
+}
+
+.villagio_link_item section:nth-child(2) {
+    display: flex;
+    gap: 16px;
 }
 
 .btn-group {
@@ -98,11 +109,9 @@ nav section > ul li a {
 
     nav section {
         margin: 0;
-        flex-direction: column;
-        align-items: flex-start;
     }
 
-    nav section > ul {
+    nav article section > ul {
         flex-direction: column;
         gap: 20px;
         padding-left: 0;
@@ -135,9 +144,10 @@ nav section > ul li a {
     }
 
     .dropdown-item:hover {
-        background-color: #ddd;
+        background-color: #a0aec0;
     }
 
+    /* Center the dropdown items and create space between text and arrow */
     .dropdown-toggle {
         display: flex;
         justify-content: space-between;
@@ -146,7 +156,8 @@ nav section > ul li a {
     }
 
     .villagio_link_item section:nth-child(2) {
-        gap: 10px;
+        flex-direction: column;
+        gap: 16px;
     }
 
     .villagio_icon {
