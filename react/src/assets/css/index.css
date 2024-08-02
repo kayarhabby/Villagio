@@ -346,6 +346,13 @@ footer p{
         margin-right: 0;
     }
 
+    .home {
+        box-shadow: none;
+        border: none;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -431,6 +438,13 @@ footer p{
     #main-header-text-content form section div label{
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .home {
+        box-shadow: none;
+        border: none;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
 }
