@@ -40,7 +40,7 @@ export default function Navbar() {
 
     return (
         <nav id="navbar">
-            <div className="villagio_icon">
+            <article className="villagio_icon">
                 <section
                     className={`menu-hamburger ${isMenuOpen ? 'active' : ''}`}
                     onClick={toggleMenu}
@@ -49,8 +49,8 @@ export default function Navbar() {
                     <a href="#"><i className="fa-solid fa-x"></i></a>
                 </section>
                 <a href="/">Villagio</a>
-            </div>
-            <div className={`villagio_link_item ${isMenuOpen ? 'is-visible' : ''}`}>
+            </article>
+            <article className={`villagio_link_item ${isMenuOpen ? 'is-visible' : ''}`}>
                 <section>
                     <ul>
                         <li
@@ -119,7 +119,7 @@ export default function Navbar() {
                         </div>
                     </section>
                 </section>
-            </div>
+            </article>
         </nav>
     );
 }
