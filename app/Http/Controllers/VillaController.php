@@ -24,28 +24,45 @@ class VillaController extends Controller
     //Rechercher des villas disponibles
     public function search(Request $request)
     {
-        // Validation des données
-        $request->validate([
-            'Date_debut_disponible' => 'required|date',
-            'Date_fin_disponible' => 'required|date',
-            'Adultes' => 'required|integer|min:1',
-            'Enfants' => 'required|integer|min:0',
-        ]);
+        // Récupérer les paramètres de recherche depuis la requête
+        $dateDebut = $request->input('Date_debut_disponible');
+        $dateFin = $request->input('Date_fin_disponible');
+        $adultes = $request->input('Adultes');
+        $enfants = $request->input('Enfants');
+        $lieuId = $request->input('lieu_id'); // Récupérer l'ID du lieu sélectionné
 
-        $Date_debut_disponible = Carbon::parse($request->Date_debut_disponible);//Faciliter la manipulation des dates
-        $Date_fin_disponible = Carbon::parse($request->Date_fin_disponible);//Faciliter la manipulation des dates
-        $Adultes = $request->Adultes;
-        $Enfants = $request->Enfants;
+        // Construire la requête de recherche
+        $query = Villa::query();
 
-        // Rechercher les villas disponibles
-        $villa = Villa::where('Date_debut_disponible', '<=', $Date_debut_disponible)
-            ->where('Date_fin_disponible', '>=', $Date_fin_disponible)
-            ->where('Adultes', '>=', $Adultes)
-            ->where('Enfants', '>=', $Enfants)
-            ->get();
+        // Filtrer par lieu (si sélectionné)
+        if ($lieuId && $lieuId !== 'AllVillas') {
+            $query->where('id_lieu', $lieuId);
+        }
 
+        // Filtrer par date de disponibilité
+        if ($dateDebut && $dateFin) {
+            $query->where('Date_debut_disponible', '<=', $dateDebut)
+                ->where('Date_fin_disponible', '>=', $dateFin);
+        }
+
+        // Filtrer par nombre d'adultes
+        if ($adultes) {
+            $query->where('Adultes', '>=', $adultes);
+        }
+
+        // Filtrer par nombre d'enfants
+        if ($enfants) {
+            $query->where('Enfants', '>=', $enfants);
+        }
+
+        // Récupérer les résultats
+        $villa = $query->get();
+
+        // Retourner les résultats sous forme de ressource JSON
         return VillaResource::collection($villa);
     }
+
+
 
     // Créer une nouvelle villa
     public function store(Request $request)
