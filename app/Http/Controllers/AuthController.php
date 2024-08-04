@@ -47,6 +47,7 @@ class AuthController extends Controller
         return response()->json(['error' => 'Les informations de connexion sont incorrectes'], 401);
     }
 
+    //Déconnexion du client
     public function deconnexion(Request $request)
     {
         auth()->logout();
