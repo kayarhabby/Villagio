@@ -105,7 +105,7 @@ export default function ConnexionForm() {
 
                     {/* Champ de saisie pour le mot de passe */}
                     <div className={`form-control ${errors.Password ? 'error' : ''}`}>
-                        <label htmlFor="Password">Mot de passe</label>
+                        <label htmlFor="Password">Password </label>
                         <div style={{ display: 'flex', alignItems: 'center' }}>
                             <input
                                 type={showPassword ? 'text' : 'password'} // Permet de basculer entre type 'text' et 'password'
