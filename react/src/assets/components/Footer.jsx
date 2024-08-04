@@ -25,7 +25,7 @@ export default function Footer() {
 
     const multilingualVillagioData = {
         title: "MULTILINGUAL VILLAGIO",
-        descriptions: "The demo content in German is not a professional translation! It’s sample data used to demonstrate a multilingual website (localization was performed via WPML plugin, which is NOT included into the theme). " +
+        descriptions: "The demo content in German is not a professional translations! It’s sample data used to demonstrate a multilingual website (localization was performed via WPML plugin, which is NOT included into the theme). " +
             "\n" +
             "Note: multi-currency is performed via addon, which is NOT included into the theme."
     };
