@@ -1,0 +1,23 @@
+{
+    "sightseeingNaples": {
+        "title": "Visite de Naples en Famille",
+        "desc": "Explorez une belle Naples avec votre famille lors de cette visite adaptée aux enfants.\n\nVous plongerez dans l'histoire, l'art, la cuisine et les traditions de Naples sans que ce ne soit ennuyeux pour vos enfants grâce à une visite interactive conçue pour les enfants. Vous serez guidé par un guide anglophone pour une expérience amusante et éducative, préparez-vous à ce que vos enfants soient très impliqués !",
+        "link": "/SightseeingNaples"
+    },
+    "wineAndCheese": {
+        "title": "Tour du Vin et du Fromage au Domaine Viticole Populaire de Le Marche",
+        "desc": "Intéressé par une leçon essentielle sur la culture du vin de Le Marche ? Nous avons quelque chose de vin et de savoureux pour vous – une visite guidée dans l'une des plus anciennes caves de la région, avec dégustation de vins fins locaux accompagnée d'un plateau sélectif de viandes et de fromages locaux. Vous aurez donc également la chance de goûter au fromage italien.",
+        "link": "/WineAndCheese"
+    },
+    "capriBoatTour": {
+        "title": "Excursion en Bateau à Capri depuis Sorrente",
+        "desc": "Amateur de balades en bateau et de tours en yacht ? Découvrez la séduisante île de Capri lors d'une excursion en bateau d'une journée au départ de Sorrente chaque jour ! Pour les visiteurs de notre villa, il y a encore plus de bonus !",
+        "link": "/CapriBoatTourFromSorrento"
+    },
+    "learnHistory": {
+        "title": "Apprenez l'Histoire : Excursion d'une Demi-journée à Pompéi",
+        "desc": "Intéressé par l'histoire de l'Italie ? Alors vous devez absolument visiter les vestiges classés au patrimoine mondial de l'UNESCO de la ville romaine de Pompéi ! Nous proposons ce voyage pour une visite de 3 heures depuis Naples. Tous les transferts sont fournis.",
+        "link": "/LearnHistory"
+    },
+    "activitiesTitle": "Activités"
+}

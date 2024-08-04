@@ -1,34 +1,10 @@
-// App.js
+// Testimonial.js
 import React from 'react';
-import {useNavigate} from "react-router-dom";
-
-
-
-const guests = [
-    {
-        id: 1,
-        src: "/src/assets/images/joeDoe.jpg",
-        alt: "JOE DOE",
-        comments: "I was in Italy for the first time and stayed by chance in a winder cottage Monte Bianco. I must say that was an unforgettable experience!",
-        name : "JOE DOE"
-    },
-    {
-        id: 2,
-        src: "/src/assets/images/kimLee.jpg",
-        alt: "KIM LEE",
-        comments: "I’ll never forget our summer stay at villa Emilia! Perfect location, perfect service, amazing nature views. I enjoyed the stay and would recommend it to everyone. Moreover, there are a lot of interesting things to visit and do – fests, food tours, castles tours and much more!",
-        name : "KIM LEE"
-    },
-    {
-        id: 3,
-        src: "/src/assets/images/tomHendrix.jpg",
-        alt: "John Doe",
-        comments: "I was visiting Le Marche with my family and friends and stayed at  Etna House – this was an amazing and unforgettable stay! A lot of space, a pool, a beachfront, just a peaceful rest.",
-        name : "TOM HENDRIX"
-    }
-];
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 function Testimonial() {
+    const { t } = useTranslation('testimonial');
 
     const navigate = useNavigate();
 
@@ -36,19 +12,43 @@ function Testimonial() {
         navigate(`/testimonial/${encodeURIComponent(name)}`);
     };
 
+    const guests = [
+        {
+            id: 1,
+            key: 'joeDoe',
+            src: "/src/assets/images/joeDoe.jpg",
+            alt: "JOE DOE",
+            name: "JOE DOE"
+        },
+        {
+            id: 2,
+            key: 'kimLee',
+            src: "/src/assets/images/kimLee.jpg",
+            alt: "KIM LEE",
+            name: "KIM LEE"
+        },
+        {
+            id: 3,
+            key: 'tomHendrix',
+            src: "/src/assets/images/tomHendrix.jpg",
+            alt: "TOM HENDRIX",
+            name: "TOM HENDRIX"
+        }
+    ];
+
     return (
         <section id="guest">
-            <h2>
-                Guest Reviews
-            </h2>
+            <h2>{t('guestReviews')}</h2>
             <div className="guest-container-card">
                 {guests.map((guest) => (
                     <div key={guest.id}>
                         <article className="guest-container">
-                            <img src={guest.src} alt={guest.alt} className="cercle-img"/>
+                            <img src={guest.src} alt={t(`guests.${guest.key}.alt`)} className="cercle-img" />
                             <section>
-                                <p>{guest.comments}</p>
-                                <button className="btn" onClick={() => goToTestimonialPage(guest.name)}>{guest.name}</button>
+                                <p>{t(`guests.${guest.key}.comments`)}</p>
+                                <button className="btn" onClick={() => goToTestimonialPage(guest.name)}>
+                                    {t(`guests.${guest.key}.name`)}
+                                </button>
                             </section>
                         </article>
                     </div>

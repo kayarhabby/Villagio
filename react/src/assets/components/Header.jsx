@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import HeaderText from "./HeaderText.jsx";
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
-
+    const { t } = useTranslation('header');
     const navigate = useNavigate();
 
     const goToVillaBookPage = (name) => {
@@ -13,30 +14,30 @@ export default function Header() {
     const pages = [
         {
             id: 1,
-            title: "Villa Bastilicata Grande",
-            desc: "This is a perfect villa with spa center and hot tub for private, family and corporate rest in Le Marche region in Italy, with best nature views.",
+            title: t('villa1.title'),
+            desc: t('villa1.desc'),
             src: "/src/assets/images/Villa_Bastilicata_Grande.jpg",
             link: "/leMarche",
             region: "Le Marche",
-            price: "Prices start at: $630 for 3 nights (+taxes and fees)"
+            price: t('villa1.price')
         },
         {
             id: 2,
-            title: "Seaside Villa Tuscany Maremma",
-            desc: "A beautiful villa in one of the most attractive destinations of Italy – in Maremma coastline area, in northwestern Italy.",
+            title: t('villa2.title'),
+            desc: t('villa2.desc'),
             src: "/src/assets/images/Seaside_Villa_Tuscany_Maremma.jpg",
             link: "/lazio",
             region: "Lazio",
-            price: "Prices start at: $474 for 3 nights (+taxes and fees)"
+            price: t('villa2.price')
         },
         {
             id: 3,
-            title: "Beachfront Villa Casa Aurora",
-            desc: "A wonderful fully equipped beachfront villa in Lazio, the home of Rome, where you’ll can get your best vacation memories.",
+            title: t('villa3.title'),
+            desc: t('villa3.desc'),
             src: "/src/assets/images/Beachfront_Villa_Casa_Aurora.jpg",
             link: "/lazio",
             region: "Lazio",
-            price: "Prices start at: $360 for 3 nights (+taxes and fees)"
+            price: t('villa3.price')
         }
     ];
 

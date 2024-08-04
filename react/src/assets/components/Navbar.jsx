@@ -1,8 +1,12 @@
+// Navbar.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import i18n from '../js/i18n';
 import '../css/Navbar.css';
 
 export default function Navbar() {
+    const { t } = useTranslation('navbar');
     const [dropdowns, setDropdowns] = useState({
         region: false,
         activities: false,
@@ -38,6 +42,12 @@ export default function Navbar() {
         toggleDropdown(dropdown);
     };
 
+    const handleLanguageChange = (event) => {
+        const selectedLang = event.target.value; // recupérer la valeur 'fr' ou 'en' mis dans l'attribut value de select
+        // console.log(selectedLang);
+        i18n.changeLanguage(selectedLang);
+    };
+
     return (
         <nav id="navbar">
             <article className="villagio_icon">
@@ -58,45 +68,41 @@ export default function Navbar() {
                             onClick={(e) => handleDropdownClick(e, 'region')}
                         >
                             <a className="dropdown-toggle" href="#">
-                                REGION
+                                {t('menu.region')}
                             </a>
                             {dropdowns.region && (
                                 <ul className="dropdown-menu">
-                                    <li><Link className="dropdown-item" to="/region/1">AOSTA VALLEY</Link></li>
-                                    <li><Link className="dropdown-item" to="/region/2">LAZIO</Link></li>
-                                    <li><Link className="dropdown-item" to="/region/3">LE MARCHE</Link></li>
-                                    <li><Link className="dropdown-item" to="/allVillas">ALL VILLAS</Link></li>
+                                    <li><Link className="dropdown-item" to="/region/1">{t('regions.aostaValley')}</Link></li>
+                                    <li><Link className="dropdown-item" to="/region/2">{t('regions.lazio')}</Link></li>
+                                    <li><Link className="dropdown-item" to="/region/3">{t('regions.leMarche')}</Link></li>
+                                    <li><Link className="dropdown-item" to="/allVillas">{t('regions.allVillas')}</Link></li>
                                 </ul>
                             )}
                         </li>
-                        <li><Link to="/service" onClick={() => setMenuOpen(false)}>SERVICE</Link></li>
+                        <li><Link to="/service" onClick={() => setMenuOpen(false)}>{t('menu.service')}</Link></li>
                         <li
                             className="dropdown"
                             onClick={(e) => handleDropdownClick(e, 'activities')}
                         >
                             <Link className="dropdown-toggle" to="/activities">
-                                ACTIVITIES
+                                {t('menu.activities')}
                             </Link>
                             {dropdowns.activities && (
                                 <ul className="dropdown-menu">
-                                    <li><Link className="dropdown-item" to="/CapriBoatTourFromSorrento">CAPRI BOAT TOUR
-                                        FROM SORRENTO</Link></li>
-                                    <li><Link className="dropdown-item" to="/SightseeingNaples">SIGHTSEEING NAPLES TOUR
-                                        FOR FAMILIES</Link></li>
-                                    <li><Link className="dropdown-item" to="/LearnHistory">LEARN HISTORY: HALF-DAY TRIP
-                                        TO POMPEII</Link></li>
-                                    <li><Link className="dropdown-item" to="/WineAndCheese">Wine and Cheese Tour at Le
-                                        Marche’s Popular Wine Estate</Link></li>
+                                    <li><Link className="dropdown-item" to="/CapriBoatTourFromSorrento">{t('activities.capriBoatTour')}</Link></li>
+                                    <li><Link className="dropdown-item" to="/SightseeingNaples">{t('activities.sightseeingNaples')}</Link></li>
+                                    <li><Link className="dropdown-item" to="/LearnHistory">{t('activities.learnHistory')}</Link></li>
+                                    <li><Link className="dropdown-item" to="/WineAndCheese">{t('activities.wineAndCheese')}</Link></li>
                                 </ul>
                             )}
                         </li>
-                        <li><Link to="/findYourVilla" onClick={() => setMenuOpen(false)}>FIND YOUR VILLA</Link></li>
+                        <li><Link to="/findYourVilla" onClick={() => setMenuOpen(false)}>{t('menu.findYourVilla')}</Link></li>
                     </ul>
                 </section>
                 <section>
-                    <select className="form-select" id="langues" name="langues">
-                        <option selected>English</option>
-                        <option value="1">Français</option>
+                    <select className="form-select" id="langues" name="langues" onChange={handleLanguageChange}>
+                        <option value="en">{t('language.default')}</option>
+                        <option value="fr">{t('language.fr')}</option>
                     </select>
                     <section
                         className="dropdown"
@@ -112,8 +118,8 @@ export default function Navbar() {
                             </button>
                             {dropdowns.user && (
                                 <ul className="dropdown-menu">
-                                    <li><Link className="dropdown-item" to="/inscription">Inscription</Link></li>
-                                    <li><Link className="dropdown-item" to="/connexion">Connexion</Link></li>
+                                    <li><Link className="dropdown-item" to="/inscription">{t('user.inscription')}</Link></li>
+                                    <li><Link className="dropdown-item" to="/connexion">{t('user.connexion')}</Link></li>
                                 </ul>
                             )}
                         </div>
