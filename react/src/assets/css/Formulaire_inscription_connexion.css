@@ -16,7 +16,7 @@ section#form div.form_container{
     padding: 20px;
     border-radius: 5px;
     height: 60%;
-    width: 500px;
+    max-width: 500px;
 }
 
 section#form div.form_container form{
