@@ -1,0 +1,20 @@
+{
+    "guestReviews": "Avis des clients",
+    "guests": {
+        "joeDoe": {
+            "alt": "JOE DOE",
+            "comments": "Je suis allé en Italie pour la première fois et j'ai séjourné par hasard dans un cottage d'hiver Monte Bianco. Je dois dire que c'était une expérience inoubliable !",
+            "name": "JOE DOE"
+        },
+        "kimLee": {
+            "alt": "KIM LEE",
+            "comments": "Je n'oublierai jamais notre séjour estival à la villa Emilia ! Emplacement parfait, service parfait, vues incroyables sur la nature. J'ai apprécié le séjour et je le recommanderais à tout le monde. De plus, il y a beaucoup de choses intéressantes à visiter et à faire – festivals, visites gastronomiques, visites de châteaux et bien plus encore !",
+            "name": "KIM LEE"
+        },
+        "tomHendrix": {
+            "alt": "TOM HENDRIX",
+            "comments": "Je visitais Le Marche avec ma famille et mes amis et avons séjourné à Etna House – c'était un séjour incroyable et inoubliable ! Beaucoup d'espace, une piscine, un front de mer, juste un repos paisible.",
+            "name": "TOM HENDRIX"
+        }
+    }
+}

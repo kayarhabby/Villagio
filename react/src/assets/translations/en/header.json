@@ -1,0 +1,17 @@
+{
+    "villa1": {
+        "title": "Villa Bastilicata Grande",
+        "desc": "This is a perfect villa with spa center and hot tub for private, family and corporate rest in Le Marche region in Italy, with best nature views.",
+        "price": "Prices start at: $630 for 3 nights (+taxes and fees)"
+    },
+    "villa2": {
+        "title": "Seaside Villa Tuscany Maremma",
+        "desc": "A beautiful villa in one of the most attractive destinations of Italy – in Maremma coastline area, in northwestern Italy.",
+        "price": "Prices start at: $474 for 3 nights (+taxes and fees)"
+    },
+    "villa3": {
+        "title": "Beachfront Villa Casa Aurora",
+        "desc": "A wonderful fully equipped beachfront villa in Lazio, the home of Rome, where you’ll can get your best vacation memories.",
+        "price": "Prices start at: $360 for 3 nights (+taxes and fees)"
+    }
+}

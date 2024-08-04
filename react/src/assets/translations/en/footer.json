@@ -1,0 +1,30 @@
+{
+    "aboutUs": {
+        "title": "ABOUT US",
+        "description": "We are one of the most recognized happy vacation makers in Italy – we provide a wide range of great villas for any occasion since 2015. Any type of a winter or summer villa can be found on the site."
+    },
+    "multilingualVillagio": {
+        "title": "MULTILINGUAL VILLAGIO",
+        "description": "The demo content in German is not a professional translations! It’s sample data used to demonstrate a multilingual website (localization was performed via WPML plugin, which is NOT included into the theme).\nNote: multi-currency is performed via addon, which is NOT included into the theme."
+    },
+    "recentNewsTitle": "RECENT NEWS",
+    "linksTitle": "Links",
+    "recentNews": [
+        "Unforgettable Vignanello garden tour in Lazio",
+        "Special discounts for Italian castles tour!",
+        "Places of interest near summer villa Emilia",
+        "Celebrate Lucca Summer Festival with us",
+        "Lazio or Campania: which location is best for your stay?"
+    ],
+    "links": [
+        "How to book",
+        "General letting conditions",
+        "Jobs and careers",
+        "Travel agent resources",
+        "Contact us"
+    ],
+    "footerBase": {
+        "copyright": "Villagia 2024",
+        "address": "+1 (954) 456 6789410 Sunny St, Florida, FL"
+    }
+}

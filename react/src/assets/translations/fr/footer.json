@@ -1,0 +1,30 @@
+{
+    "aboutUs": {
+        "title": "À PROPOS DE NOUS",
+        "description": "Nous sommes l'un des créateurs de vacances heureux les plus reconnus en Italie - nous fournissons une large gamme de villas magnifiques pour toute occasion depuis 2015. Tout type de villa d'hiver ou d'été peut être trouvé sur le site."
+    },
+    "multilingualVillagio": {
+        "title": "VILLAGIO MULTILINGUE",
+        "description": "Le contenu de démonstration en allemand n'est pas une traduction professionnelle! C'est des données d'exemple utilisées pour démontrer un site Web multilingue (la localisation a été effectuée via le plugin WPML, qui n'est PAS inclus dans le thème).\nNote : la multi-devise est réalisée via un addon, qui n'est PAS inclus dans le thème."
+    },
+    "recentNewsTitle": "NOUVELLES RÉCENTES",
+    "linksTitle": "Liens",
+    "recentNews": [
+        "Visite inoubliable du jardin de Vignanello dans le Latium",
+        "Remises spéciales pour la visite des châteaux italiens!",
+        "Lieux d'intérêt près de la villa d'été Emilia",
+        "Célébrez le Lucca Summer Festival avec nous",
+        "Latium ou Campanie : quel lieu est le meilleur pour votre séjour ?"
+    ],
+    "links": [
+        "Comment réserver",
+        "Conditions générales de location",
+        "Emplois et carrières",
+        "Ressources pour les agents de voyage",
+        "Contactez-nous"
+    ],
+    "footerBase": {
+        "copyright": "Villagia 2024",
+        "address": "+1 (954) 456 6789410 Sunny St, Floride, FL"
+    }
+}

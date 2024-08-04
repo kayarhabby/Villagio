@@ -1,0 +1,29 @@
+{
+    "menu": {
+        "region": "REGION",
+        "service": "SERVICE",
+        "activities": "ACTIVITIES",
+        "findYourVilla": "FIND YOUR VILLA"
+    },
+    "regions": {
+        "aostaValley": "AOSTA VALLEY",
+        "lazio": "LAZIO",
+        "leMarche": "LE MARCHE",
+        "allVillas": "ALL VILLAS"
+    },
+    "activities": {
+        "capriBoatTour": "CAPRI BOAT TOUR FROM SORRENTO",
+        "sightseeingNaples": "SIGHTSEEING NAPLES TOUR FOR FAMILIES",
+        "learnHistory": "LEARN HISTORY: HALF-DAY TRIP TO POMPEII",
+        "wineAndCheese": "Wine and Cheese Tour at Le Marche’s Popular Wine Estate"
+    },
+    "user": {
+        "inscription": "Sign Up",
+        "connexion": "Log In"
+    },
+    "language": {
+        "default": "English",
+        "fr": "Français"
+    }
+}
+
