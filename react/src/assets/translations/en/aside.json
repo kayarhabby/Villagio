@@ -1,0 +1,21 @@
+{
+    "recentCommentsTitle": "RECENT COMMENTS",
+    "recommendTitle": "WE RECOMMEND",
+    "regionButtons": {
+        "title": "Region",
+        "regions": ["Aosta Valley", "Lazio", "Le Marche"]
+    },
+    "recommendSection": {
+        "imageAltText": "Cottage Monte Bianco",
+        "villaName": "Summer Villa Emilia",
+        "price": "Prices start at: $561 for 3 nights (+taxes and fees)",
+        "buttonText": "BOOK"
+    },
+    "recentComments": [
+        { "text": "Unforgettable Vignanello garden tour in Lazio", "href": "#" },
+        { "text": "Special discounts for Italian castles tour!", "href": "#" },
+        { "text": "Places of interest near summer villa Emilia", "href": "#" },
+        { "text": "Celebrate Lucca Summer Festival with us", "href": "#" },
+        { "text": "Lazio or Campania: which location is best for your stay?", "href": "#" }
+    ]
+}

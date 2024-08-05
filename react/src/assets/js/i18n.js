@@ -17,6 +17,8 @@ import enService from '../translations/en/service.json';
 import frService from '../translations/fr/service.json';
 import enActivities from '../translations/en/activities.json';
 import frActivities from '../translations/fr/activities.json';
+import enAside from '../translations/en/aside.json';
+import frAside from '../translations/fr/aside.json';
 
 // Configuration de i18next
 i18n
@@ -31,6 +33,7 @@ i18n
                 villa: enVilla,
                 service: enService,
                 activities: enActivities,
+                aside: enAside,
             },
             fr: {
                 navbar: frNavbar,
@@ -40,11 +43,12 @@ i18n
                 villa: frVilla,
                 service: frService,
                 activities: frActivities,
+                aside: frAside,
             }
         },
         lng: 'en', // Langue par défaut
         fallbackLng: 'en', // Langue de repli en cas de non disponibilité
-        ns: ['navbar', 'footer', 'header', 'testimonial', 'villa'], // Noms des namespaces
+        ns: ['navbar', 'footer', 'header', 'testimonial', 'villa', 'service', 'activities', 'aside'], // Noms des namespaces
         defaultNS: 'navbar', // Namespace par défaut
         interpolation: {
             escapeValue: false, // Pas nécessaire pour React

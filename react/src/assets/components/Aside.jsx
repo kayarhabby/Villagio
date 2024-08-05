@@ -1,29 +1,26 @@
-import SearchForm from "./SearchForm.jsx";
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import FooterLinks from "./FooterLinks.jsx";
 import RegionButtons from "./RegionButtons.jsx";
 import RecommendSection from "./RecommendSection.jsx";
 
-export default function () {
-    const recentComments = [
-        { text: 'Unforgettable Vignanello garden tour in Lazio', href: '#' },
-        { text: 'Special discounts for Italian castles tour!', href: '#' },
-        { text: 'Places of interest near summer villa Emilia', href: '#' },
-        { text: 'Celebrate Lucca Summer Festival with us', href: '#' },
-        { text: 'Lazio or Campania: which location is best for your stay?', href: '#' },
-    ];
+export default function AsideComponent() {
+    const { t } = useTranslation('aside');
+
+    const recentComments = t('recentComments', { returnObjects: true });
 
     const regionButtonsData = {
-        title: "Région",
-        regions: ["Aosta Valley", "Lazio", "Le Marche"]
+        title: t('regionButtons.title'),
+        regions: t('regionButtons.regions', { returnObjects: true })
     };
 
     const recommendSectionData = {
-        title: "WE RECOMMEND",
+        title: t('recommendTitle'),
         imageSrc: "/src/assets/images/Cottage_Monte_Bianco.jpg",
-        altText: "Cottage Monte Bianco",
-        villaName: "Summer Villa Emilia",
-        price: "$561",
-        buttonText: "BOOK"
+        altText: t('recommendSection.imageAltText'),
+        villaName: t('recommendSection.villaName'),
+        price: t('recommendSection.price'),
+        buttonText: t('recommendSection.buttonText')
     };
 
     return (
@@ -31,7 +28,7 @@ export default function () {
             <RegionButtons {...regionButtonsData} />
             <RecommendSection {...recommendSectionData} />
             <section>
-                <FooterLinks title="RECENT COMMENTS" links={recentComments} />
+                <FooterLinks title={t('recentCommentsTitle')} links={recentComments} />
             </section>
         </aside>
     )
