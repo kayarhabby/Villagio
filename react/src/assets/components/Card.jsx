@@ -22,11 +22,11 @@ export default function Card(props) {
                 <p className="desc-item-p">{description}</p>  {/*Villa description */}
                 <section className="description-item-acs">
                 <span>
-                    Adults : {nbAdult} / Children : {nbChildren} / Size : {size} / Amenities : {amenities} / Categories : {categories}.
+                    {nbAdult} / {nbChildren} / {size} / {amenities} / {categories}.
                 </span> {/* Villa details */}
                 </section>
                 <div className="price-item-acs">
-                    <span>Prices start at : </span> <strong>{price}</strong> for 3 nights (+taxes and fees)
+                    <strong>{price}</strong>
                 </div>
                 <div>
                     <button className="btn" onClick={() => goToVillaBookPage(title)}>BOOK</button>

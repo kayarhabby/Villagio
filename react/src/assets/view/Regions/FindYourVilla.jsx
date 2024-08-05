@@ -3,19 +3,22 @@ import Footer from "../../components/Footer.jsx";
 import React from "react";
 import ImageCard from "../Activities/ImageCard.jsx";
 import SearchForm from "../../components/SearchForm.jsx";
+import { useTranslation } from "react-i18next";
 
 export default function FindYourVilla() {
+    const { t } = useTranslation('findyourvilla');
+
     const imageSrc = 'src/assets/images/Seaside_Villa_Tuscany_Maremma.jpg';
-    const imageTitle = 'Find Your Villa';
+    const imageTitle = t('findYourVilla.title'); // Utilisation de la traduction
     const imageAlt = 'Seaside villa Tuscany Maremma';
 
     return (
-        <div  className="home">
+        <div className="home">
             <Navbar/>
-            <ImageCard src={imageSrc} title={imageTitle}  alt={imageAlt} />
+            <ImageCard src={imageSrc} title={imageTitle} alt={imageAlt} />
             <section className="fyv-container">
                 <p>
-                    Booking your dream villa with Villagio company is really fast and safe. Just set check-in and check-out dates, view the description, choose your villa, provide details for reservation and pay online! Your perfect vacation is several clicks away!
+                    {t('findYourVilla.description')}
                 </p>
                 <SearchForm />
             </section>
