@@ -69,18 +69,30 @@ export default function RegistrationForm() {
     const handleSubmit = async (e) => {
         e.preventDefault(); // Empêche le rechargement de la page
 
+
         // Vérification des champs obligatoires et des formats
         checkRequired(['FirstName', 'LastName', 'Email', 'PhoneNumber', 'Password']);
         checkEmail(formData.Email);
         checkPhoneNumber(formData.PhoneNumber);
 
+        // Récupération du jeton CSRF depuis la balise meta
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+        // Configuration de la requête avec le jeton CSRF
+        const config = {
+            headers: {
+                'X-CSRF-TOKEN': csrfToken
+            }
+        };
+
         // Soumission du formulaire si toutes les validations sont réussies
         if (Object.values(errors).every((error) => !error)) {
             try {
                 // Envoi des données du formulaire à l'API via une requête POST
-                const response = await axios.post("URL_DE_VOTRE_API", formData);
+                const response = await axios.post("http://127.0.0.1:8000/api/inscription", formData,config);
                 if (response.data.success) {
                     console.log("Formulaire envoyé !");
+
                     clearForm(); // Réinitialisation du formulaire après succès
                 } else {
                     alert(response.data.msg); // Affichage d'un message d'erreur en cas de réponse négative

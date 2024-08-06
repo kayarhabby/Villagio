@@ -64,7 +64,7 @@ export default function ConnexionForm() {
         if (Object.values(errors).every((error) => !error)) {
             try {
                 // Envoi des données du formulaire à l'API
-                const response = await axios.post("URL_DE_VOTRE_API", formData);
+                const response = await axios.post("http://127.0.0.1:8000/api/connexion", formData);
                 if (response.data.success) {
                     console.log("Formulaire envoyé !");
                     clearForm(); // Réinitialisation du formulaire
