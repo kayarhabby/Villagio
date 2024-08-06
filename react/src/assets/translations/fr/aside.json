@@ -1,0 +1,21 @@
+{
+    "recentCommentsTitle": "COMMENTAIRES RÉCENTS",
+    "recommendTitle": "NOUS RECOMMANDONS",
+    "regionButtons": {
+        "title": "Région",
+        "regions": ["Vallée d'Aoste", "Lazio", "Le Marche"]
+    },
+    "recommendSection": {
+        "imageAltText": "Cottage Monte Bianco",
+        "villaName": "Villa d'été Emilia",
+        "price": "Les prix commencent à : 561 $ pour 3 nuits (+ taxes et frais)",
+        "buttonText": "RÉSERVER"
+    },
+    "recentComments": [
+        { "text": "Visite inoubliable des jardins de Vignanello dans le Lazio", "href": "#" },
+        { "text": "Réductions spéciales pour la visite des châteaux italiens !", "href": "#" },
+        { "text": "Lieux d'intérêt près de la villa d'été Emilia", "href": "#" },
+        { "text": "Célébrez le Festival d'été de Lucques avec nous", "href": "#" },
+        { "text": "Lazio ou Campanie : quel endroit est le meilleur pour votre séjour ?", "href": "#" }
+    ]
+}

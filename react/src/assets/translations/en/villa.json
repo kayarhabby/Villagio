@@ -1,0 +1,62 @@
+{
+    "summervillaemilia": {
+        "title": "Summer Villa Emilia",
+        "desc": "Summer Villa Emilia is a perfect place for luxury rest, traveling, and tasting the best regional cuisine in Italy, with a feeling of rebirth.",
+        "adults": "Adults: {{number}}",
+        "children": "Children: {{number}}",
+        "amenities": "Amenities: {{amenities}}",
+        "size": "Size: {{size}}",
+        "category": "Categories: {{category}}",
+        "price": "Prices start at: {{price}} for 3 nights (+taxes and fees)"
+    },
+    "cottagemontebianco": {
+        "title": "Cottage Monte Bianco",
+        "desc": "Cottage Monte Bianco in the Aosta Valley is well decorated, warm, and fully functional. A perfect cottage for your winter vacation.",
+        "adults": "Adults: {{number}}",
+        "children": "Children: {{number}}",
+        "amenities": "Amenities: {{amenities}}",
+        "size": "Size: {{size}}",
+        "category": "Categories: {{category}}",
+        "price": "Prices start at: {{price}} for 3 nights (+taxes and fees)"
+    },
+    "seasidevillatuscanymaremma": {
+        "title": "Seaside Villa Tuscany Maremma",
+        "desc": "A beautiful villa in one of Italy's most attractive destinations – in the Maremma coastline area, in northwestern Italy.",
+        "adults": "Adults: {{number}}",
+        "children": "Children: {{number}}",
+        "amenities": "Amenities: {{amenities}}",
+        "size": "Size: {{size}}",
+        "category": "Categories: {{category}}",
+        "price": "Prices start at: {{price}} for 3 nights (+taxes and fees)"
+    },
+    "beachfrontvillacasaaurora": {
+        "title": "Beachfront Villa Casa Aurora",
+        "desc": "A magnificent fully equipped beachfront villa in Lazio, the home of Rome, where you can create your best vacation memories.",
+        "adults": "Adults: {{number}}",
+        "children": "Children: {{number}}",
+        "amenities": "Amenities: {{amenities}}",
+        "size": "Size: {{size}} m²",
+        "category": "Categories: {{category}}",
+        "price": "Prices start at: {{price}} for 3 nights (+taxes and fees)"
+    },
+    "lemarcheetnahouse": {
+        "title": "Le Marche Etna House",
+        "desc": "Le Marche Etna House is a fully equipped villa with many amenities.",
+        "adults": "Adults: {{number}}",
+        "children": "Children: {{number}}",
+        "amenities": "Amenities: {{amenities}}",
+        "size": "Size: {{size}}",
+        "category": "Categories: {{category}}",
+        "price": "Prices start at: {{price}} for 3 nights (+taxes and fees)"
+    },
+    "villabastilicatagrande": {
+        "title": "Villa Bastilicata Grande",
+        "desc": "This is a perfect villa with a spa center and hot tub for private, family, and corporate rest in the Marche region in Italy, with the best nature views.",
+        "adults": "Adults: {{number}}",
+        "children": "Children: {{number}}",
+        "amenities": "Amenities: {{amenities}}",
+        "size": "Size: {{size}}",
+        "category": "Categories: {{category}}",
+        "price": "Prices start at: {{price}} for 3 nights (+taxes and fees)"
+    }
+}

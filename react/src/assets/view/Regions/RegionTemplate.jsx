@@ -28,23 +28,22 @@ export default function RegionTemplate(props) {
             <section>
                 <ul className="description">
                     <li>
-                        <span className="title-desc-color">Adults : </span> {nbAdult}
+                        {nbAdult}
                     </li>
                     <li>
-                        <span className="title-desc-color">Children : </span> {nbChildren}
+                        {nbChildren}
                     </li>
                     <li>
-                        <span className="title-desc-color">Amenities :</span> {amenities}
+                         {amenities}
                     </li>
                     <li>
-                        <span className="title-desc-color">Size : </span> {size}
+                         {size}
                     </li>
                     <li>
-                        <span className="title-desc-color">Categories : </span> {categories}
+                         {categories}
                     </li>
                     <li>
-                        <span className="title-desc-color">Prices start at : </span> {price} for 3 nights (+taxes
-                            and fees)
+                         {price}
                     </li>
                 </ul>
 

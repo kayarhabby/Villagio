@@ -1,0 +1,17 @@
+{
+    "villa1": {
+        "title": "Villa Bastilicata Grande",
+        "desc": "C'est une villa parfaite avec centre spa et bain à remous pour des vacances privées, familiales et d'entreprise dans la région des Marches en Italie, avec les meilleures vues sur la nature.",
+        "price": "Prix à partir de : 630 $ pour 3 nuits (+ taxes et frais)"
+    },
+    "villa2": {
+        "title": "Villa au bord de la mer en Toscane Maremma",
+        "desc": "Une belle villa dans l'une des destinations les plus attractives d'Italie – dans la région côtière de Maremma, au nord-ouest de l'Italie.",
+        "price": "Prix à partir de : 474 $ pour 3 nuits (+ taxes et frais)"
+    },
+    "villa3": {
+        "title": "Villa en bord de mer Casa Aurora",
+        "desc": "Une merveilleuse villa en bord de mer entièrement équipée dans le Lazio, la maison de Rome, où vous pourrez obtenir les meilleurs souvenirs de vacances.",
+        "price": "Prix à partir de : 360 $ pour 3 nuits (+ taxes et frais)"
+    }
+}

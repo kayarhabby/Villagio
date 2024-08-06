@@ -1,0 +1,36 @@
+{
+    "foodHamper": {
+        "title": "Panier-repas",
+        "text": "Vous arrivez tard à notre villa ? Lorsque les magasins sont fermés ? Vous ne devez pas vous précipiter pour faire les courses ! Réservez un panier-repas et trouvez les indispensables dans la villa à votre arrivée.\n\nLe panier-repas peut être livré directement à la villa à votre arrivée. Les paniers contiennent : pain, œufs, sel, poivre, sucre, thé, café, lait, beurre, jambon (200 g), salami (200 g), 500 g de pâtes, 1 boîte de thon, 1 pot de sauce pour pâtes, 1 paquet de biscuits, 1 pot de marmelade, 1 bouteille d'eau minérale, 1 bouteille de vin blanc, 1 bouteille de vin rouge, papier toilette, 1 paquet de serviettes et 1 savon.",
+        "price": "$55"
+    },
+    "mealCatering": {
+        "title": "Service de restauration",
+        "text": "Les repas sont une grande partie de vos vacances. Et nous pouvons simplement les rendre parfaits. Bien que les villas soient entièrement équipées d'une kitchenette, nous pouvons vous faciliter la vie. Notre beau service de restauration est pour les repas, soit le déjeuner ou le brunch, près de la piscine ou dans le jardin, pour les dîners et déjeuners, pour les événements spéciaux.\n\nVous aurez un menu avec les plats que vous pouvez choisir. Ils sont préparés par nos chefs professionnels et seront livrés directement à la villa à l'heure convenue. Les plats peuvent être convenus directement avec le service de restauration.\n\nLe prix que vous payez maintenant couvre la réservation d'un créneau horaire pour les chefs. Vous pourrez choisir les plats et discuter de tous les menus plus tard.",
+        "price": "$20"
+    },
+    "babySitter": {
+        "title": "Garde d'enfants",
+        "text": "Vous emmenez des enfants avec vous ? Laissez-les passer les meilleures vacances et laissez-vous aussi ! Profitez de votre temps libre pendant que nos baby-sitters s'occupent de vos enfants – nous avons de nombreuses choses intéressantes à faire – jouer, nager, cuisiner, etc.\n\nDans nos villas, il est possible de demander les services d'une baby-sitter qualifiée qui peut s'occuper de vos enfants lors de visites, excursions qui ne leur conviennent pas, ou simplement pour une soirée romantique.\n\nLe service est convenu en fonction de vos besoins, contactez-nous pour la disponibilité. Le prix indiqué est un acompte que nous ajouterons au prix final du service.",
+        "price": "$23"
+    },
+    "weddingsAndBirthdays": {
+        "title": "Célébrations de mariages et anniversaires",
+        "text": "Un service spécial pour ceux qui souhaitent passer des journées spéciales dans des endroits spéciaux. Laissez-nous organiser votre anniversaire ou réunion de famille, mariage ou tout autre événement spécial avec des conseils de première main sur les propriétés, les zones et les activités adaptées pour un grand groupe dans nos villas. Chaque villa dispose d'espaces extérieurs spécialement aménagés pour les célébrations.\n\nCélébrez votre mariage dans un endroit magnifique près de l'océan, cadre parfait pour profiter de la famille et des amis. Vous pouvez également avoir une bénédiction intime dans la chapelle privée de la Villa – est-ce ce dont vous avez toujours rêvé ? Buvez un verre de vin italien autour de la piscine et dînez sous des arbres magnifiques.\n\nNous organisons tous types de mariages de luxe et petits – uniquement du lundi au jeudi inclus et pour un maximum de 40 invités. Services de planification de mariage et de restauration sur demande. Le prix indiqué couvre la réservation d'un planificateur de mariage ou d'anniversaire.",
+        "price": "$250"
+    },
+    "cleaningService": {
+        "title": "Service de nettoyage",
+        "text": "Toutes nos villas sont nettoyées régulièrement. Mais nous proposons également des services de nettoyage supplémentaires sur demande – si vous en avez besoin lorsque le nettoyage n'est pas prévu. Peu importe qu'il s'agisse d'un service planifié ou supplémentaire réservé, nous fournissons des niveaux extraordinaires de propreté et un service supérieur, afin que vous ne perturbiez jamais votre repos à cause de chambres non nettoyées.\n\nLe nettoyage de nos villas comprend le ménage de vos chambres d'hôtes, sols, cuisines, salles de bains, restaurants, bars, spas, et plus selon la villa choisie. Vous pouvez également le précommander par téléphone pendant votre séjour.\n\nNous répondons toujours aux exigences élevées de l'industrie hôtelière en matière de propreté, nous enverrons donc plusieurs employés à votre villa pour effectuer un nettoyage complet ou partiel.",
+        "price": "$15"
+    },
+    "carRental": {
+        "title": "Location de voiture",
+        "text": "Notre service de location de voitures vous aide à profiter d'un voyage pratique autour de la campagne et à vous rendre dans les villes voisines également.\n\nEn plus d'une grande variété de voitures parmi lesquelles vous pouvez choisir, nous proposons également des offres de location de voitures complètes adaptées à vos besoins et à votre budget tout au long de votre séjour, peu importe combien de jours vous restez.\n\nComme il y a beaucoup d'activités sportives intéressantes dans différentes zones, louez une voiture et conduisez pour profiter des sports dans les environs, comme le ski, la randonnée et la pêche.",
+        "price": "$50"
+    },
+    "once": "Une fois",
+    "perDay": "Par jour",
+    "perAccommodation": "Par logement",
+    "perGuest": "Par invité"
+}

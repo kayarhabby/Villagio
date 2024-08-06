@@ -1,0 +1,28 @@
+{
+    "menu": {
+        "region": "RÉGION",
+        "service": "SERVICE",
+        "activities": "ACTIVITÉS",
+        "findYourVilla": "TROUVEZ VOTRE VILLA"
+    },
+    "regions": {
+        "aostaValley": "VALLÉE D'AOSTE",
+        "lazio": "LAZIO",
+        "leMarche": "LES MARCHES",
+        "allVillas": "TOUTES LES VILLAS"
+    },
+    "activities": {
+        "capriBoatTour": "EXCURSION EN BATEAU À CAPRI DEPUIS SORRENTO",
+        "sightseeingNaples": "VISITE GUIDÉE DE NAPLES POUR LES FAMILLES",
+        "learnHistory": "APPRENEZ L'HISTOIRE: EXCURSION D'UNE DEMI-JOURNÉE À POMPÉI",
+        "wineAndCheese": "Visite de dégustation de vins et fromages au domaine viticole populaire des Marches"
+    },
+    "user": {
+        "inscription": "Inscription",
+        "connexion": "Connexion"
+    },
+    "language": {
+        "default": "English",
+        "fr": "Français"
+    }
+}

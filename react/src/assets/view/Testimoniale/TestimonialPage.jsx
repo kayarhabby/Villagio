@@ -1,6 +1,6 @@
-// TestimonialPage.jsx
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; // Import du hook useTranslation
 import Navbar from "../../components/Navbar.jsx";
 import ImageCard from "../Activities/ImageCard.jsx";
 import TextTestimonial from "./TextTestimonial.jsx";
@@ -8,50 +8,40 @@ import Navigation from "./Navigation.jsx";
 import Aside from "../../components/Aside.jsx";
 import Footer from "../../components/Footer.jsx";
 
-const guests = [
-    {
-        id: 1,
-        src: "/src/assets/images/joedoeM.jpg",
-        alt: "JOE DOE",
-        comments: "I was in Italy for the first time and stayed by chance in a winder cottage Monte Bianco. I must say that was an unforgettable experience!",
-        name : "JOE DOE"
-    },
-    {
-        id: 2,
-        src: "/src/assets/images/kimLeeM.jpg",
-        alt: "KIM LEE",
-        comments: "I’ll never forget our summer stay at villa Emilia! Perfect location, perfect service, amazing nature views. I enjoyed the stay and would recommend it to everyone. Moreover, there are a lot of interesting things to visit and do – fests, food tours, castles tours and much more!",
-        name : "KIM LEE"
-    },
-    {
-        id: 3,
-        src: "/src/assets/images/tomHendrixM.jpg",
-        alt: "John Doe",
-        comments: "I was visiting Le Marche with my family and friends and stayed at  Etna House – this was an amazing and unforgettable stay! A lot of space, a pool, a beachfront, just a peaceful rest.",
-        name : "TOM HENDRIX"
-    }
-];
-
 function TestimonialPage() {
-    // const { id } = useParams();
-    // const navigate = useNavigate();
-    // const currentPage = parseInt(id, 10);
-
+    const { t } = useTranslation('testimonial'); // Initialiser le hook
     const { name } = useParams();
     const navigate = useNavigate();
+
+    // Les témoignages traduits depuis i18next
+    const guests = [
+        {
+            id: 1,
+            key: 'joeDoe',
+            src: "/src/assets/images/joedoeM.jpg",
+            alt: t(`guests.joeDoe.alt`),
+            name: t(`guests.joeDoe.name`),
+            comments: t(`guests.joeDoe.comments`)
+        },
+        {
+            id: 2,
+            key: 'kimLee',
+            src: "/src/assets/images/kimLeeM.jpg",
+            alt: t(`guests.kimLee.alt`),
+            name: t(`guests.kimLee.name`),
+            comments: t(`guests.kimLee.comments`)
+        },
+        {
+            id: 3,
+            key: 'tomHendrix',
+            src: "/src/assets/images/tomHendrixM.jpg",
+            alt: t(`guests.tomHendrix.alt`),
+            name: t(`guests.tomHendrix.name`),
+            comments: t(`guests.tomHendrix.comments`)
+        }
+    ];
+
     const currentPage = guests.findIndex(guest => guest.name === decodeURIComponent(name));
-
-    // const nextPage = () => {
-    //     navigate(`/testimonial/${currentPage < guests.length - 1 ? currentPage + 1 : currentPage}`);
-    // };
-    //
-    // const prevPage = () => {
-    //     navigate(`/testimonial/${currentPage > 0 ? currentPage - 1 : currentPage}`);
-    // };
-
-    if (currentPage === -1) {
-        return <div>Témoignage non trouvé</div>;
-    }
 
     const nextPage = () => {
         const nextIndex = currentPage < guests.length - 1 ? currentPage + 1 : currentPage;
@@ -62,6 +52,10 @@ function TestimonialPage() {
         const prevIndex = currentPage > 0 ? currentPage - 1 : currentPage;
         navigate(`/testimonial/${encodeURIComponent(guests[prevIndex].name)}`);
     };
+
+    if (currentPage === -1) {
+        return <div>{t('guestReviews.notFound')}</div>; // Message de non-trouvé traduit
+    }
 
     return (
         <div className="template home">
@@ -87,4 +81,3 @@ function TestimonialPage() {
 }
 
 export default TestimonialPage;
-
