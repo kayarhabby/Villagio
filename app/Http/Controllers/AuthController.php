@@ -30,7 +30,7 @@ class AuthController extends Controller
         return response()->json(['token' => $token], 201);
     }
 
-    // Connexion d'un client existant
+    // Connexion d'un client
     public function connexion(Request $request)
     {
         $credentials = $request->validate([
@@ -41,11 +41,17 @@ class AuthController extends Controller
         if (auth()->attempt($credentials)) {
             $request->session()->regenerate();
 
-            return response()->json(['message' => 'Connexion réussie'], 200);
+            $clientId = auth()->user()->id;
+
+            return response()->json([
+                'message' => 'Connexion réussie',
+                'client_id' => $clientId,
+            ], 200);
         }
 
         return response()->json(['error' => 'Les informations de connexion sont incorrectes'], 401);
     }
+
 
     //Déconnexion du client
     public function deconnexion(Request $request)
