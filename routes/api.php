@@ -38,7 +38,7 @@ Route::apiResource('villa', VillaController::class);
 
 Route::get('lieu/{id_lieu}/villa', [LieuController::class, 'villa']);
 
-Route::get('villa/search', [VillaController::class, 'search']);
+Route::post('villa/search', [VillaController::class, 'search']);
 
 
 Route::post('/inscription', [AuthController::class, 'inscription']);
