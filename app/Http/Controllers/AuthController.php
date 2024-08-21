@@ -25,9 +25,6 @@ class AuthController extends Controller
             'Password'=>Hash::make($request->Password),
         ]);
 
-        $token = $client->createToken('client-token')->plainTextToken;
-
-        return response()->json(['token' => $token], 201);
     }
 
     // Connexion d'un client
