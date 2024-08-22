@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function SearchForm() {
     const [formData, setFormData] = useState({
@@ -9,6 +10,8 @@ export default function SearchForm() {
         Children: '0',
         Region: '0', // Valeur par défaut correspondant à "All Villas"
     });
+
+    const navigate = useNavigate(); // Utilisez useNavigate pour la redirection
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -29,9 +32,10 @@ export default function SearchForm() {
             const data = response.data;
 
             if (data.success) {
-                console.log("Recherche envoyée !");
-                console.log(data.data); // Traitement des données retournées (si nécessaire)
+                // Stocker les résultats dans localStorage
+                localStorage.setItem('searchResults', JSON.stringify(data.data));
                 clearForm();
+                navigate('/search'); // Redirigez vers la page des résultats de recherche
             } else {
                 alert(data.msg);
             }
