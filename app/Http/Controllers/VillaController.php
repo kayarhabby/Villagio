@@ -65,8 +65,6 @@ class VillaController extends Controller
         ]);
     }
 
-
-
     // Créer une nouvelle villa
     public function store(Request $request)
     {
