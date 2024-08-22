@@ -59,13 +59,10 @@ return [
     |
     */
 
-    'middleware' => ['api'],
-
-    // 'middleware' => [
-    //     'verify_csrf_token' => App\Http\Middleware\VerifyCsrfToken::class,
-    //     'encrypt_cookies' => App\Http\Middleware\EncryptCookies::class,
-    // ],
-
-
+    'middleware' => [
+        'api', // Middleware pour les API
+        'verify_csrf_token' => App\Http\Middleware\VerifyCsrfToken::class, // Protection CSRF
+        'encrypt_cookies' => App\Http\Middleware\EncryptCookies::class, // Chiffrement des cookies
+    ],
 
 ];
