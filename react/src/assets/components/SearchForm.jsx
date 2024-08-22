@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
 export default function SearchForm() {
@@ -7,52 +7,37 @@ export default function SearchForm() {
         CheckOut: '',
         Adults: '1',
         Children: '0',
-        Region: 'AllVillas',
+        Region: '0', // Valeur par défaut correspondant à "All Villas"
     });
-    const [errors, setErrors] = useState({});
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
 
-    const showError = (inputName, message) => {
-        setErrors((prevErrors) => ({ ...prevErrors, [inputName]: message }));
-    };
-
-    const showSuccess = (inputName) => {
-        setErrors((prevErrors) => ({ ...prevErrors, [inputName]: '' }));
-    };
-
-    const checkRequired = (fields) => {
-        let valid = true;
-        fields.forEach((field) => {
-            if (!formData[field]) {
-                showError(field, `${field.replace(/([A-Z])/g, ' $1')} est requis`);
-                valid = false;
-            } else {
-                showSuccess(field);
-            }
-        });
-        return valid;
-    };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const requiredFields = ['CheckIn', 'CheckOut', 'Adults', 'Children', 'Region'];
-        if (checkRequired(requiredFields)) {
-            try {
-                const response = await axios.post("/api/search", formData);
-                if (response.data.success) {
-                    console.log("Recherche envoyée !");
-                    clearForm();
-                } else {
-                    alert(response.data.msg);
-                }
-            } catch (error) {
-                console.error("Une erreur est survenue:", error);
-                alert("Une erreur est survenue...");
+
+        try {
+            const response = await axios.post("http://127.0.0.1:8000/api/villa/search", formData, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                withCredentials: true // Pour envoyer les cookies, nécessaire pour Sanctum
+            });
+
+            const data = response.data;
+
+            if (data.success) {
+                console.log("Recherche envoyée !");
+                console.log(data.data); // Traitement des données retournées (si nécessaire)
+                clearForm();
+            } else {
+                alert(data.msg);
             }
+        } catch (error) {
+            console.error("Une erreur est survenue:", error.response?.data || error.message);
+            alert("Une erreur est survenue...");
         }
     };
 
@@ -62,7 +47,7 @@ export default function SearchForm() {
             CheckOut: '',
             Adults: '1',
             Children: '0',
-            Region: 'AllVillas',
+            Region: '0', // Valeur par défaut pour "All Villas"
         });
     };
 
@@ -79,7 +64,6 @@ export default function SearchForm() {
                         value={formData.CheckIn}
                         onChange={handleChange}
                     />
-                    {errors.CheckIn && <small>{errors.CheckIn}</small>}
                 </div>
                 <div>
                     <label htmlFor="CheckOut">Check-out :</label>
@@ -91,7 +75,6 @@ export default function SearchForm() {
                         value={formData.CheckOut}
                         onChange={handleChange}
                     />
-                    {errors.CheckOut && <small>{errors.CheckOut}</small>}
                 </div>
                 <div>
                     <label htmlFor="Adults">Adults</label>
@@ -106,7 +89,6 @@ export default function SearchForm() {
                             <option key={n} value={n + 1}>{n + 1}</option>
                         ))}
                     </select>
-                    {errors.Adults && <small>{errors.Adults}</small>}
                 </div>
                 <div>
                     <label htmlFor="Children">Children</label>
@@ -121,7 +103,6 @@ export default function SearchForm() {
                             <option key={n} value={n}>{n}</option>
                         ))}
                     </select>
-                    {errors.Children && <small>{errors.Children}</small>}
                 </div>
                 <div>
                     <label htmlFor="Region">Region</label>
@@ -132,12 +113,11 @@ export default function SearchForm() {
                         value={formData.Region}
                         onChange={handleChange}
                     >
-                        <option value="AllVillas">All Villas</option>
-                        <option value="Aosta Valley">Aosta Valley</option>
-                        <option value="Lazio">Lazio</option>
-                        <option value="Le Marche">Le Marche</option>
+                        <option value="0">All Villas</option>
+                        <option value="1">Aosta Valley</option>
+                        <option value="2">Lazio</option>
+                        <option value="3">Le Marche</option>
                     </select>
-                    {errors.Region && <small>{errors.Region}</small>}
                 </div>
             </section>
             <button type="submit" className="btn">SEARCH</button>
