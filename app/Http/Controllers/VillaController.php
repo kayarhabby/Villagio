@@ -25,17 +25,17 @@ class VillaController extends Controller
     public function search(Request $request)
     {
         // Récupérer les paramètres de recherche depuis la requête
-        $dateDebut = $request->input('Date_debut_disponible');
-        $dateFin = $request->input('Date_fin_disponible');
-        $adultes = $request->input('Adultes');
-        $enfants = $request->input('Enfants');
-        $lieuId = $request->input('lieu_id'); // Récupérer l'ID du lieu sélectionné
+        $dateDebut = $request->input('CheckIn');
+        $dateFin = $request->input('CheckOut');
+        $adultes = $request->input('Adults');
+        $enfants = $request->input('Children');
+        $lieuId = $request->input('Region'); // Récupérer l'ID du lieu sélectionné
 
         // Construire la requête de recherche
         $query = Villa::query();
 
-        // Filtrer par lieu (si sélectionné)
-        if ($lieuId && $lieuId !== 'AllVillas') {
+        // Filtrer par lieu (si un lieu spécifique est sélectionné)
+        if ($lieuId !== '0') {  // '0' correspond à "All Villas"
             $query->where('id_lieu', $lieuId);
         }
 
@@ -56,10 +56,13 @@ class VillaController extends Controller
         }
 
         // Récupérer les résultats
-        $villa = $query->get();
+        $villas = $query->get();
 
         // Retourner les résultats sous forme de ressource JSON
-        return VillaResource::collection($villa);
+        return response()->json([
+            'success' => true,
+            'data' => VillaResource::collection($villas)
+        ]);
     }
 
 
