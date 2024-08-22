@@ -1,24 +1,21 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Importez useNavigate
 import Navbar from "../../components/Navbar.jsx";
 import Footer from "../../components/Footer.jsx";
 import SearchRegionTemplate from "./SearchRegionTemplate.jsx";
 
 export default function SearchVillaResults() {
     const [villas, setVillas] = useState([]);
-    const navigate = useNavigate();
+    const navigate = useNavigate(); // Utilisez useNavigate pour la redirection
 
     useEffect(() => {
-        const fetchVillas = async () => {
-            try {
-                const response = await axios.get(`http://127.0.0.1:8000/api/villa`);
-                setVillas(response.data.data);
-            } catch (error) {
-                console.error('Error fetching villas:', error);
-            }
-        };
-        fetchVillas();
+        // Récupérer les résultats de recherche depuis localStorage
+        const searchResults = localStorage.getItem('searchResults');
+        if (searchResults) {
+            setVillas(JSON.parse(searchResults));
+            // Nettoyer localStorage après avoir récupéré les résultats
+            localStorage.removeItem('searchResults');
+        }
     }, []);
 
     const goToVillaBookPage = (name) => {
@@ -35,11 +32,10 @@ export default function SearchVillaResults() {
             <main>
                 <article className="villa-search-title">
                     <h1>Search Results</h1>
-                    <p>{villas.length} accommodations found </p>
+                    <p>{villas.length} accommodations found</p>
                 </article>
 
                 {villas.map((villa) => {
-                    // Split the image URL
                     const imgPathParts = villa.Image.split('/');
                     const imgFileName = imgPathParts[imgPathParts.length - 1];
                     const src = `/src/assets/images/${imgFileName}`;
