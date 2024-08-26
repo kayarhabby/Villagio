@@ -26,20 +26,20 @@ class ClientController extends Controller
         //Valider les données
         $request->validate([
 
-            'Nom'=>'required|string',
-            'Prenom'=>'required|string',
-            'Contact'=>'required|string|unique:client,Contact',
-            'Email'=>'required|string|email|unique:client,Email',
-            'Password'=>'required|string|min:8',
+            'nom'=>'required|string',
+            'prenom'=>'required|string',
+            'contact'=>'required|string|unique:client,Contact',
+            'email'=>'required|string|email|unique:client,Email',
+            'password'=>'required|string|min:8',
         ]);
 
         //Création d'un nouveau client dans la BDD
         $client = Client::create([
-            'Nom'=>$request->Nom,
-            'Prenom'=>$request->Prenom,
-            'Contact'=>$request->Contact,
-            'Email'=>$request->Email,
-            'Password'=>bcrypt($request->Password),
+            'nom'=>$request->nom,
+            'prenom'=>$request->prenom,
+            'contact'=>$request->contact,
+            'email'=>$request->email,
+            'password'=>bcrypt($request->password),
         ]);
 
         //Retourner la ressource créée
@@ -52,31 +52,31 @@ class ClientController extends Controller
         //Validation des données
         $request->validate([
 
-            'Nom'=>'sometimes|required|string',
-            'Prenom'=>'sometimes|required|string',
-            'Contact' => 'sometimes|required|string|unique:client,Contact,' . $client->id,
-            'Email' => 'sometimes|required|string|email|unique:client,Email,' . $client->id,
-            'Password'=>'sometimes|required|string|min:8',
+            'nom'=>'sometimes|required|string',
+            'prenom'=>'sometimes|required|string',
+            'contact' => 'sometimes|required|string|unique:client,Contact,' . $client->id,
+            'email' => 'sometimes|required|string|email|unique:client,Email,' . $client->id,
+            'password'=>'sometimes|required|string|min:8',
         ]);
 
         //Mis à jour de la ressource dans la base de données
-        if($request->has('Nom')){
-            $client->Nom = $request->Nom;
+        if($request->has('nom')){
+            $client->nom = $request->nom;
         }
 
-        if($request->has('Prenom')){
-            $client->Prenom = $request->Prenom;
+        if($request->has('prenom')){
+            $client->prenom = $request->prenom;
         }
 
-        if($request->has('Contact')){
-            $client->Contact = $request->Contact;
+        if($request->has('contact')){
+            $client->contact = $request->contact;
         }
 
-        if($request->has('Email')){
-            $client->Email = $request->Email;
+        if($request->has('email')){
+            $client->email = $request->email;
         }
 
-        if($request->has('Password')){
+        if($request->has('password')){
                 $client->Password = bcrypt($request->Password);
         }
 
