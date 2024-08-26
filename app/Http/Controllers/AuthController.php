@@ -23,11 +23,11 @@ class AuthController extends Controller
             ]);
 
             $client = Client::create([
-                'Nom' => $request->FirstName,
-                'Prenom' => $request->LastName,
-                'Contact' => $request->PhoneNumber,
-                'Email' => $request->Email,
-                'Password' => Hash::make($request->Password),
+                'nom' => $request->FirstName,
+                'prenom' => $request->LastName,
+                'contact' => $request->PhoneNumber,
+                'email' => $request->Email,
+                'password' => Hash::make($request->Password),
             ]);
 
             return response()->json(['success' => true, 'msg' => 'Inscription réussie!']);
@@ -40,18 +40,20 @@ class AuthController extends Controller
         }
     }
 
-    // Connexion d'un client
     public function connexion(Request $request)
     {
+        // Valider les données reçues
         $credentials = $request->validate([
             'Email' => 'required|email',
-            'Password' => 'required|string|min:8', // Ajout des critères pour le mot de passe
+            'Password' => 'required|string|min:8',
         ]);
 
+        // Tenter l'authentification
         if (Auth::attempt([
             'email' => $credentials['Email'],
             'password' => $credentials['Password']
         ])) {
+            // Regénérer la session
             $request->session()->regenerate();
             $user = Auth::user();
 
@@ -62,8 +64,10 @@ class AuthController extends Controller
             ]);
         }
 
+        // Retourner une réponse d'erreur si l'authentification échoue
         return response()->json(['success' => false, 'msg' => 'Les informations de connexion sont incorrectes'], 401);
     }
+
 
 
     // Déconnexion du client
