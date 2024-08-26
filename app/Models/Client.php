@@ -13,15 +13,15 @@ class Client extends Authenticatable
     public $incrementing = true; //Activation de l'auto-incrémentation
 
     protected $fillable = [
-        'Nom',
-        'Prenom',
-        'Contact',
-        'Email',
-        'Password',
+        'nom',
+        'prenom',
+        'contact',
+        'email',
+        'password',
     ];
 
     protected $hidden = [
-        'Password',
+        'password',
     ];
 
     //Relation 1 à plusieurs avec la table réservation
